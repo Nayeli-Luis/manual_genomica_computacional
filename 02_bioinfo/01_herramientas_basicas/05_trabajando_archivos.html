@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Archivos, permisos y usuarios &#8212; Manual de biología y bioinformática.</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Opciones y argumentos" href="06_opciones_argumentos.html" />
+    <link rel="prev" title="Explorando directorios desde la terminal" href="04_explorando_directorios.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/gc.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de biología y bioinformática.</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_intro.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_estructura_celular.html">
+     La célula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/03_principios_genetica/00_intro_genetica.html">
+   Principios de genética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/01_mutaciones.html">
+     Mutaciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/02_expresion_genica.html">
+     Expresión génica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Introducción a la bioinformática
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_intro.html">
+   Herramientas básicas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_guia_md.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_git_github.html">
+     Git y Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_linea_comandos.html">
+     Introducción a linea de comandos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_explorando_directorios.html">
+     Explorando directorios desde la terminal
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Archivos, permisos y usuarios
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06_opciones_argumentos.html">
+     Opciones y argumentos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_permisos_usuarios.html">
+     Permisos y usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_principios_programacion/01_python_intro.html">
+   Principios de programación con Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_principios_programacion/02_datos_variables.html">
+     Datos, variables y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_principios_programacion/04_funciones.html">
+     Algoritmos y funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_principios_programacion/05_sintaxis_basica.html">
+     Resumen de la sintaxis básica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Análisis de datos biológicos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/00_generalidades.html">
+   Métodos de biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/01_extraccion_dna.html">
+     Extracción de DNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/02_amplificacion.html">
+     Amplificación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/03_electroforesis.html">
+     Electroforesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/04_secuenciacion.html">
+     Secuenciación del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/00_intro.html">
+   Análisis bioinformáticos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/01_datos.html">
+     ¿De dónde obtenemos datos biológicos?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/02_formatos.html">
+     Formatos de archivos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/03_workflows_analisis.html">
+     Flujo de trabajo general de análisis bioinformáticos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/04_calidad.html">
+     Calidad de las secuencias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/05_alineamiento_mapeo.html">
+     Alineamiento y mapeo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome.html">
+     Flujo de trabajo para análisis con genomas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-archivos">
+   Crear archivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editar-archivos">
+   Editar archivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cat">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cat
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#head-y-tail">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     head
+    </span>
+   </code>
+   y
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     tail
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creacion-de-ligas-links">
+   Creación de ligas (links)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="archivos-permisos-y-usuarios">
+<h1>Archivos, permisos y usuarios<a class="headerlink" href="#archivos-permisos-y-usuarios" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Objetivo</p>
+<ul class="simple">
+<li><p>Aprender a crear y editar archivos desde la terminal.</p></li>
+<li><p>Comprender el significado de lo símbolos de permisos y ser capaza de cambiarlos.</p></li>
+<li><p>Comprender las diferencias entre las ligas <em>soft</em> y <em>hard</em>.</p></li>
+</ul>
+</div>
+<p>Un archivo o fichero  en Linux puede definirse como una colección de datos que aparecen al usuario como un bloque de información.</p>
+<div class="warning admonition">
+<p class="admonition-title">Nota</p>
+<p>Te recomiendo siempre hacer carpetas para cada prueba/ejercicio que vayas a realizar y conozcas la dirección exacta. En este caso, seguiré utilizando Sandbox, pero tu puedes utilizar la terminal de tu computadora o del ambiente Linux que hayas creado.</p>
+</div>
+<section id="crear-archivos">
+<h2>Crear archivos<a class="headerlink" href="#crear-archivos" title="Permalink to this headline">¶</a></h2>
+<p>Primero, crearemos un directorio para guardar todo lo que hagamos en este apartado, ingresaremos en ese nuevo directorio, crearemos una carpeta dentro e imprimiremos la ruta:</p>
+<br>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir 01_archivos
+<span class="nb">cd</span> 01_archivos
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+<p>Una vez que estés dentro de tu directorio de trabajo, vamosa a crear un fichero. Para crear archivos solo basta con utilizar el comando <code class="docutils literal notranslate"><span class="pre">touch</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch archivo01.txt
+</pre></div>
+</div>
+<p>Y para asegurarnos que fue creado podemos ingresar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<p>Podras observar que ya aparece tu archivo. También podemos crear varios ficheros en una sola línea. Imaginemos que deseamos crear 10 archivos, lo que escribiríamos a continuación sería:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch archivo0<span class="o">{</span><span class="m">2</span>..9<span class="o">}</span>.txt
+</pre></div>
+</div>
+<p>Lista de nuevo para comprobar que se han creado.</p>
+<p>Ahora, vamos a utilizar el comando <code class="docutils literal notranslate"><span class="pre">echo</span></code> para pasar una linea de texto como un argumento y guardarlo en un archivo.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Aprender bioinformatica es bueno para la salud&quot;</span> &gt; archivo02.txt
+</pre></div>
+</div>
+<p>Si te das cuenta, utilicé el símbolo de “mayor que” para poder indicar en donde quería guardar la linea de texto.</p>
+<p>Vamos a comprobar que <code class="docutils literal notranslate"><span class="pre">archivo02.txt</span></code> se creó correctamente, para esto lo abriremos y usaremos el comando <code class="docutils literal notranslate"><span class="pre">file</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>file archivo02.txt
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">file</span></code> determina el tipo y formato de un archivo, en este caso es un fichero que utiliza el formato de codificación ASCII que es el Código Estadounidense Estándar para el Intercambio de Información y es el código que se utiliza en los ficheros generados por métodos de secuenciación masiva. <a href = "https://elcodigoascii.com.ar/">Aquí</a> puedes hallar cada símbolo.</p>
+<p>Podemos cambiar el nombre de un archivo con el comando <code class="docutils literal notranslate"><span class="pre">mv</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv archivo02.txt archivo02_mod.txt
+</pre></div>
+</div>
+<p>Vuelve a listar para comprobar que el cambio se llevó a cabo.</p>
+</section>
+<section id="editar-archivos">
+<h2>Editar archivos<a class="headerlink" href="#editar-archivos" title="Permalink to this headline">¶</a></h2>
+<p>Para editar algún archivo desde la terminal se utilizan editores de texto. <strong>GNU nano</strong> es un editor de texto para entornos similares a Unix y otros sistemas operativos que utilizan una línea de comandos de terminal. Existen otros editores como <strong>vi</strong>, <strong>vim</strong>, <strong>Emacs</strong> y <strong>pico</strong>, en este caso usaremos <strong>Nano</strong>.</p>
+<p>Primero, vamos a crear un nuevo archivo con el siguiente ejemplo:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano datos_alumnos.txt
+</pre></div>
+</div>
+<p>Te abrirá una ventana de éste estilo:</p>
+<figure class="align-default" id="ventana-nano">
+<a class="reference internal image-reference" href="../../_images/nano.png"><img alt="../../_images/nano.png" src="../../_images/nano.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Ventana de Nano</span><a class="headerlink" href="#ventana-nano" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Ahora ingresaremos una tabla donde separaremos cada valor por tabuladores <code class="docutils literal notranslate"><span class="pre">tab</span></code>. Es decir, nombre + tab + apellido + tab + correo.</p>
+<figure class="align-default" id="valores">
+<a class="reference internal image-reference" href="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png"><img alt="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png" src="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Valores ingresados en Nano</span><a class="headerlink" href="#valores" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Ahora darás <code class="docutils literal notranslate"><span class="pre">control</span> <span class="pre">+</span> <span class="pre">x</span></code> para salir del editor nano, y te aparecerá un menú que te preguntará si deseas guardar lo que has modificado, le pondrás que si presionando la tecla <code class="docutils literal notranslate"><span class="pre">y</span></code> y luego <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+</section>
+<section id="cat">
+<h2><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h2>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">cat</span></code> tiene diferentes funciones:</p>
+<ul class="simple">
+<li><p>Crear archivos</p></li>
+<li><p>Escribir un archivo</p></li>
+<li><p>Ver el contenido de un archivo (es la más utilizada)</p></li>
+<li><p>Concatenar archivos</p></li>
+</ul>
+<p>Primero, vamos a crear un archivo llamado <code class="docutils literal notranslate"><span class="pre">planetas</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">planetas</span>
+</pre></div>
+</div>
+<p>Podras escribir contenido, después de escribirlo, puedes guarda con <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">d</span></code> y puedes comprobar que se ha creado con <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<p>Para ver el contenido solo escribe <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">planetas</span></code>, te aparecerá algo como:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">usuario</span><span class="nd">@computadora</span> <span class="o">~</span> <span class="o">%</span> <span class="n">cat</span> <span class="n">planetas</span>
+<span class="n">mercurio</span>
+<span class="n">venus</span>
+<span class="n">tierra</span>
+</pre></div>
+</div>
+<p>Ahora agregamos <code class="docutils literal notranslate"><span class="pre">marte</span></code> en otra línea:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;&gt;</span> <span class="n">planetas</span>
+<span class="n">marte</span>
+
+<span class="c1"># ctrl + d para cerrar y guardar</span>
+</pre></div>
+</div>
+<p>Visualiza que se haya agregado el planeta nuevo.</p>
+<p>Ahora crearemos con <code class="docutils literal notranslate"><span class="pre">cat</span></code> otro archivo llamado <code class="docutils literal notranslate"><span class="pre">planetas2</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">planetas2</span>
+<span class="n">jupiter</span>
+<span class="n">saturno</span>
+<span class="n">urano</span>
+<span class="n">neptuno</span>
+<span class="n">pluton</span>
+
+<span class="c1"># ctrl + d</span>
+</pre></div>
+</div>
+<p>Para unir o concatenar los archivos podemos escribir:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">planetas</span> <span class="n">planetas2</span> <span class="o">&gt;</span> <span class="n">planetas_todos</span>
+</pre></div>
+</div>
+</section>
+<section id="head-y-tail">
+<h2><code class="docutils literal notranslate"><span class="pre">head</span></code> y <code class="docutils literal notranslate"><span class="pre">tail</span></code><a class="headerlink" href="#head-y-tail" title="Permalink to this headline">¶</a></h2>
+<p>Muestran el contenido de un archivo por terminal. <code class="docutils literal notranslate"><span class="pre">head</span></code> muestra las 10 primeras líneas, al menos que se específique otro numero y <code class="docutils literal notranslate"><span class="pre">tail</span></code> muestra las 10 últimas líneas. Para especificar debes agregar <code class="docutils literal notranslate"><span class="pre">-n</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ver primeras dos líneas</span>
+<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="n">planetas_todos</span>
+
+<span class="c1"># Ver últimas dos líneas</span>
+<span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="n">planetas_todos</span>
+</pre></div>
+</div>
+</section>
+<section id="creacion-de-ligas-links">
+<h2>Creación de ligas (links)<a class="headerlink" href="#creacion-de-ligas-links" title="Permalink to this headline">¶</a></h2>
+<p>En los sistemas Linux es posible crear ligas o <em>links</em> entre archivos, es como crear un acceso directo o “<em>shortcut</em>.” Existen dos tipos de ligas las <em>hard</em> y las <em>soft</em> o simbólicas.</p>
+<p>Los enlaces <em>soft</em> o simbólicos:</p>
+<ul class="simple">
+<li><p>Pueden cruzar todo el sistema de archivos</p></li>
+<li><p>Generan un acceso directo a los archivos</p></li>
+<li><p>Tienen diferentes permisos con respecto al archivo original</p></li>
+<li><p>Si cambian los permisos o la ubicación del archivo original, estos no se actualizan.</p></li>
+<li><p>Contienen solo la ruta del archivo original no el contenido.</p></li>
+</ul>
+<p>Por otro lado, los enlaces <em>hard</em> :</p>
+<ul class="simple">
+<li><p>No pueden cruzar todo el sistema de archivos</p></li>
+<li><p>No crean un acceso directo <em>sensu sctricto</em></p></li>
+<li><p>Tienen los mismos permisos que el archivo original</p></li>
+<li><p>Si la ubicación o los permisos del archivo original, estos se actualizarán.</p></li>
+<li><p>Contienen todo el contenido del archivo original, por lo que podrás seguir viendo el contenido aunque el archivo original sea eliminado o modificado.</p></li>
+</ul>
+<p>El comando para crear ligas es <code class="docutils literal notranslate"><span class="pre">ln</span></code> y para crear ligas <em>soft</em> se utiliza con la opción <code class="docutils literal notranslate"><span class="pre">-s</span></code>.  Cuando trabajas en un servidor externo, la mayoría de las veces solo podrás crear <em>soft links</em>. Por tanto, vamos a crear un <em>soft link</em> del ‘archivo01.txt’ en nuestra carpeta llamada ‘genomica’. Para esto, primero accederemos a la carpeta donde queremos el link y luego lo generaremos escribiendo el comando <code class="docutils literal notranslate"><span class="pre">ln</span></code> con la opción <code class="docutils literal notranslate"><span class="pre">-s</span></code> y la ruta relativa correspondiente:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> genomica
+ln -s ../archivo01.txt
+</pre></div>
+</div>
+<p>Si enlistas tu carpeta, aparecerá el archivo y generalmente aparece resaltado en otro color:</p>
+<figure class="align-default" id="soft-link">
+<a class="reference internal image-reference" href="../../_images/soft_link.png"><img alt="../../_images/soft_link.png" src="../../_images/soft_link.png" style="height: 100px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Liga simbólica o <em>soft link</em>.</span><a class="headerlink" href="#soft-link" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Y si exploras el contenido con <code class="docutils literal notranslate"><span class="pre">file</span></code>, deberá aparecerte vacio (<em>empty</em>) debido aque solo es un acceso directo del archivo original.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_bioinfo/01_herramientas_basicas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="04_explorando_directorios.html" title="previous page">Explorando directorios desde la terminal</a>
+    <a class='right-next' id="next-link" href="06_opciones_argumentos.html" title="next page">Opciones y argumentos</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

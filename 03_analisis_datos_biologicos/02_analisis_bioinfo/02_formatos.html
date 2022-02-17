@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Formatos de archivos &#8212; Manual de biología y bioinformática.</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Flujo de trabajo general de análisis bioinformáticos" href="03_workflows_analisis.html" />
+    <link rel="prev" title="¿De dónde obtenemos datos biológicos?" href="01_datos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/gc.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de biología y bioinformática.</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_intro.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_estructura_celular.html">
+     La célula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/03_principios_genetica/00_intro_genetica.html">
+   Principios de genética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/01_mutaciones.html">
+     Mutaciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/02_expresion_genica.html">
+     Expresión génica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Introducción a la bioinformática
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/00_intro.html">
+   Herramientas básicas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/02_git_github.html">
+     Git y Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/03_linea_comandos.html">
+     Introducción a linea de comandos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/04_explorando_directorios.html">
+     Explorando directorios desde la terminal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
+     Archivos, permisos y usuarios
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
+     Opciones y argumentos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/07_permisos_usuarios.html">
+     Permisos y usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/01_python_intro.html">
+   Principios de programación con Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/02_datos_variables.html">
+     Datos, variables y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/04_funciones.html">
+     Algoritmos y funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/05_sintaxis_basica.html">
+     Resumen de la sintaxis básica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Análisis de datos biológicos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_metodos_biol_mol/00_generalidades.html">
+   Métodos de biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/01_extraccion_dna.html">
+     Extracción de DNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/02_amplificacion.html">
+     Amplificación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/03_electroforesis.html">
+     Electroforesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/04_secuenciacion.html">
+     Secuenciación del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_intro.html">
+   Análisis bioinformáticos
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_datos.html">
+     ¿De dónde obtenemos datos biológicos?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Formatos de archivos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_workflows_analisis.html">
+     Flujo de trabajo general de análisis bioinformáticos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_calidad.html">
+     Calidad de las secuencias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_alineamiento_mapeo.html">
+     Alineamiento y mapeo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06_workflow_genome.html">
+     Flujo de trabajo para análisis con genomas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/03_analisis_datos_biologicos/02_analisis_bioinfo/02_formatos.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F03_analisis_datos_biologicos/02_analisis_bioinfo/02_formatos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#genbank">
+   GENBANK
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fasta">
+   FASTA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastaq">
+   FASTAQ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gff-gtf">
+   GFF/GTF
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sam-bam">
+   SAM/BAM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vcf">
+   VCF
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="formatos-de-archivos">
+<h1>Formatos de archivos<a class="headerlink" href="#formatos-de-archivos" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<p>A lo largo de el análisis de datos de origen biológico te vas a encontrar con diferentes formatos de los archivos resultantes de la secuenciación de tus muestras o de un proceso bioinformático. Por tanto, es importante que conozcas el tipo de información que guarda los principales formatos con los que te puedes encontrar.</p>
+<section id="genbank">
+<h2>GENBANK<a class="headerlink" href="#genbank" title="Permalink to this headline">¶</a></h2>
+<p>Es el formato de archivo más antiguo y clásico. Sus extensiones son <code class="docutils literal notranslate"><span class="pre">.gb</span></code>, <code class="docutils literal notranslate"><span class="pre">.gbff</span></code>, <code class="docutils literal notranslate"><span class="pre">.genbank</span></code>. Está diseñado para que sea fácilmente entendido por seres humanos. Aquí un ejemplo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LOCUS       CP010822             2158963 bp    DNA     circular BCT 19-OCT-2015
+DEFINITION  Thermus aquaticus Y51MC23, complete genome.
+ACCESSION   CP010822
+VERSION     CP010822.1
+DBLINK      BioProject: PRJNA274060
+            BioSample: SAMN02441811
+KEYWORDS    .
+SOURCE      Thermus aquaticus Y51MC23
+  ORGANISM  Thermus aquaticus Y51MC23
+            Bacteria; Deinococcus-Thermus; Deinococci; Thermales; Thermaceae;
+</pre></div>
+</div>
+</section>
+<section id="fasta">
+<h2>FASTA<a class="headerlink" href="#fasta" title="Permalink to this headline">¶</a></h2>
+<p>Es un formato de texto plano que contiene las secuencias crudas, este formato es el que otorgan las plataformas de secuenciación. Puede tener las siguientes extensiones: <code class="docutils literal notranslate"><span class="pre">.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">.fna</span></code>, <code class="docutils literal notranslate"><span class="pre">.fasta</span></code>. El formato es:</p>
+<ul class="simple">
+<li><p>Un encabezado por secuencia que inicia con el símbolo mayor que (&gt;) y que contiene texto que puede ser el nombre de la secuencia, una descripción, etc.</p></li>
+<li><p>La secuencia tal cual</p></li>
+</ul>
+<p>Aquí un ejemplo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;NZ_CP010822.1 Thermus aquaticus Y51MC23 chromosome, complete genome
+GTGGCCTTGACGCACGAGGCGGTCTGGCAGCACGTTCTGGAGCACATCCGCCGCAACATCACCGAGGTGGAGTACCACAC
+CTGGTTTGAAAGGATCCGCCCCCTGGGTATCCGGGAAGGGGTTTTGGAGCTGGCGGTGCCCACCTCCTTCGCCCTGGACT
+GGATCAAGCGGCACTACGCCCCCCTGATCCAGGAGGCTTTAGGCCTCCTGGGGGCCCAGGTACCCCGCTTTGAGCTTTTG
+GTGGTGCCCGGAGCCGCCCAGCCGGTCCAGGTGGACATCTTCCAGGCCGTCCCCCAGGCCGACCAGGGGAAGTCCAAGCT
+CAACCCCAAGTACACCTTTGAGAACTTCGTGGTGGGGCCCAACAACAACCTGGCCCACGCCGCGGCCGTGGCCGTGGCCG
+AGTCGCCCGGCAAGGCCTACAACCCCCTTTTCATCTACGGGGGGGTGGGCCTGGGCAAGACCCACCTCATGCACGCCGTG
+GGCCACTCGGTAGCCAAGCGGTTCCCCAGCCTCAAGATTGAGTACGTCTCCACCGAAACCTTCACCAACGAGCTCATCAA
+CGCCATCCGCGAGGACCGCATGGCGGAGTTCCGGGAGCGGTACCGCTCCGTGGACCTCCTCCTGGTGGACGACATCCAGT
+TCATCGCCGGCAAGGAAAGGACGCAGGAGGAGTTCTTCCACACCTTCAACGCCCTCTTTGAGGCCCACAAGCAGATCATC
+</pre></div>
+</div>
+</section>
+<section id="fastaq">
+<h2>FASTAQ<a class="headerlink" href="#fastaq" title="Permalink to this headline">¶</a></h2>
+<!-- Hacer un anexo del score de Phred-->
+<p>Es una variante del formato FASTA, solo que tiene asociado datos sobre la calidad de cada secuencia. Los archivos con formato FASTAQ consisten en 4 secciones:</p>
+<ol class="simple">
+<li><p>Un encabezado por secuencia que inicia con arroba (&#64;), seguido por el ID de la secuencia y más texto opcional como la descripción.</p></li>
+<li><p>La segunda sección contiene la secuencia, generalmente solo utiliza una línea.</p></li>
+<li><p>la tercera línea inicia con símbolo más (+) y puede contener texto opcional.</p></li>
+<li><p>LA cuarta contiene los valores de calidad codificados en caracteres <a href = "https://www.ascii-code.com/" >ASCII</a> y tiene la misma longitud que la secuencia. Cada caracter representa un número y la codificación puede ser diferente, en general se utiliza el score de calidad Phred. Para entender en qué consiste el score de calidad Phred puedes leer el anexo de éste manual <em>Score de calidad Phred</em>.</p></li>
+</ol>
+<p>De manera que los archivos FASTAQ se pueden ver de la siguiente forma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@ERR059938.60 HS9_6783:8:2304:19291:186369#7/2
+GTCTCCGGGGGCTGGGGGAACCAGGGGTTCCCACCAACCACCCTCACTCAGCCTTTTCCCTCCAGGCATCTCTGGGAAAGGACATGGGGCTGGTGCGGGG
++
+7?CIGJB:D:-F7LA:GI9FDHBIJ7,GHGJBKHNI7IN,EML8IFIA7HN7J6,L6686LCJE?JKA6G7AK6GK5C6@6IK+++?5+=&lt;;227*6054
+</pre></div>
+</div>
+</section>
+<section id="gff-gtf">
+<h2>GFF/GTF<a class="headerlink" href="#gff-gtf" title="Permalink to this headline">¶</a></h2>
+<p>Los formatos de <em>General Feature Format</em> (GFF) y <em>General Transfer Format</em> (GTF),
+son archivos que contienen las anotaciones de los genes después de haber llevado a cabo un ensamble, donde cada línea corresponde a un gen o un objeto. Existen varias versiones de los archivos con formato GFF y en particular, un archivo GTF es idéntico a un archivo GFF versión 2. Estos archivos contienen nueve columnas separadas por tabuladores que arrojan información sobre: el nombre de la secuencia, la fuente de procedencia de la anotación, la característica de gen, los nucleótidos de inicio del gen , los nucleótidos de  fin del gen, el grado de confianza, la hebra de DNA que se transcribe, la fase de anotación de los codones y  una columna con otros atributos del gen.</p>
+<p>Aquí un ejemplo de un archivo con formato GTF:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#gtf-version 2.2
+#!genome-build ASM139977v1
+#!genome-build-accession NCBI_Assembly:GCF_001399775.1
+#!annotation-date 12/11/2020 01:41:48
+#!annotation-source NCBI RefSeq
+NZ_CP010822.1 RefSeq  gene  7 1326  . + . gene_id &quot;TO73_RS00005&quot;; transcript_id &quot;&quot;; gbkey &quot;Gene&quot;; gene &quot;dnaA&quot;; gene_biotype &quot;protein_coding&quot;; locus_tag &quot;TO73_RS00005&quot;; old_locus_tag &quot;TO73_0001&quot;; 
+</pre></div>
+</div>
+<p>A continuación se describe cada columna:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">[seqname]</span></code></dt><dd><p>Nombre de la secuencia, usualmente es el identificador del cromosoma en donde se encuentra el gen.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[source]</span></code></dt><dd><p>Etiqueta que indica la fuente de la cual procede la anotación, puede ser el nombre del programa de predicción o la base de datos.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[feature]</span></code></dt><dd><p>Característica de la secuencia anotada puede ser: “<a href = "https://www.uniprot.org/help/cds_protein_definition#:~:text=A%20CoDing%20Sequence%20(CDS)%20is,ends%20at%20a%20STOP%20codon.">CDS</a>”, “start_codon”, “stop_codon”, “gene”.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[start]</span></code> y <code class="docutils literal notranslate"><span class="pre">[end]</span></code></dt><dd><p>Indican los nucleótidos de inicio y final del gen.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[score]</span></code></dt><dd><p>Indica el grado de confianza en la existencia y las coordenadas del objeto (gen). El valor no tiene una escala global, pero puede tener importancia relativa cuando en [source] se indica el programa utilizado para hacer la predicción, si es así se puede usar un número, de lo contrario puede reemplazarse por un punto.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[strand]</span></code></dt><dd><p>Puede representarse con signo más (+) para forward ó menos (-).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[frame]</span></code></dt><dd><p>Se representa como 0, 1 o 2. 0 indica que el objeto comienza con un codón completo en la base 5’. 1 significa que hay una base extra antes del primer codón completo (la tercera base de un codón anterior) y 2 significa que hay dos bases extra (la segunda y la tercera base de un codón anterior) antes del primer codón completo.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[attribute]</span></code></dt><dd><p>Una lista separada por punto y coma (;) de otros atributos del gen como un identificador global del gen, un identificador global del transcrito, entre otros.</p>
+</dd>
+</dl>
+<div class="note admonition">
+<p class="admonition-title">Paraq saber más…</p>
+<p>sobre los archivos con formato <code class="docutils literal notranslate"><span class="pre">GFF</span></code> puedes visitar la documentación en la siguientes páginas:</p>
+<ul class="simple">
+<li><p><a href = "http://gmod.org/wiki/GFF2" >GFF versión 2</a></p></li>
+<li><p><a href = "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md" >GFF versión 3</a></p></li>
+</ul>
+</div>
+</section>
+<section id="sam-bam">
+<h2>SAM/BAM<a class="headerlink" href="#sam-bam" title="Permalink to this headline">¶</a></h2>
+<p>Los formatos SAM/BAM son conocidos como mapas de alineamiento de secuencias (<em>Sequence Alignment Maps</em>). Estos archivos representan los resultados de alineamiento de un FASTQ con un archivo FASTA de referencia y describe las alienaciones individuales por pares que se encontraron. Diferentes algoritmos pueden crear alineamientos (archivos SAM/BAM). La diferencia entre una archivo SAM y uno BAM, es que el BAM es el formato binario del SAM, es decir, es más pequeño y necesita un interprete para poder ser leído por humanos.</p>
+<p>Visión de un archivo BAM:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>MT_orang  0 MT_human  577 60  14M2D4M3I37M1D85M1D232M1I559M1D6M1I550M1D2M1D146M2I3M1D3M1D132M1D3M1I40M3I13M1D1M1D335M3I4M1D3M2D342M1D52M1I13M3I1M2D52M1I592M1D3M1I485M1D5M1I974M3I4M3D230M1D59M1D156M1D31M1I98M1I26M14I329M3I7M3D1203M1D4M1I70M1D345M1D9M1I398M7I8M8I1M1I9M3I2M1I2M1D390M1I5M1D193M1I6M1D195M1D7M1I1826M1D10M1I1256M1D49M1D157M3D5M3I48M2I1M1I3M3D1203M1I2M2D1M1I44M2D2M1I2M1I38M2D16M2I2079M1I5M1D50M1D3M1I43M5I57M1I54M4D19M1I39M2D8M1I7M1I22M1I5M1I4M1D5M1I2M2D29M2I20M1D13M2I1M1D8M1D45M1D15M1I5M2D17M1D56M1D2M1I131M1I38M474S  * 0 0 GTTTATGTAGCTTATTCTATCCAAAGCAATGCACTGAAAATGTCTCGACGGGCCCACACGCCCCATAAACAAATAGGTTTGGTCCTAGCCTTTCTATTAGCTCTTAGTGAGGTTACACATGCAAGCTCTCAACAACCCTACCCCATCAACCCAACAAAATCCAATTTTTATCTTTAGGCTATGTGCACTTTCAACAGGCACCCCTCAACTAACACAATCTCCTTCTTATCCCACCCACCAACCCCCCCCCCCCCTTCCTCCCTCTTTCTCCATTTTCCCCACAAACACCGCTACTACCCCCACACCCCAGACCAACCCAACCCAAAAGACACCCCGCACG * NM:i:2322 ms:i:18279  AS:i:18198  nn:i:0  tp:A:P  cm:i:342  s1:i:3187 s2:i:0  de:f:0.1405 rl:i:0
+</pre></div>
+</div>
+</section>
+<section id="vcf">
+<h2>VCF<a class="headerlink" href="#vcf" title="Permalink to this headline">¶</a></h2>
+<p>El formato VCF (<em>Variant Call Format</em>) es un archivo delimitado por tabuladores y describe la variación de alineaciones con respecto a una referencia. Este archivo se genera a partir de un archivo BAM. Las extensiones de éste formato son <code class="docutils literal notranslate"><span class="pre">.vcf</span></code>, <code class="docutils literal notranslate"><span class="pre">.bcf</span></code>.</p>
+<p>Visión de un archivo VCF</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#CHROM POS ID REF ALT QUAL FILTER INFO FORMAT NA00001 NA00002 NA00003
+20 14370 rs6054257 G A 29 PASS NS=3;DP=14;AF=0.5;DB;H2 GT:GQ:DP:HQ 0|0:48:1:51,51 1|0:48:8:51,51 1/1:43:5:.,.
+20 17330 . T A 3 q10 NS=3;DP=11;AF=0.017 GT:GQ:DP:HQ 0|0:49:3:58,50 0|1:3:5:65,3 0/0:41:3
+20 1110696 rs6040355 A G,T 67 PASS NS=2;DP=10;AF=0.333,0.667;AA=T;DB GT:GQ:DP:HQ 1|2:21:6:23,27 2|1:2:0:18,2 2/2:35:4
+20 1230237 . T . 47 PASS NS=3;DP=13;AA=T GT:GQ:DP:HQ 0|0:54:7:56,60 0|0:48:4:51,51 0/0:61:2
+20 1234567 microsat1 GTC G,GTCT 50 PASS NS=3;DP=9;AA=G GT:GQ:DP 0/1:35:4 0/2:17:2 1/1:40:3
+</pre></div>
+</div>
+<p>El significado de cada columna es el siguiente:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">[CHROM]</span></code></dt><dd><p>Identificador del genoma de referencia. Todas las entradas para un CHROM específico deben formar un bloque dentro del archivo.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[POS]</span></code></dt><dd><p>La posición de referencia, las posiciones se ordenan numéricamente en orden creciente dentro de cada secuena de referencia CHROM.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[ID]</span></code></dt><dd><p>Lista de identificadores únicos separados por punto y coma.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[ALT]</span></code></dt><dd><p>Lista separada por comas de los alelos alternativos que no son de referencia invocados en al menos una de las muestras.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[QUAL]</span></code></dt><dd><p>Puntaje de calidad.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[FILTER]</span></code></dt><dd><p>PASS si la posición ha pasasado todos los filtros. De lo contrario se arroja una lista separada por punto y coma para los filtros que fallan.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[INFO]</span></code></dt><dd><p>Serie de claves cortas separadas por punto y coma con valores opcionales en el formato <clave> = <datos> [, datos].</p>
+</dd>
+</dl>
+<div class="caution admonition">
+<p class="admonition-title">Para saber más…</p>
+<p>Para saber con más detalle qué significa cada parámetro de los archivos BAM/SAM y VCF te recomiendo leer con detenimiento los documentos de la página <a href = "https://samtools.github.io/hts-specs/"><em>SAM/BAM and related specifications</em></a>.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03_analisis_datos_biologicos/02_analisis_bioinfo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="01_datos.html" title="previous page">¿De dónde obtenemos datos biológicos?</a>
+    <a class='right-next' id="next-link" href="03_workflows_analisis.html" title="next page">Flujo de trabajo general de análisis bioinformáticos</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

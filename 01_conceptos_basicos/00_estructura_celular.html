@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>La célula &#8212; Manual de genómica computacional</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Biomoléculas" href="01_biomoleculas.html" />
+    <link rel="prev" title="Presentación" href="../00_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/biology.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de genómica computacional</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Biología molecular básica
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/01_conceptos_basicos/00_estructura_celular.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_conceptos_basicos/00_estructura_celular.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#videos-y-otros-recursos">
+   Videos y otros recursos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principios-de-la-teoria-celular">
+   Principios de la teoría celular
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-celulas">
+   Tipos de células
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organelos">
+   Organelos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#niveles-de-organizacion-de-la-vida">
+   Niveles de organización de la vida
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="la-celula">
+<h1>La célula<a class="headerlink" href="#la-celula" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis Vargas</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Objetivo</p>
+<p>Comprender que la célula es la unidad de la vida y que se compone de organelos.</p>
+</div>
+<section id="videos-y-otros-recursos">
+<h2>Videos y otros recursos<a class="headerlink" href="#videos-y-otros-recursos" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Videos y otros recursos
+Aquí un video para ver en 3D Una célula eucarionte</p>
+<p><a href = "https://www.youtube.com/watch?v=URUJD5NEXC8">Biología: Estructura celular</a></p>
+<p>No se pretende dar un largo paseo sobre los descubrimientos de la célula, sólo es necesario que comprendas qué es una célula y que identifiques la funcionalidad de algunos organelos como el núcleo y el ribosoma.</p>
+</div>
+</section>
+<section id="principios-de-la-teoria-celular">
+<h2>Principios de la teoría celular<a class="headerlink" href="#principios-de-la-teoria-celular" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Todos los organismos vivos están constituidos por una o varias células.</p></li>
+<li><p>Toda célula proviebe de un otra preexistente.</p></li>
+<li><p>Cada célula contiene toda la información hereditaria necesaria para el control de su ciclo de vida y para el desarrollo y funcionamineto de un organismo.</p></li>
+</ul>
+</section>
+<section id="tipos-de-celulas">
+<h2>Tipos de células<a class="headerlink" href="#tipos-de-celulas" title="Permalink to this headline">¶</a></h2>
+<p>Sólo existen dos tipos de células: procariontes y eucariontes. Las diferencias se encuentran resumidas en la siguiente tabla:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Procarionte</p></th>
+<th class="head"><p>Eucarionte</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Presente en bacterias y arqueas</p></td>
+<td><p>Presente en animales, plantas, hongos, protistas, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DNA disperso en el citoplasma</p></td>
+<td><p>DNA contenido en el núcleo</p></td>
+</tr>
+<tr class="row-even"><td><p>No presenta organelos especializados</p></td>
+<td><p>Presenta organelos especializados</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sólo tiene un cromosoma</p></td>
+<td><p>Múltiples cromosomas</p></td>
+</tr>
+<tr class="row-even"><td><p>Ribosomas 80S</p></td>
+<td><p>Ribosomas 70S</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="tipos-celulas">
+<a class="reference internal image-reference" href="../_images/tipos_celulas.png"><img alt="../_images/tipos_celulas.png" src="../_images/tipos_celulas.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Tipos de células</span><a class="headerlink" href="#tipos-celulas" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="organelos">
+<h2>Organelos<a class="headerlink" href="#organelos" title="Permalink to this headline">¶</a></h2>
+<p>Son unidades estructurales que cumplen una función especializada dentro de la célula. Cabe señalar que los procariontes solo cuentan con ribosomas, a continuación se listarán algunos:</p>
+<dl class="simple myst">
+<dt>Núcleo</dt><dd><p>Contiene al DNA, es decir, toda la información genética que nos conforma como organismos y especies.</p>
+</dd>
+<dt>Membrana plasmática</dt><dd><p>Se encarga de mantener y seleccionar lo que entra y sale de la célula, es una barrera. Se compone de fosfolípidos y proteínas.</p>
+</dd>
+<dt>Mitocondrias</dt><dd><p>Son las generadoras de energía, permiten la respiración y la descomposición de carbohidratos para la generación de ATP (una molécula energética).</p>
+</dd>
+<dt>Ribosomas</dt><dd><p>Complejos que se encargan de la generación de proteínas. El tamaño de los ribosomas es diferente en procariontes (70S) y eucariontes (80S)</p>
+</dd>
+</dl>
+</section>
+<section id="niveles-de-organizacion-de-la-vida">
+<h2>Niveles de organización de la vida<a class="headerlink" href="#niveles-de-organizacion-de-la-vida" title="Permalink to this headline">¶</a></h2>
+<p>Las difeerentes formas de vida que hay en el planeta se origanizan de lo más simple a lo más complejo:</p>
+<figure class="align-default" id="niveles">
+<a class="reference internal image-reference" href="../_images/niveles_organizacion.jpeg"><img alt="../_images/niveles_organizacion.jpeg" src="../_images/niveles_organizacion.jpeg" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Niveles de organización de la vida</span><a class="headerlink" href="#niveles" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_conceptos_basicos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../00_intro.html" title="previous page">Presentación</a>
+    <a class='right-next' id="next-link" href="01_biomoleculas.html" title="next page">Biomoléculas</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By M.C. Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

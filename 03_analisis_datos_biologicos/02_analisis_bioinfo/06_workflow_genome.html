@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Flujo de trabajo para análisis con genomas &#8212; Manual de biología y bioinformática.</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Alineamiento y mapeo" href="05_alineamiento_mapeo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/gc.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de biología y bioinformática.</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_intro.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_estructura_celular.html">
+     La célula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/03_principios_genetica/00_intro_genetica.html">
+   Principios de genética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/01_mutaciones.html">
+     Mutaciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/02_expresion_genica.html">
+     Expresión génica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Introducción a la bioinformática
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/00_intro.html">
+   Herramientas básicas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/02_git_github.html">
+     Git y Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/03_linea_comandos.html">
+     Introducción a linea de comandos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/04_explorando_directorios.html">
+     Explorando directorios desde la terminal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
+     Archivos, permisos y usuarios
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
+     Opciones y argumentos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/07_permisos_usuarios.html">
+     Permisos y usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/01_python_intro.html">
+   Principios de programación con Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/02_datos_variables.html">
+     Datos, variables y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/04_funciones.html">
+     Algoritmos y funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_bioinfo/02_principios_programacion/05_sintaxis_basica.html">
+     Resumen de la sintaxis básica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Análisis de datos biológicos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_metodos_biol_mol/00_generalidades.html">
+   Métodos de biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/01_extraccion_dna.html">
+     Extracción de DNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/02_amplificacion.html">
+     Amplificación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/03_electroforesis.html">
+     Electroforesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_metodos_biol_mol/04_secuenciacion.html">
+     Secuenciación del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_intro.html">
+   Análisis bioinformáticos
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_datos.html">
+     ¿De dónde obtenemos datos biológicos?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_formatos.html">
+     Formatos de archivos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_workflows_analisis.html">
+     Flujo de trabajo general de análisis bioinformáticos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_calidad.html">
+     Calidad de las secuencias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_alineamiento_mapeo.html">
+     Alineamiento y mapeo
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Flujo de trabajo para análisis con genomas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisis-de-calidad">
+   Análisis de calidad
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fastqc">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       FastQC
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limpieza">
+   Limpieza
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensamble">
+   Ensamble
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensamble-sin-genoma-de-referencia-de-novo">
+     Ensamble sin genoma de referencia:
+     <em>
+      de novo
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#software-para-ensamble-de-genomas-de-novo">
+       Software para ensamble de genomas
+       <em>
+        de novo
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensamble-con-genoma-de-referencia">
+     Ensamble con genoma de referencia
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anotacion-de-genes">
+   Anotación de genes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="flujo-de-trabajo-para-analisis-con-genomas">
+<h1>Flujo de trabajo para análisis con genomas<a class="headerlink" href="#flujo-de-trabajo-para-analisis-con-genomas" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autoras: M. Nayeli Luis-Vargas y Marisol Navarro</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Objetivo</p>
+<ul class="simple">
+<li><p>Conocer el flujo de trabajo general que se lleva a cabo en un análisis genomico, así como las principales herramientas bionformáticas utilizadas en cada paso.</p></li>
+<li><p>Comprender los archivos input y output conseguidos en cada paso del proceso.</p></li>
+</ul>
+</div>
+<p>Cuando hablamos de un análisis genómico, nos referimos al ensamble del genoma de un organismo. Después de secuenciar nuestras muestras, recibimos un archivo de texto plano con los fragmentos de DNA (que llamamos lecturas) correspondientes al organismo en cuestión. Estos fragmentos deben ser ensamblados, es decir, unidos como si se tratará de armar un rompecabezas, con el fin de conocer la composición genética del organismo que nos interesa. A partir de un genoma ensamblado podemos saber que tipo de genes tiene, para qué protéina codifican o podemos comparar su composición genética con la de otro organismo (organimos de referencia) y así identificar variaciones.</p>
+<p>Los fragmentos de DNA obtenidos a partir del secuenciador son conocidos como lecturas y cada plataforma de secuenciación produce distitnos tamaños de estos.</p>
+<p>El proceso para ensamblar un genoma se muestra en la siguiente figura (da click en ésta para que puedas visualizarla mejor):</p>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/workflow-genomic.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/workflow-genomic.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/workflow-genomic.png" style="height: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Flujo de trabajo en un análisis genómico.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="analisis-de-calidad">
+<h2>Análisis de calidad<a class="headerlink" href="#analisis-de-calidad" title="Permalink to this headline">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Archivos</p>
+<p><strong>Archivo input</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> obtenido del secuenciador.
+<br>
+<strong>Archivo output</strong>: No hay archivo como tal, sino un reporte en <code class="docutils literal notranslate"><span class="pre">HTML</span></code> que indica la calidad de lase secuencas.</p>
+</div>
+<p>El proceso de secuenciación puede tener algunos errores, algunos de éstos pueden ser:</p>
+<ul class="simple">
+<li><p>La variación en la preparación de la muestra</p></li>
+<li><p>Algun tipo de contaminación</p></li>
+<li><p>Duplicados por PCR</p></li>
+<li><p>Recombinación</p></li>
+<li><p>Amplificación selectiva</p></li>
+<li><p>Error por sustitución de bases</p></li>
+<li><p>Inserciones y deleciones</p></li>
+</ul>
+<p>De manera que es importante saber si nuestras secuencias tienen una calidad aceptable para poder continuar con su análisis. El software màs utilizado para llevar a cabo éste proceso es <a href = "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"></a> <code class="docutils literal notranslate"><span class="pre">FASTQC</span></code>.</p>
+<section id="fastqc">
+<h3><code class="docutils literal notranslate"><span class="pre">FastQC</span></code><a class="headerlink" href="#fastqc" title="Permalink to this headline">¶</a></h3>
+<p>Tiene como objetivo proporcionar una manera simple de hacer algunas comprobaciones de control de calidad de datos de secuencias procedentes de metodologías de secuenciación de alto rendimiento. En el software se ingresa un archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> y a partir de éste arroja una reporte en <code class="docutils literal notranslate"><span class="pre">HTML</span></code> el cual indica si los datos tienen algún problema de calidad que deba ser tomado en cuenta antes de realizar cualquier análisis posterior.</p>
+<p>Las principales funciones de FastQC son:</p>
+<ul class="simple">
+<li><p>Proporcionar una visión general y rápida que identifique en qué áreas puede haber problemas.</p></li>
+<li><p>Gráficos y tablas para evaluar rápidamente los datos.</p></li>
+<li><p>Operación fuera de línea para permitir la generación automática de informes sin ejecutar la aplicación de forma interactiva.</p></li>
+</ul>
+<div class="admonition-intepretacion-del-reporte-de-fastqc admonition">
+<p class="admonition-title">Intepretación del reporte de FASTQC</p>
+<p>Para saber cómo se interpretan los resultados del reporte arrojado por FASTQC puedes ver el vídeo <a href = "https://www.youtube.com/watch?v=bz93ReOv87Y">Using FastQC to check the quality of high throughput sequence</a></p>
+</div>
+</section>
+</section>
+<section id="limpieza">
+<h2>Limpieza<a class="headerlink" href="#limpieza" title="Permalink to this headline">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Archivos</p>
+<p><strong>Archivo input</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> obtenido del secuenciador.
+<br>
+<strong>Archivo output</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> “limpio”.</p>
+</div>
+<p>Durante éste paso se eliminan los adaptadores que se colocaron durante la secuenciación, así mismo pueden eliminarse secuencias sobrerrepresentadas o hacer algún corte en donde la secuencia haya reflejado una mala calidad. Existen diversas herrameintas para llevar a cabo esta limpieza desde un archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code>. Algunas de éstas herramientas son:</p>
+<ul class="simple">
+<li><p><a href = "http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a></p></li>
+<li><p><a href = "https://cutadapt.readthedocs.org/en/stable/">CutAdapt</a></p></li>
+<li><p><a href = "https://github.com/linneas/condetri">Condetri</a></p></li>
+<li><p><a href = "http://erne.sourceforge.net">ERNE-filter</a></p></li>
+<li><p><a href = "http://hannonlab.cshl.edu/fastx_toolkit/download.html">FASTX-tools</a></p></li>
+<li><p><a href = "http://prinseq.sourceforge.net">PRINTSEQ</a></p></li>
+<li><p><a href = "https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trimgalore</a></p></li>
+</ul>
+</section>
+<section id="ensamble">
+<h2>Ensamble<a class="headerlink" href="#ensamble" title="Permalink to this headline">¶</a></h2>
+<p>Después de los procesos mencionados (calidad y limpieza de las secuencas) el ensamble del genoma puede llevarse a cabo de dos maneras: a partir de un genoma de referencia o sin un genoma de referencia, es decir <em>de novo</em>. ¿En qué se diferencian? Imagina que estás armando un rompecabezas, si tienes la imagen del rompecabezas (la que viene en la caja), todo será más sencillo, puedes puedes ir comparando las piezas con la imagen y darte una idea. Ahora, imagina que no tienes la imagen…Se vuelve más complicado porque no tienes idea de cómo luce, ni que figuras tiene, ni los patrones ni nada de nada. Si estuvieras en éste caso, pues tendrás que buscar otras estrategias.</p>
+<section id="ensamble-sin-genoma-de-referencia-de-novo">
+<h3>Ensamble sin genoma de referencia: <em>de novo</em><a class="headerlink" href="#ensamble-sin-genoma-de-referencia-de-novo" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Archivos</p>
+<p><strong>Archivo input</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> “limpio”.</p>
+<p><strong>Archivo output</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fasta</span></code>.</p>
+</div>
+<p>En general, el ensamble <em>de novo</em> se basa en la simple suposición de que los fragmenos de DNA (las lecturas) con bastante similitud se originan de la misma posición dentro del genoma. De ésta manera, la similitud entre secuencias de DNA se usa para conectar fragmentos individuales en secuencias contiguas más largas, denominadas <em>contigs</em> (secuencias consenso obtenidas a partir del ensamblaje de los fragmentos de DNA).</p>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ensamble_de_novo.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ensamble_de_novo.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ensamble_de_novo.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Proceso general en un ensamble <em>de novo</em>.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>En el ensamble <em>de novo</em> las lecturas de corta longitud (como las que se obtienen a partir de tecnologías de secuenciación masiva) constituyen un problema cuando hay repeticiones en el genoma, es decir, segmentos de DNA que aparecen más de una vez a lo largo del genoma. Cuando una lectura proviene de una región repetitiva, y es más corto que la región completa, no se sabe con certeza de cuál copia de la repetición se obtuvo. Es por ello que durante el ensamblaje, se pueden crear falsas uniones en las regiones de repetición. Para evitar este problema se han empleado algunas estrategias computacionles, éstas son:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">OLC</span> <span class="pre">(*Overlap-Layout-Consesus*)</span></code></dt><dd><p>Éste método identifica todos los pares de lecturas que se solapan lo suficientemente bien y organiza ésta información en un grafo (una red), en la cual hay  uno nodo por cada par de lecturas de ellos y un enlace. Ésta estructura permite que se tome en cuenta la relación global entre las lecturas. De ésta manera, se definen caminos que corresponde con los segmentos del genoma que están siendo ensamblados. Se reconstruye el genoma mediante la búsqueda de un único camino que atraviese todos los nodos de una sola vez  <span id="id1">[<a class="reference internal" href="#id9">Aguilar-Bultet and Falquet, 2015</a>]</span>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Gráficos</span> <span class="pre">De</span> <span class="pre">Brujin</span></code></dt><dd><p>Descompone las lecturas en k-meros, <a href = "https://es.wikipedia.org/wiki/K-mero#Ensamblaje_de_secuencias">los k-meros</a> son subcadenas de longitud <em>k</em> contenidas dentro de una secuencia biológica. De manera que se modela la relación entre subcadenas exactas de logitud <em>k</em> dentro de las lecturas. En el grafo de De Brujin los nodos son k-meros y los enlaces indican qué k-meros adyacentes se solapan por <em>k-1</em> letras, por lo que la longitud del k-mero se correlaciona con la longitud del solapamiento que el ensamblador es capaz de detectar. La mayoría de los ensambladores usan la información global de las lecturas para refinar la estructura del gráfico, resolver repeticiones y eliminar patrones no consistentes. Además, incorporan métodos de corrección de errores para mejorar la calidad del ensamblaje <span id="id2">[<a class="reference internal" href="#id9">Aguilar-Bultet and Falquet, 2015</a>]</span>.</p>
+</dd>
+</dl>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="warning admonition">
+<p class="admonition-title">Para entender mejor</p>
+<p>En qué consiste un grafo y cómo funciona el método OLC puedes ver el vídeo <a href = "https://www.youtube.com/watch?v=yPJ7yHRk2OI&ab_channel=BenLangmead">ASD1: Overlap graphs</a>.
+<br>
+Cómo funciona el algoritmo de De Brujin puedes ver el vídeo: <a href = "https://www.youtube.com/watch?v=TNYZZKrjCSk&ab_channel=BenLangmead">ADS1: Gráficos de Brujin y paseos eulerianos</a>.</p>
+</div>
+</aside>
+<section id="software-para-ensamble-de-genomas-de-novo">
+<h4>Software para ensamble de genomas <em>de novo</em><a class="headerlink" href="#software-para-ensamble-de-genomas-de-novo" title="Permalink to this headline">¶</a></h4>
+<p>Los softwares más utilizados para el ensamble son <a href = "https://www.ebi.ac.uk/~zerbino/velvet/"><code class="docutils literal notranslate"><span class="pre">Velvet</span></code></a> y <a href = "https://kbase.us/applist/apps/kb_SPAdes/run_SPAdes/release?gclid=CjwKCAiAvriMBhAuEiwA8Cs5ldzaiatuD4vl4JH2BCsz02ajLpdv7YHc2wdqiuMQn--w-Xq4uCa58xoCtlwQAvD_BwE"> <code class="docutils literal notranslate"><span class="pre">SPAdes</span></code></a>. Sin embargo puedes consultar <a href = "https://bioinformaticshome.com/tools/wga/wga.html">ésta página</a> para consultar todas las herramientas que actualmente existen para ensamblar un genoma.</p>
+</section>
+</section>
+<section id="ensamble-con-genoma-de-referencia">
+<h3>Ensamble con genoma de referencia<a class="headerlink" href="#ensamble-con-genoma-de-referencia" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Archivos</p>
+<p><strong>Archivos input</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fastq</span></code> “limpio” y archivo <code class="docutils literal notranslate"><span class="pre">.fasta</span></code> que es el genoma de referencia.</p>
+<p><strong>Archivo output</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.sam</span></code>/<code class="docutils literal notranslate"><span class="pre">.bam</span></code>/<code class="docutils literal notranslate"><span class="pre">.cram</span></code>.</p>
+</div>
+<p>Cuando se tiene un genoma de referencia, se hace un mapeo o alineamiento de los fragmentos de DNA de nuestra muestras con un genoma de referencia, es decir, con un genoma previamente ensamblado y cuyas secuencias podemos descargar del NCBI o que podemos obtener de estudios anteriores. A partir de éste mapeo se hace el ensamble. Cuando se hace un ensamble de éste tipo, uno de los objetivos puede ser comparar ambos genomas, ¿En qué genes se diferencian? y hacer un estudio conocido como llamado de variantes genéticas <em>variant calling</em>. La llamada de variantes implica identificar polimorfismo de un solo nucleótido (SNPs) y pequeñas inserciones y deleciones de los datos.</p>
+</section>
+</section>
+<section id="anotacion-de-genes">
+<h2>Anotación de genes<a class="headerlink" href="#anotacion-de-genes" title="Permalink to this headline">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Archivos</p>
+<p><strong>Archivo input</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.fasta</span></code>.</p>
+<p><strong>Archivo output</strong>: Archivo <code class="docutils literal notranslate"><span class="pre">.gff</span></code>/<code class="docutils literal notranslate"><span class="pre">.gtf</span></code>.</p>
+</div>
+<p>La anotación de genes es el proceso de identificar cualquier elemento funcional a lo largo de la secuencia. La anotación da significado al genoma al proporcionar la ubicación y la función de genes y regiones reguladoras. Los programas más utilizados actualmente para anotar genes en procariontes son <a href = "https://github.com/tseemann/prokka"><code class="docutils literal notranslate"><span class="pre">Prokka</span></code></a> y <a href = "https://rast.nmpdr.org/"><code class="docutils literal notranslate"><span class="pre">RAST</span></code></a>.</p>
+<div class="admonition-recursos-recomendados admonition">
+<p class="admonition-title">Recursos recomendados</p>
+<ul class="simple">
+<li><p>Artículos: <a href = "https://drive.google.com/file/d/1lxPBCvvzzv5f4lsO5uT6x3PGtydzhpQJ/view?usp=sharing">Sequence assembly demystified</a> y <a href = "https://drive.google.com/file/d/1gMNXuJLjRKatzLcOqTe2zm_SL4QzbZ7R/view?usp=sharing">Twelve quick steps for genome assembly and annotation in the classroom</a></p></li>
+<li><p>Libro: <a href = "https://drive.google.com/file/d/15DAnHmjR8I9V4vRerBmGxg6MyDYvxui2/view?usp=sharing">Next Generation Sequencing and Sequence Assembly</a></p></li>
+</ul>
+</div>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id9"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Lisandra Aguilar-Bultet and Laurent Falquet. Secuenciación y ensamblaje de novo de genomas bacterianos: una alternativa para el estudio de nuevos patógenos. <em>Revista de Salud Animal</em>, 37(2):125–132, 2015.</p>
+</dd>
+</dl>
+</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03_analisis_datos_biologicos/02_analisis_bioinfo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="05_alineamiento_mapeo.html" title="previous page">Alineamiento y mapeo</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

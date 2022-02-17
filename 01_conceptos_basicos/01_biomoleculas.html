@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Biomoléculas &#8212; Manual de genómica computacional</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Estructura del DNA" href="02_DNA.html" />
+    <link rel="prev" title="La célula" href="00_estructura_celular.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/biology.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de genómica computacional</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_estructura_celular.html">
+   Biología molecular básica
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/01_conceptos_basicos/01_biomoleculas.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_conceptos_basicos/01_biomoleculas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#videos-y-otros-recursos">
+   Videos y otros recursos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concepto-de-biomolecula">
+   Concepto de biomolécula
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acidos-nucleicos">
+   Ácidos nucleícos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diferencias-entre-el-dna-y-el-rna">
+     Diferencias entre el DNA y el RNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proteinas">
+   Proteínas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-se-relacionan-el-dna-y-las-proteinas">
+   ¿Cómo se relacionan el DNA y las proteínas?
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="biomoleculas">
+<h1>Biomoléculas<a class="headerlink" href="#biomoleculas" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<!--Mejorar los diagramas que se usan -->
+<div class="tip admonition">
+<p class="admonition-title">Objetivo</p>
+<p>Comprender a los ácidos nucléicos y las proteínas como biomoléculas importantes para la bioinformática.</p>
+</div>
+<section id="videos-y-otros-recursos">
+<h2>Videos y otros recursos<a class="headerlink" href="#videos-y-otros-recursos" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Videos y otros recursos
+Aquí un video que explica con detalle las biomoléculas.</p>
+<p><a href = "https://drive.google.com/file/d/1a-xq2kI1IHckCUBAV0o2K3klxZCaaW7R/view?usp=sharing"> Biomoléculas </a></p>
+</div>
+</section>
+<section id="concepto-de-biomolecula">
+<h2>Concepto de biomolécula<a class="headerlink" href="#concepto-de-biomolecula" title="Permalink to this headline">¶</a></h2>
+<p>Todas los seres vivos estamos compuestos de <em><strong>biomoléculas</strong></em>, los cuales juegan funciones importantes en las células y por tanto, permiten nuestra supervivencia. La biomoléculas son <em><strong>polímeros</strong></em> constituidos por unidades elementales llamadas <em><strong>monómeros</strong></em>.  Imaginemos que un collar de perlas es una polímero, por tanto, una perla sería su monómero, pues el conjunto de éstas formaría la preciada joya.</p>
+<br>
+<p>Existen diferentes tipos de biomoléculas: las <em><strong>proteínas</strong></em>, los carbohidratos, los lípidos y los <em><strong>ácidos nucleícos (ácido desoxirribonucleíco (ADN o DNA) y ácido ribonucleíco (ARN o RNA))</strong></em>. Éstas biomoléculas están constituidas por un monómero específico, con propiedades químicas únicas. La siguiente tabla indica la biomolécula y su monómero.</p>
+<br>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Biomolécula</p></th>
+<th class="head"><p>Monómero</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Carbohidratos</p></td>
+<td><p>Monoscárido</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Proteínas</p></td>
+<td><p>Aminoácidos</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Lípidos</p></td>
+<td><p>Ácidos grasos y glicerol</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Ácidos nucleicos (DNA y RNA)</p></td>
+<td><p>Nucleótidos</p></td>
+</tr>
+</tbody>
+</table>
+<p>Para éste curso, es esencial que se conozca un poco más a fondo los ácidos nucleícos y las proteínas.</p>
+</section>
+<section id="acidos-nucleicos">
+<h2>Ácidos nucleícos<a class="headerlink" href="#acidos-nucleicos" title="Permalink to this headline">¶</a></h2>
+<p>Los monómeros de cada biomolécula tienen una estructura química especial, la cual permite la formación de enlaces específicos y la modificación de la biomolécula en si. Tomemos de ejemplo a los ácidos nucleícos. Como ya vimos, el monómero de los ácidos nucleícos es el nucleótido. Un nucleótido está formado por:</p>
+<ol class="simple">
+<li><p>Una pentosa (un azúcar de cinco carbonos, es la parte rosa de la <a class="reference internal" href="#nucleotido"><span class="std std-ref">Estructura de un nucleótido.</span></a>) que puede ser la desoxirribosa o la ribosa (de aquí viene el nombre enmarañado).</p></li>
+<li><p>Un grupo fosfato (parte de color naraja de la <a class="reference internal" href="#nucleotido"><span class="std std-ref">Estructura de un nucleótido.</span></a>)</p></li>
+<li><p>Una base nitrogenada (adenina, guanina, citosina, timina y uracilo) (parte verde de la <a class="reference internal" href="#nucleotido"><span class="std std-ref">Estructura de un nucleótido.</span></a>)</p></li>
+</ol>
+<figure class="align-default" id="nucleotido">
+<a class="reference internal image-reference" href="../_images/nucleotido.png"><img alt="../_images/nucleotido.png" src="../_images/nucleotido.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Estructura de un nucleótido.</span><a class="headerlink" href="#nucleotido" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+<p>En un ácido nucleíco los nucleótidos se uniran a través de un enlace fosfodiéster, es decir, el grupo fosfato unirá los azúcares de dos nucleótidos y formará una cadena de nucleótidos.</p>
+<br>
+<figure class="align-default" id="enlaces-fosfodiester">
+<a class="reference internal image-reference" href="../_images/enlace_fosfo.png"><img alt="../_images/enlace_fosfo.png" src="../_images/enlace_fosfo.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Enlaces fosfodiéster que permiten la formación de cadenas de nucleótidos.</span><a class="headerlink" href="#enlaces-fosfodiester" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+<section id="diferencias-entre-el-dna-y-el-rna">
+<h3>Diferencias entre el DNA y el RNA<a class="headerlink" href="#diferencias-entre-el-dna-y-el-rna" title="Permalink to this headline">¶</a></h3>
+<p>Por su parte, el <em><strong>DNA</strong></em> es un biomolécula compuesta de dos cadenas de nucleótidos, los cuales forman una doble hélice. La interacción de las bases nitrogendas son las responsables de esa forma, dicha interacción es la siguiente: Timina - Adenina y Guanina - Citosina. El DNA contiene las instrucciones genéticas usadas en el desarrollo y funcionamiento de todos los organismos vivos y algunos virus, sin mencionar que, es responsable de la transmisión hereditaria.</p>
+<p>El <em><strong>RNA</strong></em> es un sóla cadena de nucleótidos y existen tres tipos principales: el RNA mensajero (mRNA), el RNA de transferencia (tRNA) y el RNA ribosomal (rRNA), cada uno de estos tiene un papel en la regulación de la expresión génica. Dado que solo es una cadena de nucleótidos, no hay una interacción como en el DNA y en el RNA la timina es reemplazada por otra base llamada uracilo.</p>
+<figure class="align-default" id="rna-y-dna">
+<a class="reference internal image-reference" href="01_conceptos_basicos/images/dnaRna.png"><img alt="01_conceptos_basicos/images/dnaRna.png" src="01_conceptos_basicos/images/dnaRna.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">RNA (cadena simple) y DNA (cadena doble)</span><a class="headerlink" href="#rna-y-dna" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="proteinas">
+<h2>Proteínas<a class="headerlink" href="#proteinas" title="Permalink to this headline">¶</a></h2>
+<p>Las proteínas llevan a cabo muchas funciones en los seres vivos: regulan los procesos metabólicos (como la respiración), permiten la formación de tejidos (como las uñas), llevan a cabo el transporte de metabolitos (como el oxígeno), entre muchas más. Las proteínas están formadas  por secuencias de aminoácidos enlazados entre sí. Y nuevamente, la interacción química entre los aminoácidos permite la configuración de las diferentes proteínas que existen.</p>
+<br>
+<figure class="align-default" id="proteina">
+<a class="reference internal image-reference" href="../_images/proteina.png"><img alt="../_images/proteina.png" src="../_images/proteina.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">De cadena de aminoácidos a proteínas.</span><a class="headerlink" href="#proteina" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="como-se-relacionan-el-dna-y-las-proteinas">
+<h2>¿Cómo se relacionan el DNA y las proteínas?<a class="headerlink" href="#como-se-relacionan-el-dna-y-las-proteinas" title="Permalink to this headline">¶</a></h2>
+<p>La instrucción para sintetizar cada aminoácido se encuentra en el DNA, en un <em><strong>codón</strong></em> específico, es decir,  en el conjunto de tres nucleótidos en la cadena de DNA (la síntesis de proteínas la veremos en el tema del Dogma Central, no desesperes). De manera que, podemos ver al  DNA como un instructivo, el DNA contiene toda la información que nos configura como seres vivos, como especie e incluso como individuos.</p>
+<p>Antes se pensaba que las proteínas eran las moléculas que albergaban la información hereditaria. Ahora sabemos que una modificación en el DNA (una modificación en el instructivo, en el input) conlleva una modificación en la proteína (output) y esto es un punto importante para interesarnos en conocer la secuencia de nucleótidos que hay en el DNA de un organismo.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_conceptos_basicos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="00_estructura_celular.html" title="previous page">La célula</a>
+    <a class='right-next' id="next-link" href="02_DNA.html" title="next page">Estructura del DNA</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By M.C. Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

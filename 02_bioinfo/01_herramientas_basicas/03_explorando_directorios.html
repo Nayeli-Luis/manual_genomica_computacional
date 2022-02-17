@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Explorando directorios desde la terminal &#8212; Manual de genómica computacional</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Archivos, permisos y usuarios" href="04_trabajando_archivos.html" />
+    <link rel="prev" title="Introducción a linea de comandos" href="02_linea_comandos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/gc.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de genómica computacional</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_intro.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_estructura_celular.html">
+     La célula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/03_principios_genetica/00_intro_genetica.html">
+   Principios de genética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/02_expresion_genica.html">
+     Expresión génica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Introducción a la bioinformática
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_intro.html">
+   Herramientas básicas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_guia_md.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_linea_comandos.html">
+     Introducción a linea de comandos
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Explorando directorios desde la terminal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_trabajando_archivos.html">
+     Archivos, permisos y usuarios
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_git_github.html">
+     Git y Github
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/02_bioinfo/01_herramientas_basicas/03_explorando_directorios.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_bioinfo/01_herramientas_basicas/03_explorando_directorios.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-basicos">
+   Comandos básicos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rutas-absolutas-y-rutas-relativas">
+   Rutas absolutas y rutas relativas
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="explorando-directorios-desde-la-terminal">
+<h1>Explorando directorios desde la terminal<a class="headerlink" href="#explorando-directorios-desde-la-terminal" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Objetivo</p>
+<ul class="simple">
+<li><p>Identificar la arquitectura jerárquica que tienen los directorios en una computadora.</p></li>
+<li><p>Entender los comandos <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">mkdir</span></code>.</p></li>
+</ul>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="tip admonition">
+<p class="admonition-title">Shortcuts</p>
+<p>Algunos shortcuts para hacer más fluído tu uso de la terminal:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tab</span></code>: Completa el nombre de un fichero o directorio existente.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">a</span></code>: Ir al principio de la línea.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">e</span></code>: Ir al final de la línea.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">l</span></code> o comando <code class="docutils literal notranslate"><span class="pre">clean</span></code>: Limpiar pantalla.</p></li>
+<li><p>Uso de flechas del teclado permite ver el historial de comandos recientes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">r</span></code>: Espera que des un patrón de búsqueda. Te regresa las líneas que has ejecutado que contengan ese patrón.</p></li>
+</ul>
+</div>
+</aside>
+<section id="comandos-basicos">
+<h2>Comandos básicos<a class="headerlink" href="#comandos-basicos" title="Permalink to this headline">¶</a></h2>
+<p>A continuación se presentan algunos comandos básicos para el manejo y exploración de directorios:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">pwd</span></code></dt><dd><p>“print working directory”: Indica la ruta (path) en la que se encuentra tu archivo.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cd</span></code></dt><dd><p>“change directory”: se utiliza para cambiar de directorio. Ejemplo de sintaxis: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">nombre_directorio</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ls</span></code></dt><dd><p>“list”: Enlista los archivos que hay en un directorio.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span></code></dt><dd><p>“remove”: Elimina un fichero o un directorio. Ejemplo de sintaxis: rm <code class="docutils literal notranslate"><span class="pre">nombre_fichero/directorio</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mv</span></code></dt><dd><p>“move”: Mueve un fichero o directorio a otra ruta. Ejemplo de sintaxis: <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">archivo.txt</span> <span class="pre">./nueva_carpeta</span></code>. También se puede cambiar el nombre de un fichero o directorio, ejemplo: <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">nombre_feo.txt</span> <span class="pre">nombre_cool.txt</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span></code></dt><dd><p>“make directory”: Crea un directorio nuevo.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">man</span></code></dt><dd><p>“manual”: Muestra el manual de uso de un comando en particular.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cp</span></code></dt><dd><p>“copy”: Copia un archivo a un directorio. Ejemplo: <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">archivo.txt</span> <span class="pre">/mi/ruta/directorio</span></code>.</p>
+</dd>
+</dl>
+<p>Una vez que ya conoces los comandos básicos para usar en terminal, vamos a practicar un poco. Para este ejercicio utilizaremos una terminal virtual llamada <a href = "https://sandbox.cs50.io/">CS50 Sandbox </a>, al dar click te aparecerá la siguiente ventana:</p>
+<figure class="align-default" id="ventana-sandbox">
+<a class="reference internal image-reference" href="02_bioinfo/01_herramientas_basicas/images/03_explorando_direc/1.png"><img alt="02_bioinfo/01_herramientas_basicas/images/03_explorando_direc/1.png" src="02_bioinfo/01_herramientas_basicas/images/03_explorando_direc/1.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Ventana de la terminal virtual Sandbox</span><a class="headerlink" href="#ventana-sandbox" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+Da click en crear para poder acceder a la terminal virtual.
+<br>
+<div class="warning admonition">
+<p class="admonition-title">Nota</p>
+<p>Para poder acceder debes tener una cuenta de <a href = "https://github.com/">GitHub</a>, sino la has creado, ahora es el momento perfecto.</p>
+</div>
+<br>
+En seguida te aparecerá la siguiente interfaz:
+<br>
+<figure class="align-default" id="interfaz">
+<a class="reference internal image-reference" href="../../_images/2.png"><img alt="../../_images/2.png" src="../../_images/2.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Interfaz de la terminal virtual Sandbox.</span><a class="headerlink" href="#interfaz" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+<p>Vamos a crear un directorio con el comando de <em><strong>make directory</strong></em> (<code class="docutils literal notranslate"><span class="pre">mkdir</span></code>), para ello escribirás lo siguiente en la terminal y darás ‘Enter’.
+<br></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir mi_directorio
+</pre></div>
+</div>
+<p>En seguida te aparecerá el directorio que creeaste en el árbol de directorios:</p>
+<figure class="align-default" id="directorios">
+<a class="reference internal image-reference" href="../../_images/3.png"><img alt="../../_images/3.png" src="../../_images/3.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Árbol de directorios de la terminal virtual de Sandbox.</span><a class="headerlink" href="#directorios" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Ahora accedamos a ese directorio con el comando <em><strong>change directory</strong></em> (<code class="docutils literal notranslate"><span class="pre">cd</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> mi_directorio
+</pre></div>
+</div>
+<p>y vamos a crear dos directorios aquí:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir dir1 dir2
+</pre></div>
+</div>
+<p>Si das click en tu carpeta principal ‘mi_directorio’, en el árbol de directorios te aparecerán tus dos nuevas carpetas. Pero si queremos verlas desde la terminal, podemos dar la instrucción de que las liste (<code class="docutils literal notranslate"><span class="pre">ls</span></code>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<p>¿Qué notas? Si pones atención en la terminal, los diectorios aparecen marcados de azul y con una diagonal (/) al final del nombre.</p>
+<figure class="align-default" id="nombres-directorios">
+<a class="reference internal image-reference" href="../../_images/4.png"><img alt="../../_images/4.png" src="../../_images/4.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Nombre de los directorios aparecen resaltados.</span><a class="headerlink" href="#nombres-directorios" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Bien, ahora entremos al ‘dir1’ y creemos un par de directorios más.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> dir1
+mkdir dir3 dir4
+</pre></div>
+</div>
+<p>¿Notaste que pude crear dos directorios de golpe?</p>
+<p>Si no tuvieramos la pestaña del árbol de directorios pero quisieramos saber en dónde se encuentra nuestra carpeta ‘dir3’, utilizariamos <code class="docutils literal notranslate"><span class="pre">pwd</span></code>.
+<br></p>
+<p>Accede a tu carpeta ‘dir3’ y teclea el comando para imprmir la ruta o dirección.
+<br></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> dir3
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+<p>Te aparerá algo así:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/root/sandbox/mi_directorio/dir1/dir3
+</pre></div>
+</div>
+<p>Ésta es tu directorio de trabajo (<em><strong>working directory</strong></em>), te encuentras en el directorio llamado ‘dir3’, y si creas más directorios o archivos, se colocarán aquí.</p>
+<p>Ahora ¿Qué pasa si quieres volver al directorio anterior?, la isntrucción que darás es la siguiente:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>Y si imprimes la ruta verás que ahora te encuentras en ‘dir1’.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/root/sandbox/mi_directorio/dir1
+</pre></div>
+</div>
+<p>Por último, si quisieramos volver al directorio raíz, es decir, a ‘root/sandbox’, tendríamos que escribir:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>
+</pre></div>
+</div>
+<p>Imprime de nuevo la ruta para que te asegures:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/root/sandbox
+</pre></div>
+</div>
+</section>
+<section id="rutas-absolutas-y-rutas-relativas">
+<h2>Rutas absolutas y rutas relativas<a class="headerlink" href="#rutas-absolutas-y-rutas-relativas" title="Permalink to this headline">¶</a></h2>
+<p>Una <strong>ruta absoluta</strong> de un directorio nos indica todo el camino que hay que recorrer para llegar a él. Mientras que, una <strong>ruta relativa</strong> apunta a una referencia y luego indica el camino a partir de esa referencia. Imagina que invitas a un&#64; amig&#64; a tu casa, no es lo mismo darle instrucciones si el punto de partida es su casa; a darle instrucciones si el punto de partrida es desde la tienda más cercana a tu casa. Acá sucede lo mismo.</p>
+<br>
+<p>Considerando el ejercicio que hemos estado realizando, nuestro árbol de directorios se vería así:</p>
+<br>
+<figure class="align-default" id="arbol-arbol-ejercicios">
+<a class="reference internal image-reference" href="../../_images/arbol_ejercicio.png"><img alt="../../_images/arbol_ejercicio.png" src="../../_images/arbol_ejercicio.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Representación gráfica del árbol de directorios para éste ejercicio.</span><a class="headerlink" href="#arbol-arbol-ejercicios" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Si quisieramos acceder a ‘dir3’ desde la terminal y escribiendo su ruta absoluta, ésta sería:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /root/sandbox/mi_directorio/dir1/dir3
+</pre></div>
+</div>
+<p>Sin embargo, si estuvieramos en ‘dir2’ y quisieramos acceder a ‘dir3’, estamos apuntando ahora a una referencia. Tendríamos primero que volver a ‘mi_directorio’ para luego ingresar a ‘dir1’ y finalmente a ‘dir3’, por tanto, la ruta relativa se vería así:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../dir1/dir3
+</pre></div>
+</div>
+<p>Nota que no escribí ‘mi_directorio’, en linea de comandos <code class="docutils literal notranslate"><span class="pre">../</span></code> indica “volver a la carpeta superior”.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_bioinfo/01_herramientas_basicas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="02_linea_comandos.html" title="previous page">Introducción a linea de comandos</a>
+    <a class='right-next' id="next-link" href="04_trabajando_archivos.html" title="next page">Archivos, permisos y usuarios</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By M.C. Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
