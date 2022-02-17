@@ -1,0 +1,69 @@
+format: jb-book
+root: 00_intro
+parts:
+  - caption: Conceptos de biología molecular
+    chapters:
+
+    - file: 01_biologia/01_conceptos_basicos/00_intro
+      title: Biología molecular básica
+      sections:
+      - file: 01_biologia/01_conceptos_basicos/00_estructura_celular
+      - file: 01_biologia/01_conceptos_basicos/01_biomoleculas
+      - file: 01_biologia/01_conceptos_basicos/02_DNA  
+    
+    - file: 01_biologia/02_dogma_central/00_dogma_central
+      title: El dogma central de la biología molecular
+      sections:
+      - file: 01_biologia/02_dogma_central/01_replicacion
+      - file: 01_biologia/02_dogma_central/02_transcripcion
+      - file: 01_biologia/02_dogma_central/03_traduccion
+
+    - file: 01_biologia/03_principios_genetica/00_intro_genetica
+      title: Principios de genética
+      sections:
+      - file: 01_biologia/03_principios_genetica/01_mutaciones
+      - file: 01_biologia/03_principios_genetica/02_expresion_genica
+  
+  - caption: Introducción a la bioinformática
+    chapters:
+
+    - file: 02_bioinfo/01_herramientas_basicas/00_intro
+      title: Herramientas básicas
+      sections:
+      - file: 02_bioinfo/01_herramientas_basicas/01_guia_md
+      - file: 02_bioinfo/01_herramientas_basicas/02_git_github
+      - file: 02_bioinfo/01_herramientas_basicas/03_linea_comandos
+      - file: 02_bioinfo/01_herramientas_basicas/04_explorando_directorios
+      - file: 02_bioinfo/01_herramientas_basicas/05_trabajando_archivos
+      - file: 02_bioinfo/01_herramientas_basicas/06_opciones_argumentos
+      - file: 02_bioinfo/01_herramientas_basicas/07_permisos_usuarios
+
+    - file: 02_bioinfo/02_principios_programacion/01_python_intro
+      title: Principios de programación con Python
+      sections: 
+      - file: 02_bioinfo/02_principios_programacion/02_datos_variables
+      - file: 02_bioinfo/02_principios_programacion/03_estructuras_control_funciones
+      - file: 02_bioinfo/02_principios_programacion/04_funciones
+      - file: 02_bioinfo/02_principios_programacion/05_sintaxis_basica
+
+  - caption: Análisis de datos biológicos
+    chapters: 
+
+    - file: 03_analisis_datos_biologicos/01_metodos_biol_mol/00_generalidades
+      title: Métodos de biología molecular
+      sections: 
+      - file: 03_analisis_datos_biologicos/01_metodos_biol_mol/01_extraccion_dna
+      - file: 03_analisis_datos_biologicos/01_metodos_biol_mol/02_amplificacion
+      - file: 03_analisis_datos_biologicos/01_metodos_biol_mol/03_electroforesis
+      - file: 03_analisis_datos_biologicos/01_metodos_biol_mol/04_secuenciacion
+
+    - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/00_intro
+      title: Análisis bioinformáticos
+      sections: 
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/01_datos
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/02_formatos
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/03_workflows_analisis
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/04_calidad
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/05_alineamiento_mapeo
+      - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome
+

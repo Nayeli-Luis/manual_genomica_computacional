@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introducción a Python &#8212; Manual de biología y bioinformática.</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Datos, variables y operadores" href="02_datos_variables.html" />
+    <link rel="prev" title="Permisos y usuarios" href="../01_herramientas_basicas/07_permisos_usuarios.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/gc.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de biología y bioinformática.</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_intro.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/00_estructura_celular.html">
+     La célula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/02_dogma_central/00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/02_dogma_central/03_traduccion.html">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_biologia/03_principios_genetica/00_intro_genetica.html">
+   Principios de genética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/01_mutaciones.html">
+     Mutaciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_biologia/03_principios_genetica/02_expresion_genica.html">
+     Expresión génica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Introducción a la bioinformática
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_herramientas_basicas/00_intro.html">
+   Herramientas básicas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/01_guia_md.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/02_git_github.html">
+     Git y Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/03_linea_comandos.html">
+     Introducción a linea de comandos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/04_explorando_directorios.html">
+     Explorando directorios desde la terminal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/05_trabajando_archivos.html">
+     Archivos, permisos y usuarios
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/06_opciones_argumentos.html">
+     Opciones y argumentos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_herramientas_basicas/07_permisos_usuarios.html">
+     Permisos y usuarios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Principios de programación con Python
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_datos_variables.html">
+     Datos, variables y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_funciones.html">
+     Algoritmos y funciones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_sintaxis_basica.html">
+     Resumen de la sintaxis básica
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Análisis de datos biológicos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/00_generalidades.html">
+   Métodos de biología molecular
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/01_extraccion_dna.html">
+     Extracción de DNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/02_amplificacion.html">
+     Amplificación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/03_electroforesis.html">
+     Electroforesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/01_metodos_biol_mol/04_secuenciacion.html">
+     Secuenciación del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/00_intro.html">
+   Análisis bioinformáticos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/01_datos.html">
+     ¿De dónde obtenemos datos biológicos?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/02_formatos.html">
+     Formatos de archivos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/03_workflows_analisis.html">
+     Flujo de trabajo general de análisis bioinformáticos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/04_calidad.html">
+     Calidad de las secuencias
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/05_alineamiento_mapeo.html">
+     Alineamiento y mapeo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome.html">
+     Flujo de trabajo para análisis con genomas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/02_bioinfo/02_principios_programacion/01_python_intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_bioinfo/02_principios_programacion/01_python_intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalacion-de-python">
+   Instalación de Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entornos-globales-de-python">
+     Entornos globales de Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#y-luego-aprende-a-usar-python">
+   ¿Y luego?: Aprende a usar Python
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="introduccion-a-python">
+<h1>Introducción a Python<a class="headerlink" href="#introduccion-a-python" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Objetivo</p>
+<ul class="simple">
+<li><p>Que el estudiante conozca qué es Python y como instalarlo.</p></li>
+</ul>
+</div>
+<p>Python es un leguaje de programación de alto nivel, es decir, que su lenguaje es más parecido al que tenemos los humanos que al que tienen las máquinas. Es fácil de enteder y por tanto, fácil de leer y escribir.</p>
+<p>Actualmente, Python es utilizado en diversas áreas de la computación como en el desarrollo de aplicaciones, videojuegos, así como en el análisis de datos masivo. Además cuenta con una enorme comunidad y gran cantidad de paquetes que nos facilitan la vida (como <code class="docutils literal notranslate"><span class="pre">conda</span></code> y <code class="docutils literal notranslate"><span class="pre">pip</span></code>). En ésta sección vamos a ver la sintaxis básica de Python.</p>
+<section id="instalacion-de-python">
+<h2>Instalación de Python<a class="headerlink" href="#instalacion-de-python" title="Permalink to this headline">¶</a></h2>
+<section id="entornos-globales-de-python">
+<h3>Entornos globales de Python<a class="headerlink" href="#entornos-globales-de-python" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Python común (<em>stock Python</em>): Es el Python que se instala en el sistema operativo y se puede usar el interprete del lenguaje desde la consola del mismo sistema operativo. Este lo puedes descargar desde <a class="reference external" href="https://www.python.org/">https://www.python.org/</a>, además el gestor de paquetes es local con <code class="docutils literal notranslate"><span class="pre">pip</span></code>, es decir, <code class="docutils literal notranslate"><span class="pre">pip</span></code> solo gestiona paquetes de Python.</p></li>
+<li><p>Python a través de un sistema de gestión de paquetes (como <code class="docutils literal notranslate"><span class="pre">conda</span></code>): En este caso, <code class="docutils literal notranslate"><span class="pre">Conda</span></code> gestiona paquetes para toda la pila de software (c++, R, Git) requerida por los usuarios, incluyendo Python y varias paqueterías. Además, <code class="docutils literal notranslate"><span class="pre">conda</span></code> puede cambiar y administrar múltiples entornos virtuales con diferentes versiones de Python si es necesario. <code class="docutils literal notranslate"><span class="pre">conda</span></code> tiene dos instaladores Miniconda y Anaconda, la diferencia entre <code class="docutils literal notranslate"><span class="pre">conda</span></code>, Miniconda y Anacoda son:</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/conda_mini_ana.png"><img alt="../../_images/conda_mini_ana.png" src="../../_images/conda_mini_ana.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Diferencias entre conda, Miniconda y Anaconda.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="caution admonition">
+<p class="admonition-title">Recomendación</p>
+<p>Instala Anaconda: <a class="reference external" href="https://repo.anaconda.com/">https://repo.anaconda.com/</a>, si tienes poco espacio entonces Miniconda: <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+</div>
+</section>
+</section>
+<section id="y-luego-aprende-a-usar-python">
+<h2>¿Y luego?: Aprende a usar Python<a class="headerlink" href="#y-luego-aprende-a-usar-python" title="Permalink to this headline">¶</a></h2>
+<p>Una vez que tengas instalado Anaconda puedes usar el <strong>interprete</strong>, es decir, abrir la terminal de tu computadora y teclear <strong>python</strong>, y te aparecerá algo similar a esto:</p>
+<figure class="align-default" id="interprete">
+<a class="reference internal image-reference" href="../../_images/interprete.png"><img alt="../../_images/interprete.png" src="../../_images/interprete.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Interprete de Python</span><a class="headerlink" href="#interprete" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Como puedes notar, la línea comienza con &gt;&gt;&gt;, es aquí donde puedes escribir tu código en Python.</p>
+<p>También puedes utilizar un modo interactivo (<a href = "https://es.wikipedia.org/wiki/IPython">IPython</a>) como Jupyter Notebook. Jupyter Notebook es una aplicación web que te permite crear y compartir documentos que contienen código, ecuacione, visualizaciones y texto. Para crear una libreta de Jupyter Notebook, solo debes escribir en una nueva terminal (NO en el interprete de Python) <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>. Te abrirá una ventana en tu navegador que te mostrará los archivos de tu computadora:</p>
+<figure class="align-default" id="jupyter-botebook">
+<a class="reference internal image-reference" href="../../_images/jupyter-notebook.png"><img alt="../../_images/jupyter-notebook.png" src="../../_images/jupyter-notebook.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Jupyter Notebook</span><a class="headerlink" href="#jupyter-botebook" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Aquí podrás moverte como si fuera el gestor de archivos de tu computadora y crear una nueva libreta dando click en el boton <code class="docutils literal notranslate"><span class="pre">New</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code>, que se encuentra en lado superior derecho. Aquí es donde podrás escribir código, para luego guardarlo y visualizarlo.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_bioinfo/02_principios_programacion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../01_herramientas_basicas/07_permisos_usuarios.html" title="previous page">Permisos y usuarios</a>
+    <a class='right-next' id="next-link" href="02_datos_variables.html" title="next page">Datos, variables y operadores</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

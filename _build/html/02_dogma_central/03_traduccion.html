@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Traducción &#8212; Manual de genómica computacional</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Transcripción" href="02_transcripcion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/biology.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Manual de genómica computacional</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00_intro.html">
+   Presentación
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Conceptos de biología molecular
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_conceptos_basicos/00_estructura_celular.html">
+   Biología molecular básica
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_conceptos_basicos/01_biomoleculas.html">
+     Biomoléculas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_conceptos_basicos/02_DNA.html">
+     Estructura del DNA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_dogma_central.html">
+   El dogma central de la biología molecular
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_replicacion.html">
+     Replicación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_transcripcion.html">
+     Transcripción
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Traducción
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/02_dogma_central/03_traduccion.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02_dogma_central/03_traduccion.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-ribosoma">
+   El ribosoma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rna-de-transferencia-trna">
+   RNA de transferencia (tRNA)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-1-iniciacion">
+   Paso 1. Iniciación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-2-elongacion">
+   Paso 2. Elongación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-3-terminacion">
+   Paso 3: Terminación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modificaciones-post-traduccion">
+   Modificaciones post-traducción
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="traduccion">
+<h1>Traducción<a class="headerlink" href="#traduccion" title="Permalink to this headline">¶</a></h1>
+<p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Videos</p>
+<p>Video de <a href = "https://drive.google.com/file/d/182dT8FwbI17KaeZ5Fq7TUuGw1hAI1Thb/view?usp=sharing"> Traducción </a></p>
+</div>
+<p>La traducción consiste en literalmente traducir el mRNA a proteínas. Éste proceso se lleva a cabo en un complejo llamado ribosoma y se requiere la intervención de RNAs de transferencia (tRNAs), que serán las moléculas encargadas de leer el mRNA y unir el aminoácido que corresponderá a cada codón. Antes de estudiar el proceso, veremos un poco sobre los ribosomas y los tRNAs.</p>
+<section id="el-ribosoma">
+<h2>El ribosoma<a class="headerlink" href="#el-ribosoma" title="Permalink to this headline">¶</a></h2>
+<p>Los ribosomas son complejos que permiten la fabricación de proteínas a partir del mRNA, están compuestos por dos subunidades, una grande y una pequeña. Los ribosomas se miden en unidades de Svedberg (S) (que es un cofieciente de sedimentación de un partícula o macromolécula). Los ribosomas diferentes tamaños en eucariontes y en procariontes. En eucariontes miden 80S, la subunidad grande mide 60S y la subinidad pequeña 40S, por su parte, en los procariontes los ribosomas miden 70S, la subunidad grande 50S y la pequeña 30S (ver <a class="reference internal" href="#ribosoma"><span class="std std-ref">Tamaño del ribosoma en eucariontes y procariontes</span></a>).</p>
+<br>
+<figure class="align-default" id="ribosoma">
+<a class="reference internal image-reference" href="../_images/ribosoma_tamaño.png"><img alt="../_images/ribosoma_tamaño.png" src="../_images/ribosoma_tamaño.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Tamaño del ribosoma en eucariontes y procariontes</span><a class="headerlink" href="#ribosoma" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+</section>
+<section id="rna-de-transferencia-trna">
+<h2>RNA de transferencia (tRNA)<a class="headerlink" href="#rna-de-transferencia-trna" title="Permalink to this headline">¶</a></h2>
+<p>El RNA de transferencia es una molécula pequeña de RNA que participa en la síntesis de proteínas. Tiene dos áreas importantes, una región de trinucleótidos llamada anticodón y una región para unir un aminoácido específico. Durante la traducción, cada vez que se agrega un aminoácido a la cadena en crecimiento, una molécula de tRNA forma pares de bases con su secuencia complementaria en la molécula de mRNA, asegurando que el aminoácido se inserte en la proteína (ver <a class="reference internal" href="#trna"><span class="std std-ref">Estructura de un tRNA.</span></a>).</p>
+<br>
+<figure class="align-default" id="trna">
+<a class="reference internal image-reference" href="../_images/tRNA.png"><img alt="../_images/tRNA.png" src="../_images/tRNA.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Estructura de un tRNA.</span><a class="headerlink" href="#trna" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+</section>
+<section id="paso-1-iniciacion">
+<h2>Paso 1. Iniciación<a class="headerlink" href="#paso-1-iniciacion" title="Permalink to this headline">¶</a></h2>
+<p>Primero, el tRNA se une a la subunidad pequeña del ribosoma, y juntos se unen al extremo 5’ del mRNA. En eucariontes, la sección reconocible es la CAP 5’ que se encuentra antes de los codones de inicio. Mientras que, en procariontes, la sección reconocible es una secuencia pequeña llamada secuencia Shine-Delgarno, que se encuentra justo antes de los codones de inicio (ver <a class="reference internal" href="#iniciacion"><span class="std std-ref">Iniciación de la traducción.</span></a>).</p>
+<br>
+<figure class="align-default" id="iniciacion">
+<a class="reference internal image-reference" href="../_images/traduccion_iniciacion.png"><img alt="../_images/traduccion_iniciacion.png" src="../_images/traduccion_iniciacion.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Iniciación de la traducción.</span><a class="headerlink" href="#iniciacion" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+</section>
+<section id="paso-2-elongacion">
+<h2>Paso 2. Elongación<a class="headerlink" href="#paso-2-elongacion" title="Permalink to this headline">¶</a></h2>
+<p>Durante éste paso crece la cadena de aminoácidos para formar la proteína. El primer tRNA lleva metionina, y comienza en el espacio del centro del ribosoma, el sitio P. Junto a éste espacio hay otro codón y en el ribosoma corresponde al espacio A (de aterrizaje), en donde llegará otro tRNA con el anticodón correcto para la unión del aminoácido correspondiente. Para esto, el aminoácido generado en el espacio P, se unirá con el aminoácido generado en el espacio A (ver primera ilustración de <a class="reference internal" href="#elongacion"><span class="std std-ref">Proceso de elongación.</span></a>).</p>
+<br>
+<figure class="align-default" id="elongacion">
+<a class="reference internal image-reference" href="../_images/traduccion_elongacion.png"><img alt="../_images/traduccion_elongacion.png" src="../_images/traduccion_elongacion.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Proceso de elongación.</span><a class="headerlink" href="#elongacion" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+<p>Una vez que se unen los aminoácidos, el mRNA avanza a través del ribosoma exactamente un codón. Este avance permite que el primer tRNa, que ya no tiene nada, salga a través del sitio E ( de éxito total o <em>exit</em> en inglés). Y ese avance, también permite que el sitio A quede expuesto para la llegada de otro tRNA con otro anticodón para otro aminoácido (ver segunda ilustración de <a class="reference internal" href="#elongacion"><span class="std std-ref">Proceso de elongación.</span></a>).</p>
+</section>
+<section id="paso-3-terminacion">
+<h2>Paso 3: Terminación<a class="headerlink" href="#paso-3-terminacion" title="Permalink to this headline">¶</a></h2>
+<p>El crecimiento de la cadena de aminoácidos termina cuando aparece un codón de alto en el mRNA (UAA, UAG, AGA), en el sitio A. También aparecen unas proteínas llamadas factores de liberación que reconocen los codones de terminación. Estos factores intervienen con la enzima que hacen los enlaces entre los aminoácidos provocando que la proteína recén fabricacada se libere (ver <a class="reference internal" href="#terminacion"><span class="std std-ref">Proceso de terminación</span></a>).</p>
+<br>
+<figure class="align-default" id="terminacion">
+<a class="reference internal image-reference" href="../_images/traduccion_terminacion.png"><img alt="../_images/traduccion_terminacion.png" src="../_images/traduccion_terminacion.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Proceso de terminación</span><a class="headerlink" href="#terminacion" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<br>
+</section>
+<section id="modificaciones-post-traduccion">
+<h2>Modificaciones post-traducción<a class="headerlink" href="#modificaciones-post-traduccion" title="Permalink to this headline">¶</a></h2>
+<p>Una vez que las proteínas son sintetizadas, se pliegan y pueden sufrir algunas modificaciones químicas como:</p>
+<ul class="simple">
+<li><p>Pérdida de secuencias de señal</p></li>
+<li><p>Modificaciones amino-terminales y carboxilo-terminales</p></li>
+<li><p>Modificaciones de aminoácidos concretos</p></li>
+<li><p>Unión de cadenas glúcidicas</p></li>
+<li><p>Modificaciones proteolíticas</p></li>
+<li><p>Formación de puentes disulfuro</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Animación de la traducción</p>
+<p>Una vez que hayas terminado de leer éste apartado, te recomiendo ver el siguiente video: <a href = "https://www.youtube.com/watch?v=TfYf_rPWUdY">Traducción de mRNA </a></p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_dogma_central"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="02_transcripcion.html" title="previous page">Transcripción</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By M.C. Luis-Vargas M. Nayeli<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
