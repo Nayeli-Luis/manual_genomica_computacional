@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traducción &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introducción a la genética" href="../03_principios_genetica/00_intro_genetica.html" />
     <link rel="prev" title="Transcripción" href="02_transcripcion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#el-ribosoma">
@@ -447,6 +477,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redundancia-del-codigo-genetico">
+   Redundancia del código genético
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modificaciones-post-traduccion">
    Modificaciones post-traducción
   </a>
@@ -459,10 +494,63 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Traducción</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-ribosoma">
+   El ribosoma
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rna-de-transferencia-trna">
+   RNA de transferencia (tRNA)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-1-iniciacion">
+   Paso 1. Iniciación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-2-elongacion">
+   Paso 2. Elongación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paso-3-terminacion">
+   Paso 3: Terminación
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redundancia-del-codigo-genetico">
+   Redundancia del código genético
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modificaciones-post-traduccion">
+   Modificaciones post-traducción
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="traduccion">
+  <div class="tex2jax_ignore mathjax_ignore section" id="traduccion">
 <h1>Traducción<a class="headerlink" href="#traduccion" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
 <div class="note admonition">
@@ -470,68 +558,56 @@
 <p>Video de <a href = "https://drive.google.com/file/d/182dT8FwbI17KaeZ5Fq7TUuGw1hAI1Thb/view?usp=sharing"> Traducción </a></p>
 </div>
 <p>La traducción consiste en literalmente traducir el mRNA a proteínas. Éste proceso se lleva a cabo en un complejo llamado ribosoma y se requiere la intervención de RNAs de transferencia (tRNAs), que serán las moléculas encargadas de leer el mRNA y unir el aminoácido que corresponderá a cada codón. Antes de estudiar el proceso, veremos un poco sobre los ribosomas y los tRNAs.</p>
-<section id="el-ribosoma">
+<div class="section" id="el-ribosoma">
 <h2>El ribosoma<a class="headerlink" href="#el-ribosoma" title="Permalink to this headline">¶</a></h2>
 <p>Los ribosomas son complejos que permiten la fabricación de proteínas a partir del mRNA, están compuestos por dos subunidades, una grande y una pequeña. Los ribosomas se miden en unidades de Svedberg (S) (que es un cofieciente de sedimentación de un partícula o macromolécula). Los ribosomas diferentes tamaños en eucariontes y en procariontes. En eucariontes miden 80S, la subunidad grande mide 60S y la subinidad pequeña 40S, por su parte, en los procariontes los ribosomas miden 70S, la subunidad grande 50S y la pequeña 30S (ver <a class="reference internal" href="#ribosoma"><span class="std std-ref">Tamaño del ribosoma en eucariontes y procariontes</span></a>).</p>
-<br>
-<figure class="align-default" id="ribosoma">
+<div class="figure align-default" id="ribosoma">
 <a class="reference internal image-reference" href="../../_images/ribosoma_tamaño.png"><img alt="../../_images/ribosoma_tamaño.png" src="../../_images/ribosoma_tamaño.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Tamaño del ribosoma en eucariontes y procariontes</span><a class="headerlink" href="#ribosoma" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<br>
-</section>
-<section id="rna-de-transferencia-trna">
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Tamaño del ribosoma en eucariontes y procariontes</span><a class="headerlink" href="#ribosoma" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="rna-de-transferencia-trna">
 <h2>RNA de transferencia (tRNA)<a class="headerlink" href="#rna-de-transferencia-trna" title="Permalink to this headline">¶</a></h2>
 <p>El RNA de transferencia es una molécula pequeña de RNA que participa en la síntesis de proteínas. Tiene dos áreas importantes, una región de trinucleótidos llamada anticodón y una región para unir un aminoácido específico. Durante la traducción, cada vez que se agrega un aminoácido a la cadena en crecimiento, una molécula de tRNA forma pares de bases con su secuencia complementaria en la molécula de mRNA, asegurando que el aminoácido se inserte en la proteína (ver <a class="reference internal" href="#trna"><span class="std std-ref">Estructura de un tRNA.</span></a>).</p>
-<br>
-<figure class="align-default" id="trna">
+<div class="figure align-default" id="trna">
 <a class="reference internal image-reference" href="../../_images/tRNA.png"><img alt="../../_images/tRNA.png" src="../../_images/tRNA.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Estructura de un tRNA.</span><a class="headerlink" href="#trna" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<br>
-</section>
-<section id="paso-1-iniciacion">
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Estructura de un tRNA.</span><a class="headerlink" href="#trna" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="paso-1-iniciacion">
 <h2>Paso 1. Iniciación<a class="headerlink" href="#paso-1-iniciacion" title="Permalink to this headline">¶</a></h2>
 <p>Primero, el tRNA se une a la subunidad pequeña del ribosoma, y juntos se unen al extremo 5’ del mRNA. En eucariontes, la sección reconocible es la CAP 5’ que se encuentra antes de los codones de inicio. Mientras que, en procariontes, la sección reconocible es una secuencia pequeña llamada secuencia Shine-Delgarno, que se encuentra justo antes de los codones de inicio (ver <a class="reference internal" href="#iniciacion"><span class="std std-ref">Iniciación de la traducción.</span></a>).</p>
-<br>
-<figure class="align-default" id="iniciacion">
+<div class="figure align-default" id="iniciacion">
 <a class="reference internal image-reference" href="../../_images/traduccion_iniciacion.png"><img alt="../../_images/traduccion_iniciacion.png" src="../../_images/traduccion_iniciacion.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Iniciación de la traducción.</span><a class="headerlink" href="#iniciacion" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<br>
-</section>
-<section id="paso-2-elongacion">
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Iniciación de la traducción.</span><a class="headerlink" href="#iniciacion" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="paso-2-elongacion">
 <h2>Paso 2. Elongación<a class="headerlink" href="#paso-2-elongacion" title="Permalink to this headline">¶</a></h2>
 <p>Durante éste paso crece la cadena de aminoácidos para formar la proteína. El primer tRNA lleva metionina, y comienza en el espacio del centro del ribosoma, el sitio P. Junto a éste espacio hay otro codón y en el ribosoma corresponde al espacio A (de aterrizaje), en donde llegará otro tRNA con el anticodón correcto para la unión del aminoácido correspondiente. Para esto, el aminoácido generado en el espacio P, se unirá con el aminoácido generado en el espacio A (ver primera ilustración de <a class="reference internal" href="#elongacion"><span class="std std-ref">Proceso de elongación.</span></a>).</p>
-<br>
-<figure class="align-default" id="elongacion">
+<div class="figure align-default" id="elongacion">
 <a class="reference internal image-reference" href="../../_images/traduccion_elongacion.png"><img alt="../../_images/traduccion_elongacion.png" src="../../_images/traduccion_elongacion.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Proceso de elongación.</span><a class="headerlink" href="#elongacion" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<br>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Proceso de elongación.</span><a class="headerlink" href="#elongacion" title="Permalink to this image">¶</a></p>
+</div>
 <p>Una vez que se unen los aminoácidos, el mRNA avanza a través del ribosoma exactamente un codón. Este avance permite que el primer tRNa, que ya no tiene nada, salga a través del sitio E ( de éxito total o <em>exit</em> en inglés). Y ese avance, también permite que el sitio A quede expuesto para la llegada de otro tRNA con otro anticodón para otro aminoácido (ver segunda ilustración de <a class="reference internal" href="#elongacion"><span class="std std-ref">Proceso de elongación.</span></a>).</p>
-</section>
-<section id="paso-3-terminacion">
+</div>
+<div class="section" id="paso-3-terminacion">
 <h2>Paso 3: Terminación<a class="headerlink" href="#paso-3-terminacion" title="Permalink to this headline">¶</a></h2>
 <p>El crecimiento de la cadena de aminoácidos termina cuando aparece un codón de alto en el mRNA (UAA, UAG, AGA), en el sitio A. También aparecen unas proteínas llamadas factores de liberación que reconocen los codones de terminación. Estos factores intervienen con la enzima que hacen los enlaces entre los aminoácidos provocando que la proteína recén fabricacada se libere (ver <a class="reference internal" href="#terminacion"><span class="std std-ref">Proceso de terminación</span></a>).</p>
-<br>
-<figure class="align-default" id="terminacion">
+<div class="figure align-default" id="terminacion">
 <a class="reference internal image-reference" href="../../_images/traduccion_terminacion.png"><img alt="../../_images/traduccion_terminacion.png" src="../../_images/traduccion_terminacion.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Proceso de terminación</span><a class="headerlink" href="#terminacion" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<br>
-</section>
-<section id="modificaciones-post-traduccion">
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Proceso de terminación</span><a class="headerlink" href="#terminacion" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="redundancia-del-codigo-genetico">
+<h2>Redundancia del código genético<a class="headerlink" href="#redundancia-del-codigo-genetico" title="Permalink to this headline">¶</a></h2>
+<p>Esto quiere decir que la mayor parte de los aminoácidos son codificados por más de un codón, es decir, hay codondes que son <em>sinónimos</em> que poseen la misma información. Para saber que codón codifica cada aminoácido nos guiamos por la siguiente clave:</p>
+<div class="figure align-default" id="codigo-genetico">
+<a class="reference internal image-reference" href="../../_images/codigo_codones.png"><img alt="../../_images/codigo_codones.png" src="../../_images/codigo_codones.png" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Código de codones</span><a class="headerlink" href="#codigo-genetico" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="modificaciones-post-traduccion">
 <h2>Modificaciones post-traducción<a class="headerlink" href="#modificaciones-post-traduccion" title="Permalink to this headline">¶</a></h2>
 <p>Una vez que las proteínas son sintetizadas, se pliegan y pueden sufrir algunas modificaciones químicas como:</p>
 <ul class="simple">
@@ -546,8 +622,8 @@
 <p class="admonition-title">Animación de la traducción</p>
 <p>Una vez que hayas terminado de leer éste apartado, te recomiendo ver el siguiente video: <a href = "https://www.youtube.com/watch?v=TfYf_rPWUdY">Traducción de mRNA </a></p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -571,34 +647,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="02_transcripcion.html" title="previous page">Transcripción</a>
-    <a class='right-next' id="next-link" href="../03_principios_genetica/00_intro_genetica.html" title="next page">Introducción a la genética</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02_transcripcion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Transcripción</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../03_principios_genetica/00_intro_genetica.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introducción a la genética</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

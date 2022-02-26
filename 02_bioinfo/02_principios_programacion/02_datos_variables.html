@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datos, variables y operadores &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Algoritmos y funciones" href="04_funciones.html" />
     <link rel="prev" title="Introducción a Python" href="01_python_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
@@ -511,11 +541,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mini-practica-1">
-   Mini-práctica 1
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -524,15 +549,123 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Datos, variables y operadores</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nombrado-variables-buenas-practicas">
+     Nombrado variables: buenas prácticas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datos-y-tipos-de-datos">
+   Datos y tipos de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-datos">
+     Tipos de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datos-numericos">
+     Datos numéricos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datos-alfanumericos">
+     Datos alfanuméricos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexar-y-rebanar">
+       Indexar y rebanar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datos-logicos">
+     Datos lógicos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadores-y-expresiones">
+   Operadores y expresiones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-aritmeticos">
+     Operadores aritméticos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-relacionales">
+     Operadores relacionales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-especiales">
+     Operadores especiales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estructuras-de-datos">
+   Estructuras de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas">
+     Listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diccionarios">
+     Diccionarios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="datos-variables-y-operadores">
+  <div class="tex2jax_ignore mathjax_ignore section" id="datos-variables-y-operadores">
 <h1>Datos, variables y operadores<a class="headerlink" href="#datos-variables-y-operadores" title="Permalink to this headline">¶</a></h1>
-<section id="variables">
+<div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <p>Una variable es una posición o espacio de memoria en la cual se almacena un dato. Y su valor puede cambiar en cualquier momento. De hecho, podemos ver las variables como cajas que pueden contener datos de algún tipo y a su vez, posee un identificador. En Python la asignación de variables se lleva a cabo con el signo igual (=). De hecho, podemos ver las variables como cajas, que van a contener datos de algún tipo y que vamos a poder nombrar.</p>
-<section id="nombrado-variables-buenas-practicas">
+<div class="section" id="nombrado-variables-buenas-practicas">
 <h3>Nombrado variables: buenas prácticas<a class="headerlink" href="#nombrado-variables-buenas-practicas" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>El primer elemento debe ser una letra.</p></li>
@@ -541,9 +674,9 @@
 <li><p>No utilizar palabras reservadas del mismo lenguaje de programación.</p></li>
 <li><p>No dejar espacios en blanco</p></li>
 </ul>
-</section>
-</section>
-<section id="datos-y-tipos-de-datos">
+</div>
+</div>
+<div class="section" id="datos-y-tipos-de-datos">
 <h2>Datos y tipos de datos<a class="headerlink" href="#datos-y-tipos-de-datos" title="Permalink to this headline">¶</a></h2>
 <p>Un dato es una representación simbólica (un número, letra, una palabra, etc.) de una característica de un elemento y prácticamente ese elemento puede ser cualquier cosa: una persona, una bacteria, un gen, etc.</p>
 <p>Vamos a generar una variable que contenga el nombre de un organismo</p>
@@ -554,7 +687,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bacteria2</span><span class="p">,</span> <span class="n">bacteria3</span> <span class="o">=</span> <span class="s2">&quot;S. haemolyticus&quot;</span><span class="p">,</span> <span class="s2">&quot;S. aureus&quot;</span>
 </pre></div>
 </div>
-<section id="tipos-de-datos">
+<div class="section" id="tipos-de-datos">
 <h3>Tipos de datos<a class="headerlink" href="#tipos-de-datos" title="Permalink to this headline">¶</a></h3>
 <p>En general, existen los siguientes tipos de datos:</p>
 <ul class="simple">
@@ -565,8 +698,8 @@ Dos tipos: enteros y reales (flotantes)</p></li>
 <li><p><strong>Datos lógicos</strong>.
 También conocidos como boolenos.</p></li>
 </ul>
-</section>
-<section id="datos-numericos">
+</div>
+<div class="section" id="datos-numericos">
 <h3>Datos numéricos<a class="headerlink" href="#datos-numericos" title="Permalink to this headline">¶</a></h3>
 <p>Tenemos de dos tipos: enteros (<code class="docutils literal notranslate"><span class="pre">integer</span></code>) y reales (<code class="docutils literal notranslate"><span class="pre">float</span></code>/flotantes) y se componen únicamente de números y signos positivo o negativo.</p>
 <ul class="simple">
@@ -586,14 +719,14 @@ También conocidos como boolenos.</p></li>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">flotante</span><span class="p">),</span> <span class="n">flotante</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="datos-alfanumericos">
+</div>
+<div class="section" id="datos-alfanumericos">
 <h3>Datos alfanuméricos<a class="headerlink" href="#datos-alfanumericos" title="Permalink to this headline">¶</a></h3>
 <p>También conocidos como caracter o cadena (<code class="docutils literal notranslate"><span class="pre">strings</span></code>). Se componen de la combinación de todos los caracteres conocidos. <strong>NOTA</strong>: Las cadenas de DNA están caracterizadas como <strong>strings</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DNA_corto</span> <span class="o">=</span> <span class="s2">&quot;ATCGTAGCTG&quot;</span>
 </pre></div>
 </div>
-<section id="indexar-y-rebanar">
+<div class="section" id="indexar-y-rebanar">
 <h4>Indexar y rebanar<a class="headerlink" href="#indexar-y-rebanar" title="Permalink to this headline">¶</a></h4>
 <p><strong>Indexar</strong>: Consiste en referencia cada elemento de un objeto al asignarle un número, ún índice. Python comienza a indexar desde la posición cero.</p>
 <p><strong>Rebanar</strong>: Consiste en tomar solo algunos de los elementos de un objeto considerando el índice de esos elementos.</p>
@@ -607,18 +740,18 @@ También conocidos como boolenos.</p></li>
 <span class="n">DNA_corto</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="datos-logicos">
+</div>
+</div>
+<div class="section" id="datos-logicos">
 <h3>Datos lógicos<a class="headerlink" href="#datos-logicos" title="Permalink to this headline">¶</a></h3>
 <p>También conocidos como booleanos. Son datos que solo toman uno de dos posibles valores: <code class="docutils literal notranslate"><span class="pre">True/1</span></code> (verdadero) o <code class="docutils literal notranslate"><span class="pre">False/0</span></code> (falso).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">booleano</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">booleano</span><span class="p">),</span> <span class="n">booleano</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="operadores-y-expresiones">
+</div>
+</div>
+<div class="section" id="operadores-y-expresiones">
 <h2>Operadores y expresiones<a class="headerlink" href="#operadores-y-expresiones" title="Permalink to this headline">¶</a></h2>
 <p>Un operador es un <strong>símbolo</strong> que permite realizar una operación con los datos que se encuentren almacenados en la variables.
 Existen tres tipos:</p>
@@ -629,7 +762,7 @@ Existen tres tipos:</p>
 </ul>
 <p>Mientras que, una <strong>expresión</strong> es una instrucción que puede estar compuesta de operadores,
 variables, números y que generalmente <strong>produce un resultado</strong>, ya sea numérico o lógico</p>
-<section id="operadores-aritmeticos">
+<div class="section" id="operadores-aritmeticos">
 <h3>Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Permalink to this headline">¶</a></h3>
 <p>Realizar operaciones aritméticas entre <strong>datos de tipo entero o flotante</strong>.
 Regresa un <strong>resultado numérico</strong>.</p>
@@ -676,8 +809,8 @@ Regresa un <strong>resultado numérico</strong>.</p>
 
 </pre></div>
 </div>
-</section>
-<section id="operadores-relacionales">
+</div>
+<div class="section" id="operadores-relacionales">
 <h3>Operadores relacionales<a class="headerlink" href="#operadores-relacionales" title="Permalink to this headline">¶</a></h3>
 <p>Realizan <strong>operaciones de comparación</strong>, al utilizarlos en una expresión el
 <strong>resultado</strong> que arroja es de tipo <strong>booleano</strong> (<code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
@@ -719,8 +852,8 @@ Regresa un <strong>resultado numérico</strong>.</p>
 
 </pre></div>
 </div>
-</section>
-<section id="operadores-logicos">
+</div>
+<div class="section" id="operadores-logicos">
 <h3>Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Permalink to this headline">¶</a></h3>
 <p>Al utilizarlos en una expresión el <strong>resultado es lógico</strong>.
 Son usados cuando queremos evaluar dos expresiones. Además, los operadores lógicos obeceden a las tablas de verdad.</p>
@@ -745,8 +878,8 @@ Son usados cuando queremos evaluar dos expresiones. Además, los operadores lóg
 <p><code class="docutils literal notranslate"><span class="pre">and</span></code>: Todas las espresiones evaluadas deben ser ciertas, para que el resultado sea cierto.</p>
 <p><code class="docutils literal notranslate"><span class="pre">or</span></code>: Solo  una de las expresiones debe ser cierta para que el resultado sea cierto.</p>
 <p><code class="docutils literal notranslate"><span class="pre">not</span></code>: El resultado será el contrario a lo que indique la expresión.</p>
-</section>
-<section id="operadores-especiales">
+</div>
+<div class="section" id="operadores-especiales">
 <h3>Operadores especiales<a class="headerlink" href="#operadores-especiales" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Operadores de pertenecia</strong>: Evalúan sin un valor está dentro de una secuencia. Palabras reservadas <code class="docutils literal notranslate"><span class="pre">in</span></code> e <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">not</span></code>. El resultado es un booleano.</p></li>
@@ -770,11 +903,11 @@ Son usados cuando queremos evaluar dos expresiones. Además, los operadores lóg
 
 </pre></div>
 </div>
-</section>
-</section>
-<section id="estructuras-de-datos">
+</div>
+</div>
+<div class="section" id="estructuras-de-datos">
 <h2>Estructuras de datos<a class="headerlink" href="#estructuras-de-datos" title="Permalink to this headline">¶</a></h2>
-<section id="listas">
+<div class="section" id="listas">
 <h3>Listas<a class="headerlink" href="#listas" title="Permalink to this headline">¶</a></h3>
 <p>Las listas permiten contener un conjunto de datos del mismo o de diferente tipo. Se definen utilizando paréntesis cuadrados y cada elemento se separa por comas. Se puede accede a cada elemento mediante el método de indexado.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hola&quot;</span><span class="p">,</span> <span class="s2">&quot;genomica&quot;</span><span class="p">,</span> <span class="s2">&quot;computacional&quot;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">]</span>
@@ -789,8 +922,8 @@ Son usados cuando queremos evaluar dos expresiones. Además, los operadores lóg
 <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="diccionarios">
+</div>
+<div class="section" id="diccionarios">
 <h3>Diccionarios<a class="headerlink" href="#diccionarios" title="Permalink to this headline">¶</a></h3>
 <p>Es otro contenedro que permite la asociación entre clave y valores. Cada clave debe ser única. Los diccionarios se denotan con llaves (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) y cada llave:valor se separan por comas.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esto es un diccionario vacio</span>
@@ -812,55 +945,9 @@ Son usados cuando queremos evaluar dos expresiones. Además, los operadores lóg
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">numero_texto</span><span class="p">[</span><span class="s2">&quot;uno&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="mini-practica-1">
-<h2>Mini-práctica 1<a class="headerlink" href="#mini-practica-1" title="Permalink to this headline">¶</a></h2>
-<p>Ésta mini-práctica se entrega por Classroom, en una libreta de Jupyter Notebook y con la siguiente estructura en el nombre: mp1_Apellidos_Nombres.</p>
-<p><strong>Parte I</strong></p>
-<p>Explorando funciones integradas de Python.
-a) ¿Qué es una función integrada (en inglés son conocidas como <em>built-in function</em>)?</p>
-<p>b) Crea una variable que se llame <code class="docutils literal notranslate"><span class="pre">dna</span></code> que contenga la siguiente cadena de caracteres: <code class="docutils literal notranslate"><span class="pre">caacggcgggtccctcataggatgaataggtgaaactgtctgaatgcttaggaactggttatggttaccacttcatcaaatatcaattgaacgatacagc</span></code>. Ahora escribe lo siguiente:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;catag&quot;</span><span class="p">)</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
-</pre></div>
 </div>
-<p>c) ¿Qué hace cada una de las funciones anteriores?</p>
-<p><strong>Parte II</strong></p>
-<p>Trabajando con operadores y expresiones
-Escribe y ejecuta las expresiones que se encuentran a continuación y responde para cada una:</p>
-<p>a) ¿Qué tipo de dato se está utilizando?</p>
-<p>b) ¿Qué tipo de operador?</p>
-<p>c) Justifica el resultado que se obtenga de cada expresión</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">1234</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">5879</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">89</span>
-
-<span class="n">mamifero1</span> <span class="o">=</span> <span class="s2">&quot;Ornitorrinco&quot;</span>
-<span class="n">mamifero2</span> <span class="o">=</span> <span class="s2">&quot; Ornitorrinco&quot;</span>
-
-<span class="c1"># Expresion 1</span>
-<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> 
-
-<span class="c1"># Expresion 2</span>
-<span class="n">mamifero1</span> <span class="o">==</span> <span class="n">mamifero2</span>
-
-<span class="c1"># Expresión 3</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span>
-
-<span class="c1"># Expresion 4</span>
-<span class="n">y</span> <span class="o">!=</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span>
-
-<span class="c1"># Expresion 5</span>
-<span class="c1"># Tipo: Tal vez en este requieras hacer un poco de investigación</span>
-<span class="ow">not</span> <span class="n">x</span>
-</pre></div>
 </div>
-</section>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -884,34 +971,42 @@ Escribe y ejecuta las expresiones que se encuentran a continuación y responde p
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="01_python_intro.html" title="previous page">Introducción a Python</a>
-    <a class='right-next' id="next-link" href="04_funciones.html" title="next page">Algoritmos y funciones</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="01_python_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introducción a Python</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="04_funciones.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algoritmos y funciones</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

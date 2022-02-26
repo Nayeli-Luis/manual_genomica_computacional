@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introducción a Python &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Datos, variables y operadores" href="02_datos_variables.html" />
     <link rel="prev" title="Permisos y usuarios" href="../01_herramientas_basicas/07_permisos_usuarios.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instalacion-de-python">
@@ -446,62 +476,91 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introducción a Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalacion-de-python">
+   Instalación de Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entornos-globales-de-python">
+     Entornos globales de Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#y-luego-aprende-a-usar-python">
+   ¿Y luego?: Aprende a usar Python
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="introduccion-a-python">
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduccion-a-python">
 <h1>Introducción a Python<a class="headerlink" href="#introduccion-a-python" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
 <div class="important admonition">
 <p class="admonition-title">Objetivo</p>
 <ul class="simple">
-<li><p>Que el estudiante conozca qué es Python y como instalarlo.</p></li>
+<li><p>Que el estudiante conozca qué es Python y cómo instalarlo.</p></li>
 </ul>
 </div>
 <p>Python es un leguaje de programación de alto nivel, es decir, que su lenguaje es más parecido al que tenemos los humanos que al que tienen las máquinas. Es fácil de enteder y por tanto, fácil de leer y escribir.</p>
 <p>Actualmente, Python es utilizado en diversas áreas de la computación como en el desarrollo de aplicaciones, videojuegos, así como en el análisis de datos masivo. Además cuenta con una enorme comunidad y gran cantidad de paquetes que nos facilitan la vida (como <code class="docutils literal notranslate"><span class="pre">conda</span></code> y <code class="docutils literal notranslate"><span class="pre">pip</span></code>). En ésta sección vamos a ver la sintaxis básica de Python.</p>
-<section id="instalacion-de-python">
+<div class="section" id="instalacion-de-python">
 <h2>Instalación de Python<a class="headerlink" href="#instalacion-de-python" title="Permalink to this headline">¶</a></h2>
-<section id="entornos-globales-de-python">
+<div class="section" id="entornos-globales-de-python">
 <h3>Entornos globales de Python<a class="headerlink" href="#entornos-globales-de-python" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Python común (<em>stock Python</em>): Es el Python que se instala en el sistema operativo y se puede usar el interprete del lenguaje desde la consola del mismo sistema operativo. Este lo puedes descargar desde <a class="reference external" href="https://www.python.org/">https://www.python.org/</a>, además el gestor de paquetes es local con <code class="docutils literal notranslate"><span class="pre">pip</span></code>, es decir, <code class="docutils literal notranslate"><span class="pre">pip</span></code> solo gestiona paquetes de Python.</p></li>
 <li><p>Python a través de un sistema de gestión de paquetes (como <code class="docutils literal notranslate"><span class="pre">conda</span></code>): En este caso, <code class="docutils literal notranslate"><span class="pre">Conda</span></code> gestiona paquetes para toda la pila de software (c++, R, Git) requerida por los usuarios, incluyendo Python y varias paqueterías. Además, <code class="docutils literal notranslate"><span class="pre">conda</span></code> puede cambiar y administrar múltiples entornos virtuales con diferentes versiones de Python si es necesario. <code class="docutils literal notranslate"><span class="pre">conda</span></code> tiene dos instaladores Miniconda y Anaconda, la diferencia entre <code class="docutils literal notranslate"><span class="pre">conda</span></code>, Miniconda y Anacoda son:</p></li>
 </ul>
-<figure class="align-default" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/conda_mini_ana.png"><img alt="../../_images/conda_mini_ana.png" src="../../_images/conda_mini_ana.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Diferencias entre conda, Miniconda y Anaconda.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Diferencias entre conda, Miniconda y Anaconda.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <div class="caution admonition">
 <p class="admonition-title">Recomendación</p>
 <p>Instala Anaconda: <a class="reference external" href="https://repo.anaconda.com/">https://repo.anaconda.com/</a>, si tienes poco espacio entonces Miniconda: <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </div>
-</section>
-</section>
-<section id="y-luego-aprende-a-usar-python">
+</div>
+</div>
+<div class="section" id="y-luego-aprende-a-usar-python">
 <h2>¿Y luego?: Aprende a usar Python<a class="headerlink" href="#y-luego-aprende-a-usar-python" title="Permalink to this headline">¶</a></h2>
 <p>Una vez que tengas instalado Anaconda puedes usar el <strong>interprete</strong>, es decir, abrir la terminal de tu computadora y teclear <strong>python</strong>, y te aparecerá algo similar a esto:</p>
-<figure class="align-default" id="interprete">
+<div class="figure align-default" id="interprete">
 <a class="reference internal image-reference" href="../../_images/interprete.png"><img alt="../../_images/interprete.png" src="../../_images/interprete.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Interprete de Python</span><a class="headerlink" href="#interprete" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Interprete de Python</span><a class="headerlink" href="#interprete" title="Permalink to this image">¶</a></p>
+</div>
 <p>Como puedes notar, la línea comienza con &gt;&gt;&gt;, es aquí donde puedes escribir tu código en Python.</p>
 <p>También puedes utilizar un modo interactivo (<a href = "https://es.wikipedia.org/wiki/IPython">IPython</a>) como Jupyter Notebook. Jupyter Notebook es una aplicación web que te permite crear y compartir documentos que contienen código, ecuacione, visualizaciones y texto. Para crear una libreta de Jupyter Notebook, solo debes escribir en una nueva terminal (NO en el interprete de Python) <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>. Te abrirá una ventana en tu navegador que te mostrará los archivos de tu computadora:</p>
-<figure class="align-default" id="jupyter-botebook">
+<div class="figure align-default" id="jupyter-botebook">
 <a class="reference internal image-reference" href="../../_images/jupyter-notebook.png"><img alt="../../_images/jupyter-notebook.png" src="../../_images/jupyter-notebook.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Jupyter Notebook</span><a class="headerlink" href="#jupyter-botebook" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Jupyter Notebook</span><a class="headerlink" href="#jupyter-botebook" title="Permalink to this image">¶</a></p>
+</div>
 <p>Aquí podrás moverte como si fuera el gestor de archivos de tu computadora y crear una nueva libreta dando click en el boton <code class="docutils literal notranslate"><span class="pre">New</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code>, que se encuentra en lado superior derecho. Aquí es donde podrás escribir código, para luego guardarlo y visualizarlo.</p>
-</section>
+</div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -525,34 +584,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../01_herramientas_basicas/07_permisos_usuarios.html" title="previous page">Permisos y usuarios</a>
-    <a class='right-next' id="next-link" href="02_datos_variables.html" title="next page">Datos, variables y operadores</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../01_herramientas_basicas/07_permisos_usuarios.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Permisos y usuarios</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="02_datos_variables.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Datos, variables y operadores</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

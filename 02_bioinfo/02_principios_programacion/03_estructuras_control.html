@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estructuras de control de flujo &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,17 +42,20 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -70,6 +72,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -79,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -88,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -171,7 +177,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -189,7 +195,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -210,11 +216,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -252,7 +253,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -333,6 +334,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -378,7 +408,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -412,12 +442,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#flujo-de-control-secuencial-if-else">
@@ -448,6 +478,17 @@
       </span>
      </code>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#listas-de-comprehension-list-comprehensions">
+       Listas de comprehensión (
+       <em>
+        list comprehensions
+       </em>
+       )
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#while">
@@ -468,10 +509,80 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Estructuras de control de flujo</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flujo-de-control-secuencial-if-else">
+   Flujo de control secuencial (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if-else
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flujo-de-control-selectivo-o-condicional">
+   Flujo de control selectivo o condicional
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flujo-de-control-iterativo">
+   Flujo de control iterativo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-in">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for-in
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#listas-de-comprehension-list-comprehensions">
+       Listas de comprehensión (
+       <em>
+        list comprehensions
+       </em>
+       )
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#while">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="estructuras-de-control-de-flujo">
+  <div class="tex2jax_ignore mathjax_ignore section" id="estructuras-de-control-de-flujo">
 <h1>Estructuras de control de flujo<a class="headerlink" href="#estructuras-de-control-de-flujo" title="Permalink to this headline">¶</a></h1>
 <p>El control de flujo se refiere al orden en el que se ejecutan las instrucciones de un programa. El orden de ejecución puede incluir la evaluación de una expresión lógica, de manera que, en caso de ser cierta, se ejecuten ciertas instrucciones. Pero vamos por partes, los flujos de control que existen son:</p>
 <ul class="simple">
@@ -479,7 +590,7 @@
 <li><p>Flujo de control condicional o selección</p></li>
 <li><p>Flujo de control iterativo o en bucle.</p></li>
 </ul>
-<section id="flujo-de-control-secuencial-if-else">
+<div class="section" id="flujo-de-control-secuencial-if-else">
 <h2>Flujo de control secuencial (<code class="docutils literal notranslate"><span class="pre">if-else</span></code>)<a class="headerlink" href="#flujo-de-control-secuencial-if-else" title="Permalink to this headline">¶</a></h2>
 <p>Este tipo de flujo de control hace referencia a los algoritmos cuyas instrucciones se ejecutan una tras otra, sin interrupción de algún tipo. Por ejemplo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num1</span> <span class="o">=</span> <span class="mi">3748</span>
@@ -492,8 +603,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La suma de </span><span class="si">{</span><span class="n">num1</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="n">num2</span><span class="si">}</span><span class="s2"> es de </span><span class="si">{</span><span class="nb">sum</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="flujo-de-control-selectivo-o-condicional">
+</div>
+<div class="section" id="flujo-de-control-selectivo-o-condicional">
 <h2>Flujo de control selectivo o condicional<a class="headerlink" href="#flujo-de-control-selectivo-o-condicional" title="Permalink to this headline">¶</a></h2>
 <p>En éste tipo de flujo de control el algoritmo debe considerar una expresión lógica para ejecutar o no  un bloque de código en específico, en otras palabras, el programa deber tomar una decisión. Para crear un programa condicional, se utilizan las palabras reservadas <code class="docutils literal notranslate"><span class="pre">if-else</span></code> y <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Y en pseudocódigo, pueden leerse como <code class="docutils literal notranslate"><span class="pre">Si-SiNo</span></code>.</p>
 <p>La sintaxis en Python es la siguiente:</p>
@@ -530,8 +641,8 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tu calificación final es de </span><span class="si">{</span><span class="n">calificacion</span><span class="si">}</span><span class="s2">, por tanto tu status es de </span><span class="si">{</span><span class="n">resultado_final</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="flujo-de-control-iterativo">
+</div>
+<div class="section" id="flujo-de-control-iterativo">
 <h2>Flujo de control iterativo<a class="headerlink" href="#flujo-de-control-iterativo" title="Permalink to this headline">¶</a></h2>
 <p>Iterar significa llevar a cabo una acción de manera repetida. En programación, podemos repetir las instrucciones de un bloque de código en función de una secuencia o de una expresión lógica. Existen dos maneras con bucles <code class="docutils literal notranslate"><span class="pre">for-in</span></code> y <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
 <p>Conceptos importantes:</p>
@@ -539,7 +650,7 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
 <li><p><strong>Contador</strong>: Una variable con un valor inicial de cero, el cual va a cambiar con cada iteración al incrementar su valor de 1 en 1.</p></li>
 <li><p><strong>Evento</strong>: Se utiliza cuando queremos que el código se ejecute (o deje de ejecutarse) hasta que ocurra un evento en específico.</p></li>
 </ul>
-<section id="for-in">
+<div class="section" id="for-in">
 <h3><code class="docutils literal notranslate"><span class="pre">for-in</span></code><a class="headerlink" href="#for-in" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">for-in</span></code> permite la ejecución de un bloque de código un número determinado de veces. La sintaxis en Python es la siguiente:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">conjunto_de_elementos</span><span class="p">:</span>
@@ -578,8 +689,26 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">secuencia</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
 </pre></div>
 </div>
-</section>
-<section id="while">
+<div class="section" id="listas-de-comprehension-list-comprehensions">
+<h4>Listas de comprehensión (<em>list comprehensions</em>)<a class="headerlink" href="#listas-de-comprehension-list-comprehensions" title="Permalink to this headline">¶</a></h4>
+<p>Permite crear listas en una misma línea de código y son muy utilizadas en la generación de matrices, involucra ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code>  para su construcción. Por ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span> <span class="c1"># Se ejecuta un protocolo de iteración</span>
+    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Genera una lista nueva (append() agrega elementos a la lista)</span>
+
+<span class="n">cuadrados</span>
+
+</pre></div>
+</div>
+<p>Es comun escribir las listas de comprehensión en una sola línea de código y no utilizan la función <code class="docutils literal notranslate"><span class="pre">.append()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+<span class="n">cuadrados</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="while">
 <h3><code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> evalua una expresión lógica, mientras el resultado de la expresión sea verdadero, se ejecutará un bloque de código en específico. La sintaxis en Python es:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">expresion_logica</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
@@ -608,9 +737,9 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
 <span class="nb">print</span><span class="p">(</span><span class="n">lista_especies</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -634,32 +763,28 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-
-        </div>
-        
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

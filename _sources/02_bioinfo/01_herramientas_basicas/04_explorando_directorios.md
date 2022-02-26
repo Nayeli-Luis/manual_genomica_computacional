@@ -20,12 +20,16 @@ Algunos shortcuts para hacer más fluído tu uso de la terminal:
 :::
 ::::
 
-## Comandos básicos
+
+## Comandos básicos para manejo de directorios
 
 A continuación se presentan algunos comandos básicos para el manejo y exploración de directorios:
 
 `pwd`
 : "print working directory": Indica la ruta (path) en la que se encuentra tu archivo.
+
+`mkdir`
+: "make directory": Crea un directorio nuevo.
 
 `cd`
 : "change directory": se utiliza para cambiar de directorio. Ejemplo de sintaxis: `cd nombre_directorio`.
@@ -39,9 +43,6 @@ A continuación se presentan algunos comandos básicos para el manejo y explorac
 `mv`
 : "move": Mueve un fichero o directorio a otra ruta. Ejemplo de sintaxis: `mv archivo.txt ./nueva_carpeta`. También se puede cambiar el nombre de un fichero o directorio, ejemplo: `mv nombre_feo.txt nombre_cool.txt`.
 
-`mkdir`
-: "make directory": Crea un directorio nuevo.
-
 `man`
 : "manual": Muestra el manual de uso de un comando en particular.
 
@@ -49,34 +50,99 @@ A continuación se presentan algunos comandos básicos para el manejo y explorac
 : "copy": Copia un archivo a un directorio. Ejemplo: `cp archivo.txt /mi/ruta/directorio`.
 
 
-Una vez que ya conoces los comandos básicos para usar en terminal, vamos a practicar un poco. Para este ejercicio utilizaremos una terminal virtual llamada <a href = "https://sandbox.cs50.io/">CS50 Sandbox </a>, al dar click te aparecerá la siguiente ventana:
+## Sintaxis de los comandos
 
-```{figure} images/03_explorando_direc/1.png
+Para la exploración de directorios y el manejo de archivos a través de la terminal requiere el uso de comandos específicos y éstos comandos a su vez tienen su propia sintaxis. La sintaxis es la siguiente: 
+
+```
+comando opcion argumento 
+```
+
+Y cada elemento está separado por simples espacios. 
+
+
+### Opciones y argumentos 
+
+En Bash es posible modificar el comportamiento de los comandos utilizando opciones (parámetros) y argumentos. Por ejemplo, cuando utilizamos `mkdir` es necesario escribir después el nombre de la carpeta que vamos a generar, esto es un **argumento**. Cada argumento se separa mediante un espacio. 
+
+```
+mkdir carpeta_nueva
+```
+
+Algunos argumentos son obligatorios, como el nombre de un archivo para `file` , por otr lado, algunos argumentos son **opcionales**. Por ejemplo, el comando `ls` funciona sin problema, sin importar en que carpeta nos encontremos. 
+
+Los comandos también tienen **opciones** y las opciones están indicadas por un guión o dos antes de una letra, por ejemplo la opción `-n` para el comando `head`, gracias a esa opción nosotros podemos especificar el número de líneas que queremos ver de un archivo. ¿Cómo sabemos qué opciones tiene un comando? para eso existe el comando `man` al cual le pasamos como argumento el nombre de otro comando. Lo haremos con  `head`: 
+
+```
+man head
+```
+Cuando escribimos eso en terminal aparecerá una sección llamada `DESCRIPTION`, la cual indica las opciones con las que contamos.
+
+```
+DESCRIPTION
+     This filter displays the first count lines or bytes of each of the
+     specified files, or of the standard input if no files are specified.  If
+     count is omitted it defaults to 10.
+
+     The following options are available:
+
+     -c bytes, --bytes=bytes
+             Print bytes of each of the specified files.
+    -n count, --lines=count
+             Print count lines of each of the specified files.
+
+     If more than a single file is specified, each file is preceded by a header
+     consisting of the string “==> XXX <==” where “XXX” is the name of the file.
+
+```
+
+## Directorio de trabajo 
+
+::::{margin}
+:::{note}
+Fichero = Archivo
+
+Directorio = Carpeta
+:::
+::::
+
+Los directorios en una computadora están jerarquizados ({ref}`arbol de directorios`), es decir, que un directorio puede estar dentro de otro y así sucesivamente hasta tener uno principal. Además, cada directorio y/o fichero tienen un **ruta** que indica el sitio donde se encuentran. El **directorio de trabajo** o (***working directory***) es la carpeta en nuestra computadora en donde se encuentran los archivos y scripts con los que estamos trabajando actualmente. 
+
+
+```{figure} ../img/arbol_directorios.png
+---
+height: 350px
+name: arbol de directorios
+---
+Árbol de directorios
+```
+
+::::{margin}
+:::{admonition} El directorio `root` y `home`
+:class: note
+
+* El directorio */root* es como el directorio */home* del superusuario, es decir, del administrador del servidor. 
+* En el directorio */home* de un servidor se encuentran el resto de los usuarios. 
+:::
+::::
+
+
+### Rutas relativas y absolutas
+
+Una **ruta absoluta** de un directorio nos indica todo el camino que hay que recorrer para llegar a él. Mientras que, una **ruta relativa** apunta a una referencia y luego indica el camino a partir de esa referencia. Imagina que invitas a un@ amig@ a tu casa, no es lo mismo darle instrucciones si el punto de partida es su casa; a darle instrucciones si el punto de partida es desde la tienda más cercana a tu casa. En el caso de los directorios, funciona igual, si quisieramos acceder al directorio */bioinfo* podríamos hacerlo desde */root* y eso sería su *ruta absoluta*. Sin embargo, si nos encontramos dentro del directorio de */katara*, la ruta está tomando de referencia ésta carpeta y entonces sería una *ruta relativa*. 
+
+```{figure} ../img/tipos_rutas.png
 ---
 height: 400px
-name: ventana Sandbox
+name: tipos-rutas
 ---
-Ventana de la terminal virtual Sandbox
+Ruta absoluta y relativa. 
 ```
 
 
-Da click en crear para poder acceder a la terminal virtual.
+## Ejercicio en clase
 
-
-:::{admonition} Nota
-:class: warning
-Para poder acceder debes tener una cuenta de <a href = "https://github.com/">GitHub</a>, sino la has creado, ahora es el momento perfecto.
-:::
-
-En seguida te aparecerá la siguiente interfaz:
-
-```{figure} ../img/03_explorando_direc/2.png
----
-height: 450px
-name: interfaz
----
-Interfaz de la terminal virtual Sandbox.
-```
+Una vez que ya conoces los comandos básicos para usar en terminal, vamos a practicar un poco. Para este ejercicio utilizaremos la terminal virtual <a href = "https://sandbox.cs50.io/">CS50 Sandbox </a> que te presenté en la sección anterior.
 
 Vamos a crear un directorio con el comando de ***make directory*** (`mkdir`), para ello escribirás lo siguiente en la terminal y darás 'Enter'.
 
@@ -171,11 +237,7 @@ Imprime de nuevo la ruta para que te asegures:
 /root/sandbox
 ```
 
-## Rutas absolutas y rutas relativas
-
-Una **ruta absoluta** de un directorio nos indica todo el camino que hay que recorrer para llegar a él. Mientras que, una **ruta relativa** apunta a una referencia y luego indica el camino a partir de esa referencia. Imagina que invitas a un@ amig@ a tu casa, no es lo mismo darle instrucciones si el punto de partida es su casa; a darle instrucciones si el punto de partrida es desde la tienda más cercana a tu casa. Acá sucede lo mismo.
-
-Considerando el ejercicio que hemos estado realizando, nuestro árbol de directorios se vería así:
+Ahora veamos como se ven las rutas absolutas y relativas desde la terminal. Considerando el ejercicio que hemos estado realizando, nuestro árbol de directorios se vería así:
 
 ```{figure} ../img/03_explorando_direc/arbol_ejercicio.png
 ---
@@ -197,4 +259,3 @@ Sin embargo, si estuvieramos en 'dir2' y quisieramos acceder a 'dir3', estamos a
 cd ../dir1/dir3
 ```
 Nota que no escribí 'mi_directorio', en linea de comandos `../` indica "volver a la carpeta superior".
-

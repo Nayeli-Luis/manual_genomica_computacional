@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git y Github &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introducción a linea de comandos" href="03_linea_comandos.html" />
-    <link rel="prev" title="Markdown" href="01_guia_md.html" />
+    <link rel="prev" title="Guía de Markdown" href="01_guia_md.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sistema-de-control-de-versiones">
@@ -437,6 +467,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion-de-git">
+     Instalación de Git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#comandos-de-git">
      Comandos de
      <code class="docutils literal notranslate">
@@ -444,11 +479,6 @@
        git
       </span>
      </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instalacion-de-git">
-     Instalación de Git
     </a>
    </li>
   </ul>
@@ -471,10 +501,70 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Git y Github</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-de-control-de-versiones">
+   Sistema de control de versiones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git">
+   Git
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#los-tres-estados-de-git">
+     Los tres estados de Git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalacion-de-git">
+     Instalación de Git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-de-git">
+     Comandos de
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github">
+   GitHub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeros-pasos-con-git-y-github">
+   Primeros pasos con Git y GitHub
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="git-y-github">
+  <div class="tex2jax_ignore mathjax_ignore section" id="git-y-github">
 <h1>Git y Github<a class="headerlink" href="#git-y-github" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
 <div class="tip admonition">
@@ -484,28 +574,26 @@
 <li><p>Conocer los comandos básicos de Git para actualizar repositorios en GitHub</p></li>
 </ul>
 </div>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="note admonition">
 <p class="admonition-title">Videos</p>
-<p><a href = "https://git-scm.com/video/what-is-version-control">What is Version Control?</a></p>
+<p><a class="reference external" href="https://git-scm.com/video/what-is-version-control">What is Version Control?</a></p>
 </div>
-</aside>
-<section id="sistema-de-control-de-versiones">
+</div>
+<div class="section" id="sistema-de-control-de-versiones">
 <h2>Sistema de control de versiones<a class="headerlink" href="#sistema-de-control-de-versiones" title="Permalink to this headline">¶</a></h2>
 <p>Un <strong>sistema de control de versiones</strong> es un sistema que registra los cambios de un archivo o un conjunto de archivos a lo largo del tiempo, de manera que puedas acceder a alguna versión antigua posteriormente. Todes hemos generado copias de un archivo para posteriormente modificarlo y así guardar la versión anterior, de manera similar funcionan los sistema de control de versiones. Cuando trabajas solo, generar copias de tus archivos puede funcionar, pero… ¿Qué pasa si estás generando un proyecto en conjunto con otras personas?, para ésto se inventaron los <strong>sistema de control de versiones centralizados</strong> (ver <a class="reference internal" href="#control-versiones"><span class="std std-ref">Diferencia entre control de versiones (centralizado y distribuido).</span></a>), estos tienen un solo servidor que contiene todos los archivos y sus versiones, de manera que los usuarios puede extraer, cosultar o modificar archivos desde ese sitio central. El problema que tenemos ahora es que todo se encuentra en un sólo servidor, si éste falla se corre el riesgo de perder todos esos archivos.</p>
 <p>En ésta parte de la historia entra los <strong>sistemas de control de versiones distribuidos</strong> como Git, Mercurial, Bazaar o Darcs. En estos sistemas los clientes no solo revisan la última version de los archivo, más bien ellos pueden ver todo el repositiorio completo con sus versiones. Además, si algún servidor muere el resto de los colaboradores tienen un clon de los archivos, literalmente un copia de seguridad completa de todos los datos (ver <a class="reference internal" href="#control-versiones"><span class="std std-ref">Diferencia entre control de versiones (centralizado y distribuido).</span></a>).</p>
-<figure class="align-default" id="control-versiones">
+<div class="figure align-default" id="control-versiones">
 <a class="reference internal image-reference" href="../../_images/control_versiones.png"><img alt="../../_images/control_versiones.png" src="../../_images/control_versiones.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Diferencia entre control de versiones (centralizado y distribuido).</span><a class="headerlink" href="#control-versiones" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="git">
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Diferencia entre control de versiones (centralizado y distribuido).</span><a class="headerlink" href="#control-versiones" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="git">
 <h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
 <p><a href = "https://git-scm.com/">Git</a> es un sistema de control de versiones  distribuido.  Git piensa en sus datos como una serie de copias instantáneas (<em>snapshots</em>) de un sistema de archivos en miniatura. Con Git, cada vez que se confirma o se guarda el estado de un proyecto, Git literamente toma una foto de cómo se ven todos sus archivos en ese momento y almacena una referencia a esa <em>snapshot</em>. Además, para aumentar su eficiencia, Git no vuelve a almacenar el archivo, solo un enlace al archivo idéntico al anterior ya almacenado. Además, Git sólo necesita archivos y recursos locales para trabajar.</p>
-<section id="los-tres-estados-de-git">
+<div class="section" id="los-tres-estados-de-git">
 <h3>Los tres estados de Git<a class="headerlink" href="#los-tres-estados-de-git" title="Permalink to this headline">¶</a></h3>
 <p>Ahora, es importante recalcar que Git tiene tres estados principales en los que se pueden encontrar los archivos:</p>
 <ul class="simple">
@@ -514,12 +602,10 @@
 <li><p><em>Commited</em> (confirmado): Significa que los datos ya se almacenan de forma segura en su base de datos.</p></li>
 </ul>
 <p>Est nos lleva a las tres secciones principales de un proyecto Git: el directorio de trabajo, el área de preparación  (<em>staging area</em>) y el directorio Git (ver <a class="reference internal" href="#arbol-git"><span class="std std-ref">Secciones de un proyecto Git.</span></a>)</p>
-<figure class="align-default" id="arbol-git">
+<div class="figure align-default" id="arbol-git">
 <a class="reference internal image-reference" href="../../_images/arbol_git.png"><img alt="../../_images/arbol_git.png" src="../../_images/arbol_git.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Secciones de un proyecto Git.</span><a class="headerlink" href="#arbol-git" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Secciones de un proyecto Git.</span><a class="headerlink" href="#arbol-git" title="Permalink to this image">¶</a></p>
+</div>
 <p>El directorio de Git es donde se alamacenan los metadatos y la base de datos objetos para tu proyecto. El directorio de trabajo es una copia de una versión del proyecto y el área de preparación almacena la información acerca de lo que va a ir en tu próximo <code class="docutils literal notranslate"><span class="pre">commit</span></code> (confirmación), el área de preparación es como el sitio de espera.</p>
 <p>Entonces el flujo de trabajo de Git es el siguiente:</p>
 <ol class="simple">
@@ -527,8 +613,21 @@
 <li><p>Se eligen los archivos que desea que formen parte de su próxima versión, en el área de preparación.</p></li>
 <li><p>Se hace una confirmación, que toma los archivos tal como están en el área de preparación y se alamcena una <em>snapshot</em> permanente en su directorio de Git.</p></li>
 </ol>
-</section>
-<section id="comandos-de-git">
+</div>
+<div class="section" id="instalacion-de-git">
+<h3>Instalación de Git<a class="headerlink" href="#instalacion-de-git" title="Permalink to this headline">¶</a></h3>
+<p>Para instalar Git en sistema Linux:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dnf install git-all
+</pre></div>
+</div>
+<p>o</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install git-all
+</pre></div>
+</div>
+<p>En macOS, se debe tener instalado <a href = "https://brew.sh/">Homebrew</a> o <a href = "https://developer.apple.com/xcode/">Xcode</a> para posteriormente
+<a href = "https://git-scm.com/download/mac">instalar Git</a>.</p>
+</div>
+<div class="section" id="comandos-de-git">
 <h3>Comandos de <code class="docutils literal notranslate"><span class="pre">git</span></code><a class="headerlink" href="#comandos-de-git" title="Permalink to this headline">¶</a></h3>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></dt><dd><p>Crea un repositorio vació en la carpeta actual (directorio de trabajo).</p>
@@ -545,105 +644,53 @@
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">nombre_rama</span></code></dt><dd><p>Crear una nueva rama en tu repositorio local.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">chechout</span> <span class="pre">nombre_rama</span></code></dt><dd><p>Cambiar de rama.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">nombre_rama</span></code></dt><dd><p>Cambiar de rama.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">nombre_rama</span></code></dt><dd><p>Unir una rama en específico con la rama principal (master branch).</p>
 </dd>
 </dl>
-</section>
-<section id="instalacion-de-git">
-<h3>Instalación de Git<a class="headerlink" href="#instalacion-de-git" title="Permalink to this headline">¶</a></h3>
-<p>Para instalar Git en sistema Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dnf install git-all
-</pre></div>
-</div>
-<p>o</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install git-all
-</pre></div>
-</div>
-<p>En macOS, se debe tener instalado <a href = "https://brew.sh/">Homebrew</a> o <a href = "https://developer.apple.com/xcode/">Xcode</a> para posteriormente
-<a href = "https://git-scm.com/download/mac">instalar Git</a>.</p>
-</section>
-</section>
-<section id="github">
-<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
-<p><a href = "https://github.com/">GitHub</a> es el host más grande para los repositiorios Git y es el punto central de colaboración de millones de desarrolladores y proyectos.</p>
-</section>
-<section id="primeros-pasos-con-git-y-github">
-<h2>Primeros pasos con Git y GitHub<a class="headerlink" href="#primeros-pasos-con-git-y-github" title="Permalink to this headline">¶</a></h2>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition-buscador-de-comandos admonition">
 <p class="admonition-title">Buscador de comandos</p>
 <p><a href = "https://git-scm.com/docs">Aquí</a> la documentación de Git, para que busques y revises los comandos que necesites.</p>
 </div>
-</aside>
-<p>Lo que vamos a aprender a continuación es a manejar repositorios desde nuestra computadora.
-Primero, para poder utilizar Git y Github desde tu computadora debes crear un token de acceso personal, el cual utilizarás como contraseña en la línea de comandos, para ellos debes seguir <a href = "https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">este tutorial</a>. Guarda tu token en un lugar seguro, no lo compartas.</p>
+</div>
+</div>
+</div>
+<div class="section" id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p><a href = "https://github.com/">GitHub</a> es el host más grande para los repositiorios Git y es el punto central de colaboración de millones de desarrolladores y proyectos.</p>
+</div>
+<div class="section" id="primeros-pasos-con-git-y-github">
+<h2>Primeros pasos con Git y GitHub<a class="headerlink" href="#primeros-pasos-con-git-y-github" title="Permalink to this headline">¶</a></h2>
+<p>Primero, para poder utilizar Git y Github desde tu computadora debes crear un token de acceso personal, el cual utilizarás como contraseña en la línea de comandos, para ellos debes seguir <a href = "https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">este tutorial</a>. Guarda tu token en un lugar seguro, no lo compartas.</p>
 <p>Ahora, vamos a iniciar sesión en Github y a crear un nuevo repositorio.</p>
-<figure class="align-default" id="nuevo-repositorio">
+<div class="figure align-default" id="nuevo-repositorio">
 <a class="reference internal image-reference" href="../../_images/01_nuevo_repositorio.png"><img alt="../../_images/01_nuevo_repositorio.png" src="../../_images/01_nuevo_repositorio.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Generar nuevo repositorio.</span><a class="headerlink" href="#nuevo-repositorio" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Generar nuevo repositorio.</span><a class="headerlink" href="#nuevo-repositorio" title="Permalink to this image">¶</a></p>
+</div>
 <p>Podemos nombrar, dar una descripción de nuestro repositorio, elegir si deseamos que sea público o privado y elegir si queremos que se generen automáticamnte algunos archivos (recomiendo que des click en “Learn more” para saber de qué va cada uno). Una vez que hayamos configurado nuestro nuevo repositorio, damos click en “Create repository”.</p>
-<figure class="align-default" id="nombrar-repositorio">
+<div class="figure align-default" id="nombrar-repositorio">
 <a class="reference internal image-reference" href="../../_images/02_nombrar_repositorio.png"><img alt="../../_images/02_nombrar_repositorio.png" src="../../_images/02_nombrar_repositorio.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Configurar repositorio.</span><a class="headerlink" href="#nombrar-repositorio" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>Nos llevará a una ventana en donde nos mostrará la dirección de nuestro repositorio y algunas opciones que podemos configurar desde nuestra línea de comandos. Por ahora, copia la dirección de tu repositorio.</p>
-<figure class="align-default" id="direccion">
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Configurar repositorio.</span><a class="headerlink" href="#nombrar-repositorio" title="Permalink to this image">¶</a></p>
+</div>
+<p>Nos llevará a una ventana en donde nos mostrará la dirección de nuestro repositorio y algunas opciones que podemos configurar desde nuestra línea de comandos.</p>
+<div class="figure align-default" id="direccion">
 <a class="reference internal image-reference" href="../../_images/03_direccion.png"><img alt="../../_images/03_direccion.png" src="../../_images/03_direccion.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">URL de nuestro repositorio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>Ahora, comenzaremos a usar nuestra línea de comandos para trabajar archivos desde nuestra computadora y subirlos a Github. Para esto lo primero que haremos será clonar nuestro repositorio a nuestra computadora con los comandos <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">url_repositorio</span></code>. Elige el lugar donde quieras que esté, yo la pondré en mi carpeta de Documentos.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Documentos
-git clone https://github.com/Nayeli-Luis/pruba_repositorio.git
-</pre></div>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">URL de nuestro repositorio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
 </div>
-<p>Cuando hagas esto, te pedirá un usuario y tu contraseña. Tu usuario de Github aparece en la URL: https://github.com/nombre-usuario, en mi caso https://github.com/Nayeli-Luis, entonces mi usuario seria Nayeli-Luis. Por otro lado, la contraseña es el token que has creado previamente, NO es la contraseña de tu cuenta de Github.</p>
-<p>Después de que hayas ingresado tus datos te debe aparecer una carpeta con el nombre de tu repositorio, puedes comporbarlo haciendo un listado con <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Lo que haremos ahora es generar un archivo de texto.  Una vez que tu archivo esté generado, editalo escribiendo tu nombre, tu correo y tu película favorita. Sino recuerdas como hacer algo de esto, te sugiero que revises el capítulo anterior.</p>
-<p>También puedes creear una carpeta en tu computadora y generar un repositorio vacío escribiendo:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
-</pre></div>
-</div>
-<p>Ahora subiremos nuestro archivo con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, paa subir todo lo que tenemos en nuestro repositorio se agrega <code class="docutils literal notranslate"><span class="pre">./*</span></code>, entonces escribimos en terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add ./*
-</pre></div>
-</div>
-<p>También podemos agregar un archivo en específico poniendo <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">nombre_archivo</span></code>.</p>
-<p>y damos ‘Enter’, en terminal verás que no ocurre nada, pero Git ha recibido la instrucción de agregar todos los archivos al repositorio. De aquí, podemos confirmar que
-vamos a guardar ese archivo en nuestro repositorio local con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, además podemos usar la opción <code class="docutils literal notranslate"><span class="pre">-m</span></code> para agregar algún mensaje. Entonces escribimos en terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;estoy subiendo un archivo nuevo&quot;</span>
-</pre></div>
-</div>
-<p>Finalmente, vamos a transferir o enviar la confirmación que se realizó en nuestra computa al repositorio remoto en GitHub con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
-</pre></div>
-</div>
-<p>Si entramos a GitHub debemos ver el archivo que hemos subido, el mensaje cuando hicimos <code class="docutils literal notranslate"><span class="pre">commit</span></code> y desde hace cuánto tiempo lo subimos:</p>
-<figure class="align-default" id="archivo-github">
+<p>Lo ideal es tener un repositorio local en nuestra computadora en donde ya hayamos iniciando un repositorio con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>, y hayamos agregado archivos (con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> y luego <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>). de ésta manera podremos utilizar la opción <em>… or push an existing repository from the command line</em> en donde solo tenemos que seguir las instrucciones indicadas en ésta opción. De manera que cuando escribamos <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, se nos pedirá el usuario y contraseña por línea de comandos. Tu usuario de Github aparece en la URL: https://github.com/nombre-usuario, en mi caso https://github.com/Nayeli-Luis, entonces mi usuario seria Nayeli-Luis. Por otro lado, la contraseña es el token que has creado previamente, NO es la contraseña de tu cuenta de Github.</p>
+<p>Si entramos a GitHub (a través de un navegador) debemos ver el archivo que hemos subido, el mensaje cuando hicimos <code class="docutils literal notranslate"><span class="pre">commit</span></code> y desde hace cuánto tiempo lo subimos:</p>
+<div class="figure align-default" id="archivo-github">
 <a class="reference internal image-reference" href="../../_images/04_archivo_github.png"><img alt="../../_images/04_archivo_github.png" src="../../_images/04_archivo_github.png" style="height: 200px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Archivo en GitHub.</span><a class="headerlink" href="#archivo-github" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<p>Si estamos colaborando en un proyecto más grande y deseamos ver el historial de todos los “commits” (confirmaciones) que se han hecho, podemos escribir en terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git log
-</pre></div>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Archivo en GitHub.</span><a class="headerlink" href="#archivo-github" title="Permalink to this image">¶</a></p>
 </div>
-<p>Te aparecerá algo similar a esto:</p>
-<figure class="align-default" id="git-log">
+<p>Además, también podemos ver el status de los commits que realicemos y dónde se encuentran con <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>y te aparecerá algo similar a esto:</p>
+<div class="figure align-default" id="git-log">
 <a class="reference internal image-reference" href="../../_images/05_git_log.png"><img alt="../../_images/05_git_log.png" src="../../_images/05_git_log.png" style="height: 150px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Mensaje en terminal de git log.</span><a class="headerlink" href="#git-log" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Mensaje en terminal de git log.</span><a class="headerlink" href="#git-log" title="Permalink to this image">¶</a></p>
+</div>
 <p>En donde te la clave del <code class="docutils literal notranslate"><span class="pre">commit</span></code>, el autor quien lo llevó a cabo y la fecha.</p>
 <p>Para conocer el status de todos tus archivos en general, podemos escribir en terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
@@ -653,8 +700,8 @@ vamos a guardar ese archivo en nuestro repositorio local con <code class="docuti
 <p class="admonition-title">Para saber más</p>
 <p>Éste capítulo es un resumen de parte del libro de <a href = "https://git-scm.com/book/en/v2">Git Pro</ao></p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -678,34 +725,42 @@ vamos a guardar ese archivo en nuestro repositorio local con <code class="docuti
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="01_guia_md.html" title="previous page">Markdown</a>
-    <a class='right-next' id="next-link" href="03_linea_comandos.html" title="next page">Introducción a linea de comandos</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="01_guia_md.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Guía de Markdown</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="03_linea_comandos.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introducción a linea de comandos</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

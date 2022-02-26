@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 3. Manejo de datos de secuenciación con Bash. &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,17 +42,20 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -70,6 +72,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/gc.png" class="logo" alt="logo">
       
       
@@ -79,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -88,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -171,7 +177,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -189,7 +195,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -210,11 +216,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -252,7 +253,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -333,6 +334,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -378,7 +408,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -412,12 +442,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#indicaciones">
@@ -464,10 +494,65 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Práctica 3. Manejo de datos de secuenciación con Bash.</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indicaciones">
+   Indicaciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entregables">
+     Entregables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parte-i">
+   Parte I.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parte-ii">
+   Parte II.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parte-iii">
+   Parte III.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parte-iv">
+   Parte IV.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parte-v">
+   Parte V.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="practica-3-manejo-de-datos-de-secuenciacion-con-bash">
+  <div class="tex2jax_ignore mathjax_ignore section" id="practica-3-manejo-de-datos-de-secuenciacion-con-bash">
 <h1>Práctica 3. Manejo de datos de secuenciación con <code class="docutils literal notranslate"><span class="pre">Bash</span></code>.<a class="headerlink" href="#practica-3-manejo-de-datos-de-secuenciacion-con-bash" title="Permalink to this headline">¶</a></h1>
 <div class="important admonition">
 <p class="admonition-title">Objetivo</p>
@@ -476,10 +561,10 @@
 <li><p>Que el estudiante comience a familiarizarse con los formatos más comunes utilizados en la bioinformática.</p></li>
 </ul>
 </div>
-<section id="indicaciones">
+<div class="section" id="indicaciones">
 <h2>Indicaciones<a class="headerlink" href="#indicaciones" title="Permalink to this headline">¶</a></h2>
 <p>La práctica está compuesta de cinco partes para repasar los comandos de Bash que se vieron en clase y se resuelve de manera <strong>INDIVIDUAL</strong>.</p>
-<section id="entregables">
+<div class="section" id="entregables">
 <h3>Entregables<a class="headerlink" href="#entregables" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Los archivos se entregan en un directorio que deberá estar en su <code class="docutils literal notranslate"><span class="pre">GitHub</span></code>, corrobora que se encuentre toda la información.</p></li>
@@ -524,16 +609,16 @@ Comandos:
 <p class="admonition-title">IMPORTANTE</p>
 <p>Tanto el link de la carpeta como el archivo con los comandos debe enviarse a través del Classroom de la clase antes de que cierre la asignación</p>
 </div>
-</section>
-</section>
-<section id="parte-i">
+</div>
+</div>
+<div class="section" id="parte-i">
 <h2>Parte I.<a class="headerlink" href="#parte-i" title="Permalink to this headline">¶</a></h2>
 <p><strong>Pregunta 1</strong>: Creación de directorios y archivo de comandos: Inicia la terminal y colócate en el directorio de tu <em>home</em> (<code class="docutils literal notranslate"><span class="pre">computadora&#64;usuario:~/home/</span></code>) o del escritorio (<code class="docutils literal notranslate"><span class="pre">computadora&#64;usuario:~/Desktop/</span></code>). Crea un directorio llamado <code class="docutils literal notranslate"><span class="pre">GenomicaComputacional</span></code> (sin tilde), ingresa en este nuevo directorio y crea uno nuevo que lleva la inicial de tu nombre, tu apellido en minúsculas y sin espacio, guión bejo, p03. Ejemplo: <code class="docutils literal notranslate"><span class="pre">nluis_p03</span></code>. Ahora, crea el archivo <code class="docutils literal notranslate"><span class="pre">comandos_p03.md</span></code></p>
 <p><strong>Pregunta 2</strong>:  Indica qué tipo de shell tiene tu computadora. Si no recuerdas el comando, recuerda que posiblemente alguien ya preguntó eso alguna vez. Puedes visitar el siguiente sitio: <a href = "https://askubuntu.com/questions/590899/how-do-i-check-which-shell-i-am-using">How do I check whic shell I am using</a></p>
 <p><strong>Pregunta 3</strong>:  Un proyecto bioinformático que se quiere publicar debe estar bien organizado y documentado para que éste se vuelva reproducible. Colócate dentro del directorio que creaste con tu inicial y apellido. Ahora crea <strong>en una sola linea</strong> los siguientes directorios para la organización de tu proyecto bioinformático: <code class="docutils literal notranslate"><span class="pre">data/</span></code>, <code class="docutils literal notranslate"><span class="pre">filtered/</span></code>, <code class="docutils literal notranslate"><span class="pre">raw_data/</span></code>, <code class="docutils literal notranslate"><span class="pre">meta/</span></code>, <code class="docutils literal notranslate"><span class="pre">scripts/</span></code>, <code class="docutils literal notranslate"><span class="pre">figures/</span></code> y <code class="docutils literal notranslate"><span class="pre">archive/</span></code>. Mueve los directorios necesarios para obtener la siguiente esctructura: <code class="docutils literal notranslate"><span class="pre">data/filtered</span></code> y <code class="docutils literal notranslate"><span class="pre">data/raw_data</span></code>.</p>
 <p><strong>Pregunta 4</strong>:  Visita el siguiente repositorio y contesta ¿A qué se debe el nombre y la organización de los directorios que acabamos de crear? <a class="reference external" href="https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad2/Unidad2_Organizacion_proyecto_bioinf.md">BioinfinvRepo</a></p>
-</section>
-<section id="parte-ii">
+</div>
+<div class="section" id="parte-ii">
 <h2>Parte II.<a class="headerlink" href="#parte-ii" title="Permalink to this headline">¶</a></h2>
 <p><strong>Pregunta 1</strong>:  Entra al directorio <code class="docutils literal notranslate"><span class="pre">scripts/</span></code>, crea un archivo de texto <code class="docutils literal notranslate"><span class="pre">delay.sh</span></code> y abrelo con un editor de texto desde la terminal para escribir las siguientes líneas de código:</p>
 <div class="warning admonition">
@@ -554,8 +639,8 @@ Comandos:
 </pre></div>
 </div>
 <p><strong>Pregunta 5</strong>:  Imagina que en lugar de poner 30, escribiste 300. Hazlo y ejecutalo en <em>background</em>. Como no queremos esperar 5 minutos, <em>cancela</em> el proceso utilizando su PID.</p>
-</section>
-<section id="parte-iii">
+</div>
+<div class="section" id="parte-iii">
 <h2>Parte III.<a class="headerlink" href="#parte-iii" title="Permalink to this headline">¶</a></h2>
 <p>En esta parte, trabajarás con secuencias genómicas del virus SARS-CoV-2 que provoca la enfermedad Covid-19. Si necesitas un contexto general de los datos, también puedes consultar el siguiente <a class="reference external" href="https://www.youtube.com/watch?v=BtN-goy9VOY&amp;feature=youtu.be">video sobre Covid-19</a>.</p>
 <div class="warning admonition">
@@ -568,8 +653,8 @@ Comandos:
 </div>
 <p><strong>Pregunta 1</strong>:  Resumen. Elabora un resumen de 120 palabras sobre la siguiente conferencia respecto a la <a class="reference external" href="https://www.youtube.com/watch?v=I0AbpnFP1g8">estructura molecular del SARS-Cov-2</a>. También puedes apoyarte en el siguiente <a class="reference external" href="https://www.nytimes.com/interactive/2020/04/03/science/coronavirus-genome-bad-news-wrapped-in-protein.html">texto</a> publicado por The New York Times. El resumen deberá estar escrito en un archivo <code class="docutils literal notranslate"><span class="pre">SarsCov-2.txt</span></code> dentro del directorio creado para la práctica Ej. <code class="docutils literal notranslate"><span class="pre">~/home/GenomicaComputacional/mnavarro_p01/meta</span></code></p>
 <p><strong>Pregunta 2</strong>:  Mueve los <strong>ocho</strong> archivos <code class="docutils literal notranslate"><span class="pre">sarscov2_genome.fasta</span></code>, <code class="docutils literal notranslate"><span class="pre">sarscov2_genome.gff3</span></code>, <code class="docutils literal notranslate"><span class="pre">splike_c.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">splike_b.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">splike_a.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">SRR10971381_R1.fastq.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">SRR10971381_R2.fastq.gz</span></code> y <code class="docutils literal notranslate"><span class="pre">sarscov2_assembly.fasta.gz</span></code> a tu directorio <code class="docutils literal notranslate"><span class="pre">data\raw_data</span></code>.</p>
-</section>
-<section id="parte-iv">
+</div>
+<div class="section" id="parte-iv">
 <h2>Parte IV.<a class="headerlink" href="#parte-iv" title="Permalink to this headline">¶</a></h2>
 <p><strong>Pregunta 1</strong>: Ligas simbólicas. Realiza tres ligas simbólicas suaves de los archivos <code class="docutils literal notranslate"><span class="pre">splike_c.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">splike_b.faa</span></code> y <code class="docutils literal notranslate"><span class="pre">splike_a.faa</span></code> en el directorio <code class="docutils literal notranslate"><span class="pre">data/filtered</span></code>.</p>
 <p><strong>Pregunta 2</strong>:  Dentro de <code class="docutils literal notranslate"><span class="pre">data/filtered</span></code> crea un nuevo archivo llamado <code class="docutils literal notranslate"><span class="pre">glycoproteins.faa</span></code>.</p>
@@ -600,8 +685,8 @@ Comandos:
 <p><strong>Pregunta 9</strong>:  Explica la diferencia entre los formatos <code class="docutils literal notranslate"><span class="pre">.faa</span></code>, <code class="docutils literal notranslate"><span class="pre">.fastqc</span></code> y .<code class="docutils literal notranslate"><span class="pre">fasta</span></code>: ¿Las secuencias hacen referencia a nucleótidos o aminoácidos?</p>
 <p><strong>Pregunta 10</strong>: Abre el archivo <a class="reference external" href="https://nayeli-luis.github.io/manual_bioinformatica/12_formatos.html">.gff3</a> de las siguientes formas <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">sequence.gff3</span></code> y <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">-S</span> <span class="pre">sarscov2_genome.gff3</span></code>. Observa las diferencias. Repórtalas en un enunciado.</p>
 <p><strong>Pregunta 11</strong>:  Filtra el tercer campo del archivo <code class="docutils literal notranslate"><span class="pre">sarscov2_genome.gff3</span></code> por la categoría <code class="docutils literal notranslate"><span class="pre">gene</span></code> y reporta la cantidad de genes que tiene el archivo. ¿A qué corresponde el campo tres? ¿Cuál es la diferencia entre <code class="docutils literal notranslate"><span class="pre">gene</span></code> y <code class="docutils literal notranslate"><span class="pre">CDS</span></code> de acuerdo a la información proporcionada por la <a href = "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md">documentación</a> del campo 3?</p>
-</section>
-<section id="parte-v">
+</div>
+<div class="section" id="parte-v">
 <h2>Parte V.<a class="headerlink" href="#parte-v" title="Permalink to this headline">¶</a></h2>
 <p><strong>Pregunta 1</strong>:  Cambia al directorio <code class="docutils literal notranslate"><span class="pre">figures/</span></code> y crea una liga simbólica suave del archivo <code class="docutils literal notranslate"><span class="pre">sarscov2_genome.gff3</span></code></p>
 <p><strong>Pregunta 2</strong>:  Identifica cuántas categorías distintas existen en el campo 3 y cuántas veces aparecen. Redirecciona la salida a un archivo que se llame <code class="docutils literal notranslate"><span class="pre">barplot_data.txt</span></code></p>
@@ -631,8 +716,8 @@ Comandos:
 </pre></div>
 </div>
 <p><strong>Pregunta 5</strong>:  Guarda la figura que obtuviste en <code class="docutils literal notranslate"><span class="pre">figures/</span></code></p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -656,32 +741,28 @@ Comandos:
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-
-        </div>
-        
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
