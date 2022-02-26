@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>¿De dónde obtenemos datos biológicos? &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Formatos de archivos" href="02_formatos.html" />
     <link rel="prev" title="Introducción al análisis de datos biológicos con herramientas bioinformáticas." href="00_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repositorios-de-secuencias-de-dna-rna-y-o-proteinas">
@@ -427,8 +457,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#obtencion-de-secuencias-del-ncbi">
-   Obtención de secuencias del NCBI
+  <a class="reference internal nav-link" href="#ejercicio-de-clase-obtencion-de-secuencias-del-ncbi">
+   Ejercicio de clase: Obtención de secuencias del NCBI
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -451,22 +481,62 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>¿De dónde obtenemos datos biológicos?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repositorios-de-secuencias-de-dna-rna-y-o-proteinas">
+   Repositorios de secuencias de DNA, RNA y/o proteínas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicio-de-clase-obtencion-de-secuencias-del-ncbi">
+   Ejercicio de clase: Obtención de secuencias del NCBI
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descargar-secuencias-de-dna">
+     Descargar secuencias de DNA
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descargar-secuencias-de-proteinas">
+     Descargar secuencias de proteínas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="de-donde-obtenemos-datos-biologicos">
+  <div class="tex2jax_ignore mathjax_ignore section" id="de-donde-obtenemos-datos-biologicos">
 <h1>¿De dónde obtenemos datos biológicos?<a class="headerlink" href="#de-donde-obtenemos-datos-biologicos" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autoras: M. Nayeli Luis-Vargas y Marisol Navarro</strong></p>
 <p>Como vimos en una sección anterior, podemos obtener secuencias de DNA mediante experimentos, otra opción es el uso de bases de datos.</p>
-<section id="repositorios-de-secuencias-de-dna-rna-y-o-proteinas">
+<div class="section" id="repositorios-de-secuencias-de-dna-rna-y-o-proteinas">
 <h2>Repositorios de secuencias de DNA, RNA y/o proteínas<a class="headerlink" href="#repositorios-de-secuencias-de-dna-rna-y-o-proteinas" title="Permalink to this headline">¶</a></h2>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="caution admonition">
 <p class="admonition-title">Rercuerda que</p>
 <p>En este curso nos enfocamos al análisis de secuencias de DNA.</p>
 </div>
-</aside>
+</div>
 <p>El <em>International Nucleotide Sequence Database Collaboration</em> (<a href = "https://www.insdc.org/">INSDC</a>) ha hecho varios esfuerzos por mantener las secuencias de DNA originales de diversas investigaciones. Los miembors de éstas organizaciones son:</p>
 <ul class="simple">
 <li><p><a href = "https://www.ncbi.nlm.nih.gov/">NCBI</a>: National Center for Biotechnology Information</p></li>
@@ -484,45 +554,45 @@
 <p class="admonition-title">Más repositorios</p>
 <p>Si quieres saber de más sitios donde puedes obtener datos de origen biológico te recomiendo el artículo de <a href = "https://drive.google.com/file/d/12B8FbkLM1hBVWFrIJrzraKwaopvmP6ND/view?usp=sharing">Database resources of the National Center for Biotechnology Information</a> (2019) de Sayers y colaboradores.</p>
 </div>
-</section>
-<section id="obtencion-de-secuencias-del-ncbi">
-<h2>Obtención de secuencias del NCBI<a class="headerlink" href="#obtencion-de-secuencias-del-ncbi" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ejercicio-de-clase-obtencion-de-secuencias-del-ncbi">
+<h2>Ejercicio de clase: Obtención de secuencias del NCBI<a class="headerlink" href="#ejercicio-de-clase-obtencion-de-secuencias-del-ncbi" title="Permalink to this headline">¶</a></h2>
 <p>En ésta sección aprenderás a descargar secuencias desde el <em>National Center for Biotechnology Information</em> (NCBI). Te sugerimos llevar a cabo el ejercicio, pues las secuencias que descargues las necesitarás para realizar la <em>Práctica 3</em>:</p>
-<section id="descargar-secuencias-de-dna">
+<div class="section" id="descargar-secuencias-de-dna">
 <h3>Descargar secuencias de DNA<a class="headerlink" href="#descargar-secuencias-de-dna" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Entra a la página del NCBI <a class="reference external" href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a>. Escribe en el buscador el organismo que deseas, en este caso buscaremos el genoma del virus que provocó la pandemia actual. Da click en “buscar”.</p></li>
 </ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi1.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi1.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi1.png" style="height: 350px;" /></a>
-</figure>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi1.png"><img alt="../../_images/ncbi1.png" src="../../_images/ncbi1.png" style="height: 350px;" /></a>
+</div>
 <ul class="simple">
 <li><p>Te redirigirá a otra página con los datos del organismo. Da click en el recuadro que dice “Reference genome”.</p></li>
 </ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi2.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi2.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi2.png" style="height: 300px;" /></a>
-</figure>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi2.png"><img alt="../../_images/ncbi2.png" src="../../_images/ncbi2.png" style="height: 300px;" /></a>
+</div>
 <ul class="simple">
 <li><p>En seguida te redirigirá a una página con un formato de GeneBank (en el siguiente apartado vemos los formatos). Da clcik en “Send to:” y selecciona las opciones “Complete Record” y “File”. Te desplegará un pequeño apartado que dice “Format” primero seleccionaras el que diga <code class="docutils literal notranslate"><span class="pre">FASTA</span></code> y darás click en “Create File”. Te descargará un archivo con nombre <code class="docutils literal notranslate"><span class="pre">sequence.fasta</span></code>. Repetirás el proceso para ahroa descargar un archivo con formato <code class="docutils literal notranslate"><span class="pre">GFF3</span></code>, tendrás un segundo archivo con nombre <code class="docutils literal notranslate"><span class="pre">sequence.GFF3</span></code>. Renombra los archivos <code class="docutils literal notranslate"><span class="pre">sequence.fasta</span> <span class="pre">-&gt;</span> <span class="pre">sarscov2_genome.fasta</span></code> y <code class="docutils literal notranslate"><span class="pre">sequence.gff3</span> <span class="pre">-&gt;</span> <span class="pre">sarscov2_genome.gff3</span></code>.</p></li>
 </ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi3.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi3.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi3.png" style="height: 350px;" /></a>
-</figure>
-</section>
-<section id="descargar-secuencias-de-proteinas">
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi3.png"><img alt="../../_images/ncbi3.png" src="../../_images/ncbi3.png" style="height: 350px;" /></a>
+</div>
+</div>
+<div class="section" id="descargar-secuencias-de-proteinas">
 <h3>Descargar secuencias de proteínas<a class="headerlink" href="#descargar-secuencias-de-proteinas" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Entra a la página del NCBI <a class="reference external" href="https://www.ncbi.nlm.nih.gov/g">https://www.ncbi.nlm.nih.gov/g</a>. Escribe en el buscador la proteína  que deseas, en este caso buscaremos una proteína del virus que provocó la pandemia actual (<em>sars cov-2 spike ectodomain</em>). Luego, despliega el menú en donde dice “All Databases” y selecciona “Structure”. Da click en “buscar”.</p></li>
 </ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi4.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi4.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi4.png" style="height: 350px;" /></a>
-</figure>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi4.png"><img alt="../../_images/ncbi4.png" src="../../_images/ncbi4.png" style="height: 350px;" /></a>
+</div>
 <ul class="simple">
 <li><p>Da click en la opción 2: <em>Structure of the SARS-CoV-2 spike glycoprotein (closed state)[VIRAL PROTEIN]</em> . Te redirigirá a otro sitio y ahí da click en “Download sequence data”.</p></li>
 </ul>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi5.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi5.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi5.png" style="height: 350px;" /></a>
-</figure>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi5.png"><img alt="../../_images/ncbi5.png" src="../../_images/ncbi5.png" style="height: 350px;" /></a>
+</div>
 <ul class="simple">
 <li><p>Descargarás las cadenas A, B y C. Para esto:</p>
 <ol class="simple">
@@ -538,12 +608,12 @@
 <p class="admonition-title">Atención</p>
 <p>Debes seleccionarlas y descargarlas una por una, para que al final tengas tres archivos.</p>
 </div>
-<figure class="align-default">
-<a class="reference internal image-reference" href="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi6.png"><img alt="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi6.png" src="03_analisis_datos_biologicos/img/intro_analisis_bioinfo/ncbi6.png" style="height: 400px;" /></a>
-</figure>
-</section>
-</section>
-</section>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/ncbi6.png"><img alt="../../_images/ncbi6.png" src="../../_images/ncbi6.png" style="height: 400px;" /></a>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -567,34 +637,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">Introducción al análisis de datos biológicos con herramientas bioinformáticas.</a>
-    <a class='right-next' id="next-link" href="02_formatos.html" title="next page">Formatos de archivos</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introducción al análisis de datos biológicos con herramientas bioinformáticas.</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="02_formatos.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formatos de archivos</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La célula &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Biomoléculas" href="01_biomoleculas.html" />
     <link rel="prev" title="Introducción" href="00_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,18 +444,13 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#videos-y-otros-recursos">
-   Videos y otros recursos
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#principios-de-la-teoria-celular">
    Principios de la teoría celular
@@ -454,35 +479,69 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>La célula</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principios-de-la-teoria-celular">
+   Principios de la teoría celular
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-celulas">
+   Tipos de células
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organelos">
+   Organelos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#niveles-de-organizacion-de-la-vida">
+   Niveles de organización de la vida
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="la-celula">
+  <div class="tex2jax_ignore mathjax_ignore section" id="la-celula">
 <h1>La célula<a class="headerlink" href="#la-celula" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autora: M. Nayeli Luis Vargas</strong></p>
 <div class="tip admonition">
 <p class="admonition-title">Objetivo</p>
 <p>Comprender que la célula es la unidad de la vida y que se compone de organelos.</p>
 </div>
-<section id="videos-y-otros-recursos">
-<h2>Videos y otros recursos<a class="headerlink" href="#videos-y-otros-recursos" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Videos y otros recursos
-Aquí un video para ver en 3D Una célula eucarionte</p>
+<div class="note admonition">
+<p class="admonition-title">Videos y otros recursos</p>
+<p>Aquí un video para ver en 3D Una célula eucarionte</p>
 <p><a href = "https://www.youtube.com/watch?v=URUJD5NEXC8">Biología: Estructura celular</a></p>
 <p>No se pretende dar un largo paseo sobre los descubrimientos de la célula, sólo es necesario que comprendas qué es una célula y que identifiques la funcionalidad de algunos organelos como el núcleo y el ribosoma.</p>
 </div>
-</section>
-<section id="principios-de-la-teoria-celular">
+<div class="section" id="principios-de-la-teoria-celular">
 <h2>Principios de la teoría celular<a class="headerlink" href="#principios-de-la-teoria-celular" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Todos los organismos vivos están constituidos por una o varias células.</p></li>
 <li><p>Toda célula proviene de otra preexistente.</p></li>
 <li><p>Cada célula contiene toda la información hereditaria necesaria para el control de su ciclo de vida y para el desarrollo y funcionamineto de un organismo.</p></li>
 </ul>
-</section>
-<section id="tipos-de-celulas">
+</div>
+<div class="section" id="tipos-de-celulas">
 <h2>Tipos de células<a class="headerlink" href="#tipos-de-celulas" title="Permalink to this headline">¶</a></h2>
 <p>Sólo existen dos tipos de células: procariontes y eucariontes. Las diferencias se encuentran resumidas en la siguiente tabla:</p>
 <table class="colwidths-auto table">
@@ -509,14 +568,12 @@ Aquí un video para ver en 3D Una célula eucarionte</p>
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="tipos-celulas">
+<div class="figure align-default" id="tipos-celulas">
 <a class="reference internal image-reference" href="../../_images/tipos_celulas.png"><img alt="../../_images/tipos_celulas.png" src="../../_images/tipos_celulas.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Tipos de células</span><a class="headerlink" href="#tipos-celulas" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="organelos">
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Tipos de células</span><a class="headerlink" href="#tipos-celulas" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="organelos">
 <h2>Organelos<a class="headerlink" href="#organelos" title="Permalink to this headline">¶</a></h2>
 <p>Son unidades estructurales que cumplen una función especializada dentro de la célula. Cabe señalar que los procariontes solo cuentan con ribosomas, a continuación se listarán algunos:</p>
 <dl class="simple myst">
@@ -529,18 +586,16 @@ Aquí un video para ver en 3D Una célula eucarionte</p>
 <dt>Ribosomas</dt><dd><p>Complejos que se encargan de la generación de proteínas. El tamaño de los ribosomas es diferente en procariontes (70S) y eucariontes (80S)</p>
 </dd>
 </dl>
-</section>
-<section id="niveles-de-organizacion-de-la-vida">
+</div>
+<div class="section" id="niveles-de-organizacion-de-la-vida">
 <h2>Niveles de organización de la vida<a class="headerlink" href="#niveles-de-organizacion-de-la-vida" title="Permalink to this headline">¶</a></h2>
 <p>Las diferentes formas de vida que hay en el planeta se origanizan de lo más simple a lo más complejo:</p>
-<figure class="align-default" id="niveles">
+<div class="figure align-default" id="niveles">
 <a class="reference internal image-reference" href="../../_images/niveles_organizacion.jpeg"><img alt="../../_images/niveles_organizacion.jpeg" src="../../_images/niveles_organizacion.jpeg" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Niveles de organización de la vida</span><a class="headerlink" href="#niveles" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Niveles de organización de la vida</span><a class="headerlink" href="#niveles" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -564,34 +619,42 @@ Aquí un video para ver en 3D Una célula eucarionte</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">Introducción</a>
-    <a class='right-next' id="next-link" href="01_biomoleculas.html" title="next page">Biomoléculas</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introducción</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="01_biomoleculas.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Biomoléculas</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

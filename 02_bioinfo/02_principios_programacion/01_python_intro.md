@@ -3,7 +3,7 @@
 
 :::{admonition} Objetivo
 :class: important
-* Que el estudiante conozca qué es Python y como instalarlo.
+* Que el estudiante conozca qué es Python y cómo instalarlo.
 :::
 
 Python es un leguaje de programación de alto nivel, es decir, que su lenguaje es más parecido al que tenemos los humanos que al que tienen las máquinas. Es fácil de enteder y por tanto, fácil de leer y escribir. 

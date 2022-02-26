@@ -6,23 +6,17 @@
 Comprender a los ácidos nucléicos y las proteínas como biomoléculas importantes para la bioinformática.
 :::
 
-## Videos y otros recursos
-:::{note} Videos y otros recursos
-Aquí un video que explica con detalle las biomoléculas.
-
-<a href = "https://drive.google.com/file/d/1a-xq2kI1IHckCUBAV0o2K3klxZCaaW7R/view?usp=sharing"> Biomoléculas </a>
-
+:::{admonition} Videos y otros recursos
+:class: note
+[Aquí](https://drive.google.com/file/d/1a-xq2kI1IHckCUBAV0o2K3klxZCaaW7R/view?usp=sharing) un video que explica con detalle las biomoléculas.
 :::
 
 ## Concepto de biomolécula
 
 Todas los seres vivos estamos compuestos de ***biomoléculas***, los cuales juegan funciones importantes en las células y por tanto, permiten nuestra supervivencia. La biomoléculas son ***polímeros*** constituidos por unidades elementales llamadas ***monómeros***.  Imaginemos que un collar de perlas es una polímero, por tanto, una perla sería su monómero, pues el conjunto de éstas formaría la preciada joya.
 
-<br>
-
 Existen diferentes tipos de biomoléculas: las ***proteínas***, los carbohidratos, los lípidos y los ***ácidos nucleícos (ácido desoxirribonucleíco (ADN o DNA) y ácido ribonucleíco (ARN o RNA))***. Éstas biomoléculas están constituidas por un monómero específico, con propiedades químicas únicas. La siguiente tabla indica la biomolécula y su monómero.
 
-<br>
 
 | Biomolécula                  | Monómero                 |
 | :--------------------------- | ------------------------ |
@@ -53,12 +47,7 @@ name: nucleotido
 Estructura de un nucleótido.
 ```
 
-
-<br>
-
 En un ácido nucleíco los nucleótidos se uniran a través de un enlace fosfodiéster, es decir, el grupo fosfato unirá los azúcares de dos nucleótidos y formará una cadena de nucleótidos.
-
-<br>
 
 ```{figure} ../img/enlace_fosfo.png
 ---
@@ -68,7 +57,6 @@ name: enlaces fosfodiester
 Enlaces fosfodiéster que permiten la formación de cadenas de nucleótidos.
 ```
 
-<br>
 
 ### Diferencias entre el DNA y el RNA
 
@@ -88,8 +76,6 @@ RNA (cadena simple) y DNA (cadena doble)
 ## Proteínas
 
 Las proteínas llevan a cabo muchas funciones en los seres vivos: regulan los procesos metabólicos (como la respiración), permiten la formación de tejidos (como las uñas), llevan a cabo el transporte de metabolitos (como el oxígeno), entre muchas más. Las proteínas están formadas  por secuencias de aminoácidos enlazados entre sí. Y nuevamente, la interacción química entre los aminoácidos permite la configuración de las diferentes proteínas que existen.
-
-<br>
 
 ```{figure} ../img/proteina.png
 ---

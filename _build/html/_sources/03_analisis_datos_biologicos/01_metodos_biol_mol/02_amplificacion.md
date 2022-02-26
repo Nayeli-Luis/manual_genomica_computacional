@@ -43,6 +43,6 @@ Además, se utiliza un equipo llamado **termociclador**, que como su nombre indi
 :::{admonition} Para saber más...
 :class: note
 Puede ver <a href = "https://www.youtube.com/watch?v=2KoLnIwoZKU">esta animación</a> sobre la PCR.
-<br>
+
 También puedes leer <a href = "http://www2.inecc.gob.mx/publicaciones2/libros/710/pcr.pdf">este capitulo</a>.
 :::

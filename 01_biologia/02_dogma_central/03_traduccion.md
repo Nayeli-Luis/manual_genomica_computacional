@@ -11,8 +11,6 @@ La traducción consiste en literalmente traducir el mRNA a proteínas. Éste pro
 ## El ribosoma
 Los ribosomas son complejos que permiten la fabricación de proteínas a partir del mRNA, están compuestos por dos subunidades, una grande y una pequeña. Los ribosomas se miden en unidades de Svedberg (S) (que es un cofieciente de sedimentación de un partícula o macromolécula). Los ribosomas diferentes tamaños en eucariontes y en procariontes. En eucariontes miden 80S, la subunidad grande mide 60S y la subinidad pequeña 40S, por su parte, en los procariontes los ribosomas miden 70S, la subunidad grande 50S y la pequeña 30S (ver {ref}`ribosoma`).
 
-<br>
-
 ```{figure} ../img/ribosoma_tamaño.png
 ---
 height: 250px
@@ -20,12 +18,9 @@ name: ribosoma
 ---
 Tamaño del ribosoma en eucariontes y procariontes
 ```
-<br>
 
 ## RNA de transferencia (tRNA)
 El RNA de transferencia es una molécula pequeña de RNA que participa en la síntesis de proteínas. Tiene dos áreas importantes, una región de trinucleótidos llamada anticodón y una región para unir un aminoácido específico. Durante la traducción, cada vez que se agrega un aminoácido a la cadena en crecimiento, una molécula de tRNA forma pares de bases con su secuencia complementaria en la molécula de mRNA, asegurando que el aminoácido se inserte en la proteína (ver {ref}`tRNA`).
-
-<br>
 
 ```{figure} ../img/tRNA.png
 ---
@@ -34,13 +29,11 @@ name: tRNA
 ---
 Estructura de un tRNA.
 ```
-<br>
 
 ## Paso 1. Iniciación
 
 Primero, el tRNA se une a la subunidad pequeña del ribosoma, y juntos se unen al extremo 5' del mRNA. En eucariontes, la sección reconocible es la CAP 5' que se encuentra antes de los codones de inicio. Mientras que, en procariontes, la sección reconocible es una secuencia pequeña llamada secuencia Shine-Delgarno, que se encuentra justo antes de los codones de inicio (ver {ref}`iniciacion`).
 
-<br>
 
 ```{figure} ../img/traduccion_iniciacion.png
 ---
@@ -49,12 +42,9 @@ name: iniciacion
 ---
 Iniciación de la traducción.
 ```
-<br>
 
 ## Paso 2. Elongación
 Durante éste paso crece la cadena de aminoácidos para formar la proteína. El primer tRNA lleva metionina, y comienza en el espacio del centro del ribosoma, el sitio P. Junto a éste espacio hay otro codón y en el ribosoma corresponde al espacio A (de aterrizaje), en donde llegará otro tRNA con el anticodón correcto para la unión del aminoácido correspondiente. Para esto, el aminoácido generado en el espacio P, se unirá con el aminoácido generado en el espacio A (ver primera ilustración de {ref}`elongacion`).
-
-<br>
 
 ```{figure} ../img/traduccion_elongacion.png
 ---
@@ -63,14 +53,12 @@ name: elongacion
 ---
 Proceso de elongación.
 ```
-<br>
 
 Una vez que se unen los aminoácidos, el mRNA avanza a través del ribosoma exactamente un codón. Este avance permite que el primer tRNa, que ya no tiene nada, salga a través del sitio E ( de éxito total o *exit* en inglés). Y ese avance, también permite que el sitio A quede expuesto para la llegada de otro tRNA con otro anticodón para otro aminoácido (ver segunda ilustración de {ref}`elongacion`).
 
 ## Paso 3: Terminación
 El crecimiento de la cadena de aminoácidos termina cuando aparece un codón de alto en el mRNA (UAA, UAG, AGA), en el sitio A. También aparecen unas proteínas llamadas factores de liberación que reconocen los codones de terminación. Estos factores intervienen con la enzima que hacen los enlaces entre los aminoácidos provocando que la proteína recén fabricacada se libere (ver {ref}`terminacion`).
 
-<br>
 
 ```{figure} ../img/traduccion_terminacion.png
 ---
@@ -79,7 +67,18 @@ name: terminacion
 ---
 Proceso de terminación
 ```
-<br>
+
+## Redundancia del código genético
+
+Esto quiere decir que la mayor parte de los aminoácidos son codificados por más de un codón, es decir, hay codondes que son *sinónimos* que poseen la misma información. Para saber que codón codifica cada aminoácido nos guiamos por la siguiente clave: 
+
+```{figure} ../img/codigo_codones.png
+---
+height: 400px
+name: codigo_genetico
+---
+Código de codones
+```
 
 ## Modificaciones post-traducción
 Una vez que las proteínas son sintetizadas, se pliegan y pueden sufrir algunas modificaciones químicas como:

@@ -6,13 +6,14 @@
 Comprender que la célula es la unidad de la vida y que se compone de organelos.
 :::
 
-## Videos y otros recursos
-:::{note} Videos y otros recursos
+:::{admonition} Videos y otros recursos
+:class: note
 Aquí un video para ver en 3D Una célula eucarionte
 
 <a href = "https://www.youtube.com/watch?v=URUJD5NEXC8">Biología: Estructura celular</a>
 
 No se pretende dar un largo paseo sobre los descubrimientos de la célula, sólo es necesario que comprendas qué es una célula y que identifiques la funcionalidad de algunos organelos como el núcleo y el ribosoma. 
+:::
 
 ## Principios de la teoría celular
 

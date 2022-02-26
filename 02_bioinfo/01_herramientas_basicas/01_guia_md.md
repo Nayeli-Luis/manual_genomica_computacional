@@ -1,4 +1,4 @@
-# Markdown
+# Guía de Markdown
 
 :::{admonition} Objetivo
 :class: tip
@@ -8,7 +8,7 @@
 ::::{margin}
 :::{admonition} Recursos
 :class: tip
-Ésta es la guia de Markdown: <https://www.markdownguide.org/basic-syntax/>
+[Ésta](https://www.markdownguide.org/basic-syntax/) es la guia original de Markdown.
 :::
 ::::
 
@@ -117,7 +117,7 @@ Lista desordenada:
 + verde
 
 ## Código
-Para dar formato a código se utilizan los acentos graves: (``\`), esto se utiliza para escribir comandos de una sola línea, nombres de software y bloques de código. 
+Para dar formato a código se utilizan los acentos graves: (\`), esto se utiliza para escribir comandos de una sola línea, nombres de software y bloques de código. 
 
 ## Links/ URL
 
@@ -155,6 +155,7 @@ Por ejemplo, el archivo .md se escribe lo siguiente:
 ```
 
 Y sale lo siguiente: 
+
 ![Imagen de ejemplo](../img/bioinformatics3.png "Imagen de ejemplo")
 
 

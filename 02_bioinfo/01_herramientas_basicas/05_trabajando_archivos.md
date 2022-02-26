@@ -15,12 +15,10 @@ Un archivo o fichero  en Linux puede definirse como una colección de datos que 
 Te recomiendo siempre hacer carpetas para cada prueba/ejercicio que vayas a realizar y conozcas la dirección exacta. En este caso, seguiré utilizando Sandbox, pero tu puedes utilizar la terminal de tu computadora o del ambiente Linux que hayas creado.
 :::
 
-
 ## Crear archivos
 
 Primero, crearemos un directorio para guardar todo lo que hagamos en este apartado, ingresaremos en ese nuevo directorio, crearemos una carpeta dentro e imprimiremos la ruta:
 
-<br>
 
 ```{code-block} bash
 mkdir 01_archivos

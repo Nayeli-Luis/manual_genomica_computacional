@@ -35,7 +35,6 @@ parts:
       - file: 02_bioinfo/01_herramientas_basicas/03_linea_comandos
       - file: 02_bioinfo/01_herramientas_basicas/04_explorando_directorios
       - file: 02_bioinfo/01_herramientas_basicas/05_trabajando_archivos
-      - file: 02_bioinfo/01_herramientas_basicas/06_opciones_argumentos
       - file: 02_bioinfo/01_herramientas_basicas/07_permisos_usuarios
 
     - file: 02_bioinfo/02_principios_programacion/01_python_intro
@@ -66,4 +65,13 @@ parts:
       - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/04_calidad
       - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/05_alineamiento_mapeo
       - file: 03_analisis_datos_biologicos/02_analisis_bioinfo/06_workflow_genome
+
+  - caption: Prácticas
+    chapters:
+
+    - file: 04_practicas/00_practicas
+      title: Mini prácticas
+      sections:
+      - file: 04_practicas/mp1_variables_datos_operadores
+      - file: 04_practicas/mp2_funciones
 

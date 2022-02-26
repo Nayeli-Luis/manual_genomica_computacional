@@ -122,6 +122,26 @@ for i in range(len(secuencia)):
     print(str(indice) + " " + secuencia[indice])
 ```
 
+#### Listas de comprehensión (*list comprehensions*)
+Permite crear listas en una misma línea de código y son muy utilizadas en la generación de matrices, involucra ciclos `for`  para su construcción. Por ejemplo:
+
+```python
+cuadrados = []
+
+for num in [1, 2, 3, 4, 5]: # Se ejecuta un protocolo de iteración
+    squares.append(x ** 2)  # Genera una lista nueva (append() agrega elementos a la lista)
+
+cuadrados
+
+```
+
+Es comun escribir las listas de comprehensión en una sola línea de código y no utilizan la función `.append()`: 
+
+```python
+cuadrados = [num ** 2 for num in [1 , 2, 3, 4, 5]]
+cuadrados
+```
+
 ### `while`
 
 `while` evalua una expresión lógica, mientras el resultado de la expresión sea verdadero, se ejecutará un bloque de código en específico. La sintaxis en Python es: 

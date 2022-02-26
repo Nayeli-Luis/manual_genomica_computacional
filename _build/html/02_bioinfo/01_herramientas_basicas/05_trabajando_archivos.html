@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Archivos, permisos y usuarios &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Opciones y argumentos" href="06_opciones_argumentos.html" />
+    <link rel="next" title="Permisos y usuarios" href="07_permisos_usuarios.html" />
     <link rel="prev" title="Explorando directorios desde la terminal" href="04_explorando_directorios.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,12 +444,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#crear-archivos">
@@ -468,10 +498,67 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Archivos, permisos y usuarios</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crear-archivos">
+   Crear archivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editar-archivos">
+   Editar archivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cat">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cat
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#head-y-tail">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     head
+    </span>
+   </code>
+   y
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     tail
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creacion-de-ligas-links">
+   Creación de ligas (links)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="archivos-permisos-y-usuarios">
+  <div class="tex2jax_ignore mathjax_ignore section" id="archivos-permisos-y-usuarios">
 <h1>Archivos, permisos y usuarios<a class="headerlink" href="#archivos-permisos-y-usuarios" title="Permalink to this headline">¶</a></h1>
 <p><strong>Autora: M. Nayeli Luis-Vargas</strong></p>
 <div class="tip admonition">
@@ -487,10 +574,9 @@
 <p class="admonition-title">Nota</p>
 <p>Te recomiendo siempre hacer carpetas para cada prueba/ejercicio que vayas a realizar y conozcas la dirección exacta. En este caso, seguiré utilizando Sandbox, pero tu puedes utilizar la terminal de tu computadora o del ambiente Linux que hayas creado.</p>
 </div>
-<section id="crear-archivos">
+<div class="section" id="crear-archivos">
 <h2>Crear archivos<a class="headerlink" href="#crear-archivos" title="Permalink to this headline">¶</a></h2>
 <p>Primero, crearemos un directorio para guardar todo lo que hagamos en este apartado, ingresaremos en ese nuevo directorio, crearemos una carpeta dentro e imprimiremos la ruta:</p>
-<br>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir 01_archivos
 <span class="nb">cd</span> 01_archivos
 <span class="nb">pwd</span>
@@ -524,8 +610,8 @@
 </pre></div>
 </div>
 <p>Vuelve a listar para comprobar que el cambio se llevó a cabo.</p>
-</section>
-<section id="editar-archivos">
+</div>
+<div class="section" id="editar-archivos">
 <h2>Editar archivos<a class="headerlink" href="#editar-archivos" title="Permalink to this headline">¶</a></h2>
 <p>Para editar algún archivo desde la terminal se utilizan editores de texto. <strong>GNU nano</strong> es un editor de texto para entornos similares a Unix y otros sistemas operativos que utilizan una línea de comandos de terminal. Existen otros editores como <strong>vi</strong>, <strong>vim</strong>, <strong>Emacs</strong> y <strong>pico</strong>, en este caso usaremos <strong>Nano</strong>.</p>
 <p>Primero, vamos a crear un nuevo archivo con el siguiente ejemplo:</p>
@@ -533,22 +619,18 @@
 </pre></div>
 </div>
 <p>Te abrirá una ventana de éste estilo:</p>
-<figure class="align-default" id="ventana-nano">
+<div class="figure align-default" id="ventana-nano">
 <a class="reference internal image-reference" href="../../_images/nano.png"><img alt="../../_images/nano.png" src="../../_images/nano.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Ventana de Nano</span><a class="headerlink" href="#ventana-nano" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Ventana de Nano</span><a class="headerlink" href="#ventana-nano" title="Permalink to this image">¶</a></p>
+</div>
 <p>Ahora ingresaremos una tabla donde separaremos cada valor por tabuladores <code class="docutils literal notranslate"><span class="pre">tab</span></code>. Es decir, nombre + tab + apellido + tab + correo.</p>
-<figure class="align-default" id="valores">
+<div class="figure align-default" id="valores">
 <a class="reference internal image-reference" href="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png"><img alt="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png" src="02_bioinfo/01_herramientas_basicas/images/04_archivos/01.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Valores ingresados en Nano</span><a class="headerlink" href="#valores" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Valores ingresados en Nano</span><a class="headerlink" href="#valores" title="Permalink to this image">¶</a></p>
+</div>
 <p>Ahora darás <code class="docutils literal notranslate"><span class="pre">control</span> <span class="pre">+</span> <span class="pre">x</span></code> para salir del editor nano, y te aparecerá un menú que te preguntará si deseas guardar lo que has modificado, le pondrás que si presionando la tecla <code class="docutils literal notranslate"><span class="pre">y</span></code> y luego <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
-</section>
-<section id="cat">
+</div>
+<div class="section" id="cat">
 <h2><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h2>
 <p>El comando <code class="docutils literal notranslate"><span class="pre">cat</span></code> tiene diferentes funciones:</p>
 <ul class="simple">
@@ -592,8 +674,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">planetas</span> <span class="n">planetas2</span> <span class="o">&gt;</span> <span class="n">planetas_todos</span>
 </pre></div>
 </div>
-</section>
-<section id="head-y-tail">
+</div>
+<div class="section" id="head-y-tail">
 <h2><code class="docutils literal notranslate"><span class="pre">head</span></code> y <code class="docutils literal notranslate"><span class="pre">tail</span></code><a class="headerlink" href="#head-y-tail" title="Permalink to this headline">¶</a></h2>
 <p>Muestran el contenido de un archivo por terminal. <code class="docutils literal notranslate"><span class="pre">head</span></code> muestra las 10 primeras líneas, al menos que se específique otro numero y <code class="docutils literal notranslate"><span class="pre">tail</span></code> muestra las 10 últimas líneas. Para especificar debes agregar <code class="docutils literal notranslate"><span class="pre">-n</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ver primeras dos líneas</span>
@@ -603,8 +685,8 @@
 <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="n">planetas_todos</span>
 </pre></div>
 </div>
-</section>
-<section id="creacion-de-ligas-links">
+</div>
+<div class="section" id="creacion-de-ligas-links">
 <h2>Creación de ligas (links)<a class="headerlink" href="#creacion-de-ligas-links" title="Permalink to this headline">¶</a></h2>
 <p>En los sistemas Linux es posible crear ligas o <em>links</em> entre archivos, es como crear un acceso directo o “<em>shortcut</em>.” Existen dos tipos de ligas las <em>hard</em> y las <em>soft</em> o simbólicas.</p>
 <p>Los enlaces <em>soft</em> o simbólicos:</p>
@@ -629,15 +711,13 @@ ln -s ../archivo01.txt
 </pre></div>
 </div>
 <p>Si enlistas tu carpeta, aparecerá el archivo y generalmente aparece resaltado en otro color:</p>
-<figure class="align-default" id="soft-link">
+<div class="figure align-default" id="soft-link">
 <a class="reference internal image-reference" href="../../_images/soft_link.png"><img alt="../../_images/soft_link.png" src="../../_images/soft_link.png" style="height: 100px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Liga simbólica o <em>soft link</em>.</span><a class="headerlink" href="#soft-link" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Liga simbólica o <em>soft link</em>.</span><a class="headerlink" href="#soft-link" title="Permalink to this image">¶</a></p>
+</div>
 <p>Y si exploras el contenido con <code class="docutils literal notranslate"><span class="pre">file</span></code>, deberá aparecerte vacio (<em>empty</em>) debido aque solo es un acceso directo del archivo original.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -661,34 +741,42 @@ ln -s ../archivo01.txt
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="04_explorando_directorios.html" title="previous page">Explorando directorios desde la terminal</a>
-    <a class='right-next' id="next-link" href="06_opciones_argumentos.html" title="next page">Opciones y argumentos</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="04_explorando_directorios.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Explorando directorios desde la terminal</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="07_permisos_usuarios.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Permisos y usuarios</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

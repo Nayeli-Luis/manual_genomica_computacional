@@ -10,7 +10,7 @@
 ::::{margin}
 :::{admonition} Videos
 :class: note
-<a href = "https://git-scm.com/video/what-is-version-control">What is Version Control?</a>
+[What is Version Control?](https://git-scm.com/video/what-is-version-control)
 ::::
 
 ## Sistema de control de versiones
@@ -59,6 +59,26 @@ Entonces el flujo de trabajo de Git es el siguiente:
 2. Se eligen los archivos que desea que formen parte de su próxima versión, en el área de preparación.
 3. Se hace una confirmación, que toma los archivos tal como están en el área de preparación y se alamcena una *snapshot* permanente en su directorio de Git.
 
+
+### Instalación de Git
+
+Para instalar Git en sistema Linux:
+
+
+```{code-block} bash
+sudo dnf install git-all
+```
+
+o
+
+```{code-block} bash
+sudo apt install git-all
+```
+
+
+En macOS, se debe tener instalado <a href = "https://brew.sh/">Homebrew</a> o <a href = "https://developer.apple.com/xcode/">Xcode</a> para posteriormente
+<a href = "https://git-scm.com/download/mac">instalar Git</a>.
+
 ### Comandos de `git`
 
 `git init`
@@ -82,30 +102,17 @@ Entonces el flujo de trabajo de Git es el siguiente:
 `git branch nombre_rama`
 : Crear una nueva rama en tu repositorio local.
 
-`git chechout nombre_rama`
+`git checkout nombre_rama`
 : Cambiar de rama.
 
 `git merge nombre_rama`
 : Unir una rama en específico con la rama principal (master branch).
 
-### Instalación de Git
-
-Para instalar Git en sistema Linux:
-
-
-```{code-block} bash
-sudo dnf install git-all
-```
-
-o
-
-```{code-block} bash
-sudo apt install git-all
-```
-
-
-En macOS, se debe tener instalado <a href = "https://brew.sh/">Homebrew</a> o <a href = "https://developer.apple.com/xcode/">Xcode</a> para posteriormente
-<a href = "https://git-scm.com/download/mac">instalar Git</a>.
+::::{margin}
+:::{admonition} Buscador de comandos
+<a href = "https://git-scm.com/docs">Aquí</a> la documentación de Git, para que busques y revises los comandos que necesites.
+:::
+::::
 
 
 ## GitHub
@@ -114,13 +121,6 @@ En macOS, se debe tener instalado <a href = "https://brew.sh/">Homebrew</a> o <a
 
 ## Primeros pasos con Git y GitHub
 
-::::{margin}
-:::{admonition} Buscador de comandos
-<a href = "https://git-scm.com/docs">Aquí</a> la documentación de Git, para que busques y revises los comandos que necesites.
-:::
-::::
-
-Lo que vamos a aprender a continuación es a manejar repositorios desde nuestra computadora.
 Primero, para poder utilizar Git y Github desde tu computadora debes crear un token de acceso personal, el cual utilizarás como contraseña en la línea de comandos, para ellos debes seguir <a href = "https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">este tutorial</a>. Guarda tu token en un lugar seguro, no lo compartas.
 
 Ahora, vamos a iniciar sesión en Github y a crear un nuevo repositorio.
@@ -144,8 +144,7 @@ name: 02_nombrar_repositorio
 Configurar repositorio.
 ```
 
-Nos llevará a una ventana en donde nos mostrará la dirección de nuestro repositorio y algunas opciones que podemos configurar desde nuestra línea de comandos. Por ahora, copia la dirección de tu repositorio.
-
+Nos llevará a una ventana en donde nos mostrará la dirección de nuestro repositorio y algunas opciones que podemos configurar desde nuestra línea de comandos. 
 
 ```{figure} ../img/git_github/03_direccion.png
 ---
@@ -155,45 +154,9 @@ name: 03_direccion
 URL de nuestro repositorio.
 ```
 
-Ahora, comenzaremos a usar nuestra línea de comandos para trabajar archivos desde nuestra computadora y subirlos a Github. Para esto lo primero que haremos será clonar nuestro repositorio a nuestra computadora con los comandos `git clone url_repositorio`. Elige el lugar donde quieras que esté, yo la pondré en mi carpeta de Documentos.
+Lo ideal es tener un repositorio local en nuestra computadora en donde ya hayamos iniciando un repositorio con `git init`, y hayamos agregado archivos (con `git add` y luego `git commit`). de ésta manera podremos utilizar la opción *... or push an existing repository from the command line* en donde solo tenemos que seguir las instrucciones indicadas en ésta opción. De manera que cuando escribamos `git push`, se nos pedirá el usuario y contraseña por línea de comandos. Tu usuario de Github aparece en la URL: https://github.com/nombre-usuario, en mi caso https://github.com/Nayeli-Luis, entonces mi usuario seria Nayeli-Luis. Por otro lado, la contraseña es el token que has creado previamente, NO es la contraseña de tu cuenta de Github.
 
-
-```{code-block} bash
-cd Documentos
-git clone https://github.com/Nayeli-Luis/pruba_repositorio.git
-```
-Cuando hagas esto, te pedirá un usuario y tu contraseña. Tu usuario de Github aparece en la URL: https://github.com/nombre-usuario, en mi caso https://github.com/Nayeli-Luis, entonces mi usuario seria Nayeli-Luis. Por otro lado, la contraseña es el token que has creado previamente, NO es la contraseña de tu cuenta de Github.
-
-Después de que hayas ingresado tus datos te debe aparecer una carpeta con el nombre de tu repositorio, puedes comporbarlo haciendo un listado con `ls`. Lo que haremos ahora es generar un archivo de texto.  Una vez que tu archivo esté generado, editalo escribiendo tu nombre, tu correo y tu película favorita. Sino recuerdas como hacer algo de esto, te sugiero que revises el capítulo anterior.
-
-También puedes creear una carpeta en tu computadora y generar un repositorio vacío escribiendo:
-
-```{code-block} bash
-git init
-```
-
-Ahora subiremos nuestro archivo con `git add`, paa subir todo lo que tenemos en nuestro repositorio se agrega `./*`, entonces escribimos en terminal:
-
- ```{code-block} bash
- git add ./*
- ```
-
-También podemos agregar un archivo en específico poniendo `git add nombre_archivo`.
-
-y damos 'Enter', en terminal verás que no ocurre nada, pero Git ha recibido la instrucción de agregar todos los archivos al repositorio. De aquí, podemos confirmar que
-vamos a guardar ese archivo en nuestro repositorio local con `git commit`, además podemos usar la opción `-m` para agregar algún mensaje. Entonces escribimos en terminal:
-
-```{code-block} bash
-git commit -m "estoy subiendo un archivo nuevo"
-```
-
-Finalmente, vamos a transferir o enviar la confirmación que se realizó en nuestra computa al repositorio remoto en GitHub con `git push`.
-
-```{code-block} bash
-git push
-```
-
-Si entramos a GitHub debemos ver el archivo que hemos subido, el mensaje cuando hicimos `commit` y desde hace cuánto tiempo lo subimos:
+Si entramos a GitHub (a través de un navegador) debemos ver el archivo que hemos subido, el mensaje cuando hicimos `commit` y desde hace cuánto tiempo lo subimos:
 
 
 ```{figure} ../img/git_github/04_archivo_github.png
@@ -204,14 +167,7 @@ name: 04_archivo_github
 Archivo en GitHub.
 ```
 
-Si estamos colaborando en un proyecto más grande y deseamos ver el historial de todos los "commits" (confirmaciones) que se han hecho, podemos escribir en terminal:
-
-
-```{code-block} bash
-git log
-```
-
-Te aparecerá algo similar a esto:
+Además, también podemos ver el status de los commits que realicemos y dónde se encuentran con `git log`y te aparecerá algo similar a esto:
 
 ```{figure} ../img/git_github/05_git_log.png
 ---
@@ -229,13 +185,6 @@ Para conocer el status de todos tus archivos en general, podemos escribir en ter
 ```{code-block} bash
 git status
 ```
-
-:::{admonition} Resumen de comandos de Git
-:class: tip
-
-
-:::
-
 
 :::{admonition} Para saber más
 :class: attention

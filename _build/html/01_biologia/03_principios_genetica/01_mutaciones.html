@@ -4,12 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mutaciones &#8212; Manual de biología y bioinformática.</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -24,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,19 +42,22 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Expresión génica" href="02_expresion_genica.html" />
     <link rel="prev" title="Introducción a la genética" href="00_intro_genetica.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/gc.png" class="logo" alt="logo">
       
       
@@ -81,7 +87,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +96,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos de biología molecular
  </span>
@@ -173,7 +179,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introducción a la bioinformática
  </span>
@@ -191,7 +197,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/01_guia_md.html">
-     Markdown
+     Guía de Markdown
     </a>
    </li>
    <li class="toctree-l2">
@@ -212,11 +218,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/05_trabajando_archivos.html">
      Archivos, permisos y usuarios
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02_bioinfo/01_herramientas_basicas/06_opciones_argumentos.html">
-     Opciones y argumentos
     </a>
    </li>
    <li class="toctree-l2">
@@ -254,7 +255,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Análisis de datos biológicos
  </span>
@@ -335,6 +336,35 @@
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prácticas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_practicas/00_practicas.html">
+   Mini prácticas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp1_variables_datos_operadores.html">
+     Repasando variables, datos y operadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+     Funciones. El dogma central de la biología molecular.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -380,7 +410,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -414,19 +444,116 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-mutaciones">
+   Tipos de mutaciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efecto-de-las-mutaciones-en-el-genotipo">
+   Efecto de las mutaciones en el genotipo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#causa-de-las-mutaciones">
+   Causa de las mutaciones
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mutaciones</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-mutaciones">
+   Tipos de mutaciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efecto-de-las-mutaciones-en-el-genotipo">
+   Efecto de las mutaciones en el genotipo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#causa-de-las-mutaciones">
+   Causa de las mutaciones
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <section id="mutaciones">
+  <div class="tex2jax_ignore mathjax_ignore section" id="mutaciones">
 <h1>Mutaciones<a class="headerlink" href="#mutaciones" title="Permalink to this headline">¶</a></h1>
-</section>
+<p>La replicación del DNA pueden generar erores al momento de polimerizar nuevos nucleótidos. Una <strong>mutación</strong> se define como un cambio <strong>heredable</strong> en la información genética. Las mutaciones son la fuente principal de variabilidad genética y sirven como herramientas importantes para el análisis genético.</p>
+<div class="section" id="tipos-de-mutaciones">
+<h2>Tipos de mutaciones<a class="headerlink" href="#tipos-de-mutaciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em><strong>Sustituciones de bases</strong></em>: Es el tipo más simple de mutación genética, dada la naturaleza complementaria del DNA, la alteración de un sólo nucleótido altera la base pareada correspondiente. Entonces, una sustitución de bace casi siempre conduse a la sustitución de un par de bases. Existen dos tipos:</p>
+<ol class="simple">
+<li><p>Transición: En donde una purina se reemplaza por una purina o una pirimidina se reemplaza por una pirimidina.</p></li>
+<li><p>Transversión: Una purina es reemplazada por una pirimida o visceversa.</p></li>
+</ol>
+</li>
+<li><p><em><strong>Inserciones y deleciones</strong></em>: La adición o eliminación, respectivamente de uno más pares de bases de nucleótidos. Este tipo de mutaciones puede conducir a mutaciones de cambio de marco de lectura, es decir, pueden cambiar el codón de inicio de un RNA mensajero y por tanto, tener cambios drásticos en el fenotipo (en la proteína).</p></li>
+<li><p><em><strong>Expansión por repetición de trinucleótidos</strong></em>: Ocurre cuando se aumenta considerablemente el número de copias de un codón.</p></li>
+</ul>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/mutaciones.png"><img alt="../../_images/mutaciones.png" src="../../_images/mutaciones.png" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Tipos de mutaciones</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="efecto-de-las-mutaciones-en-el-genotipo">
+<h2>Efecto de las mutaciones en el genotipo<a class="headerlink" href="#efecto-de-las-mutaciones-en-el-genotipo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em><strong>Mutación de cambio de sentido</strong></em>: Ocurre cuando la sustitución de una base que alterta un codón en el mRNA y da como resultado un aminoácido diferente.</p></li>
+<li><p><em><strong>Mutación sin sentido</strong></em>: Ocurre cuando un codón con sentido (que codifica para un aminoácido) cambia por un codón sin sentido (uno que termina la traducción). Si una mutación sin sentido aparece al comiendo de la secuencia del mRNA, la proteína está muy acortada y casi nunca será funcional.</p></li>
+<li><p><em><strong>Mutación silenciosa</strong></em>: Se altera el codón pero gracias a la redundancia del código genético, el codón sigue condificando el mismo aminoácido.</p></li>
+<li><p><em><strong>Mutación neutral</strong></em>: Es una mutación de aminoácido que altera la secuencia de aminoácidos de una proteína, pero que no cambia su función.</p></li>
+</ul>
+</div>
+<div class="section" id="causa-de-las-mutaciones">
+<h2>Causa de las mutaciones<a class="headerlink" href="#causa-de-las-mutaciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Errores espontáneos de replicación: La tasa de error de la polimerasa es muy bajo, se produce menos de un error en mil millones durante la síntesis de DNA.</p></li>
+<li><p>Cambios químicos espontáneos:</p>
+<ol class="simple">
+<li><p>La despurinación: La pérdida de una base purínica de un nucleótido.</p></li>
+<li><p>La desaminación: La pérdida de un grupo amino de una base. Ésta pérdida puede ser espontánea o ser inducida por sustancias mutagénicas.</p></li>
+</ol>
+</li>
+<li><p>Mutaciones inducidas químicamente: Se trata de un agente ambiental que eleva siginifcativamente la tasa de mutación por encima de la tasa espontánea, a éste agente se le conoce como mutágeno.</p></li>
+<li><p>Radiación: Las bases nitrogenadas absorben con la energía radioactiva, esto genera uniones químicas entre moléculas pirimídicas adyacentes en la misma cadena de DNA, lo que modifica la estructura del DNA.</p></li>
+</ul>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -450,34 +577,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="00_intro_genetica.html" title="previous page">Introducción a la genética</a>
-    <a class='right-next' id="next-link" href="02_expresion_genica.html" title="next page">Expresión génica</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="00_intro_genetica.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introducción a la genética</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="02_expresion_genica.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Expresión génica</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Luis-Vargas M. Nayeli<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Luis-Vargas M. Nayeli<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

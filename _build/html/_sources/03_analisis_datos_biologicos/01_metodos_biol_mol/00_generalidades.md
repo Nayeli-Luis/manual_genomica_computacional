@@ -24,7 +24,6 @@ En algunos casos, se requiere un paso de amplificación, como en los estudios de
 3. ***Metabarcoding***: Este término hace referencia a la identificación de alto rendimiento de especies múltiples, utilizando DNA de origen ambiental, es decir, DNA en muestras de suelo, agua, etc. Con ésta técnica se busca un gen o un fragmento de gen en específico y no el conjunto de todos los genes.
 
 
-
 ```{figure} ../img/general_method2.png
 ---
 height: 500px

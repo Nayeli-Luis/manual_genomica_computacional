@@ -1,6 +1,6 @@
 # Opciones y argumentos 
 
-En Bash es posible modificar el comportamiento de los comandos utiliznado opciones y argumentos. Por ejemplo, cuando utilizamos `touch` es necesario escribir después el nombre del archivo que vamos a generar, esto es un **argumento**. Cada argumento se separa mediante un espacio. 
+En Bash es posible modificar el comportamiento de los comandos utilizando opciones (parámetros) y argumentos. Por ejemplo, cuando utilizamos `touch` es necesario escribir después el nombre del archivo que vamos a generar, esto es un **argumento**. Cada argumento se separa mediante un espacio. 
 
 ```
 touch archivo_nuevo.txt

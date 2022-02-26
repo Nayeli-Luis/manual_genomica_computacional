@@ -56,7 +56,6 @@ Para cambiar los permisos se utilizan los comandos `chown`, `chgrp` y `chmod`. T
 chmod 777 archivo01.txt
 ```
 
-
 Si vuelves a listar ( `ls -l`) podrás ver que los permisos para tu 'archivo01.txt' han cambiado. Ahora en la primera columna deberá aparecerte `-rwxrwxrwx`. Para saber el número que deberías poner para cambiar los permisos puedes utilizar la siguiente <a href = "https://sandbox.cs50.io/">calculadora de `chmod`</a>.
 
 
@@ -70,8 +69,6 @@ chmod a+x script.sh
 ## Super usuarios
 
 Todas las versiones de UNIX tienen un super-usuario el cual tiene TODOS los derechos y privilegios sobre el SO y los archivos dentro del mismo. Este usuario es **root** y pertenece al grupo del mismo nombre, siendo su UID y GID 0. Existe un comando especial llamado `sudo` (*super user do*) que al utilizarlo permite al usuario actual tener privilegios de super-usuario temporales. No te emociones, muchas veces se te solicita una contraseña cuando utilizar este comando.
-
-<br>
 
 ```{code-block} bash
 usuario@computadora: ~$ sudo [comando]

@@ -8,9 +8,10 @@ Video de <a href = "https://drive.google.com/file/d/1YaQJrvrsS_nQoNvC2DM6hXse7lp
 
 El DNA se replica para producir copias de si mismo para que éstas copias se pasen de célula madre a célula hija, de manera que se conserve exactamente la misma información. Como organismos, todo el tiempo estamos generando células nuevas, de manera que toooodo el tiempo nuestro DNA se está replicando para conservar la información necesaria para que nuestras células funcionen como deben.
 
-```{warning}
+:::{admonition} Cuidado
+:class: warning
 La replicación del DNA NO es lo mismo que la división celular.
-```
+:::
 
 ## Características de la replicación
 
@@ -33,11 +34,7 @@ Paso 1 de la replicación: Desenrrollamiento.
 
 Es importante mencionar que la replicación del DNA avanza en forma de horquilla, es decir, avanza por partes, mientras se desenrrolla y separa una sección, el resto del DNA sigue en forma de doble hélice, de manera que se forma una horquilla como la que se ve en la figura.
 
-<br>
-
 Una vez que la cadena doble hélice está abierta y separada, tenemos acceso a la información que está contenida en los nucleótidos y sólo queda copiarla. Cuando sacamos copias fotostáticas de un libro, necesitamos material ¿no es cierto?, necesitamos hojas, tinta, una máquina fotocopiadora e incluso un separador que indica donde comenzar a fotocopiar. Bueno, pues acá sucede lo mismo, para copiar el DNA necesitamos material, la intervención de otras proteínas y moléculas. Primero la fotocopiadora, en ese caso la máquina (enzima) necesaria se llama ***DNA polimerasa***. Luego el separador que indica donde iniciar, llamado  **primer o cebador** y por último,  las hojas y las tinta, en este caso los ***dNTPs o desoxinucleótidos trifosfato***, los dNTPs van a contener los nucleótidos de complemento.
-
-<br>
 
 El proceso consiste en lo siguiente:
 1. Se coloca un primer en el sitio de inicion de la cadena que se va a copiar.
@@ -51,7 +48,6 @@ El primer es una pequeña cadena de RNA y es colocado en la cadena por otra enzi
 :::
 ::::
 
-<br>
 
 Ahora, otro detalle, la replicación del DNA va de 5' -> 3', esto quiere decir que una cadena la replicación va a ser fluida y fácil, ésta cadena se llama ***cadena líder***. Mientras que la otra (la que va de 3' -> 5'), también conocida como ***cadena rezagada*** va a tener pasos extra. Debido a que la polimerasa al momento de ir leyendo en sentido contrario hace pequeños saltos, dando lugar a pequeños espacios llamados ***fragmentos de Okazaki***. En ésta cadena, interviene una enzima extra llamada ***ligasa***, como su nombre indica su trabajo es ligar/unir/pegar dichos fragmentos para que se tenga una sola cadena (ver {ref}`replicacion_paso2`).
 

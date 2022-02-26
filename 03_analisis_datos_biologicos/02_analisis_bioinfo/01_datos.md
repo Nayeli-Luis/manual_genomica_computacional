@@ -30,7 +30,7 @@ El INDSC propuso ciertas reglas para almacenar información contenida en DNA. Y 
 Si quieres saber de más sitios donde puedes obtener datos de origen biológico te recomiendo el artículo de <a href = "https://drive.google.com/file/d/12B8FbkLM1hBVWFrIJrzraKwaopvmP6ND/view?usp=sharing">Database resources of the National Center for Biotechnology Information</a> (2019) de Sayers y colaboradores.
 :::
 
-## Obtención de secuencias del NCBI
+## Ejercicio de clase: Obtención de secuencias del NCBI
 
 En ésta sección aprenderás a descargar secuencias desde el *National Center for Biotechnology Information* (NCBI). Te sugerimos llevar a cabo el ejercicio, pues las secuencias que descargues las necesitarás para realizar la *Práctica 3*: 
 
