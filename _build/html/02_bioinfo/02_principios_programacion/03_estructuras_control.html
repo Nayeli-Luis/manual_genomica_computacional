@@ -51,6 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Algoritmos y funciones" href="04_funciones.html" />
+    <link rel="prev" title="Datos, variables y operadores" href="02_datos_variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -182,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
   Introducción a la bioinformática
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_herramientas_basicas/00_intro.html">
    Herramientas básicas
@@ -225,19 +227,24 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="01_python_intro.html">
    Principios de programación con Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="02_datos_variables.html">
      Datos, variables y operadores
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Estructuras de control de flujo
     </a>
    </li>
    <li class="toctree-l2">
@@ -356,7 +363,12 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+    <a class="reference internal" href="../../04_practicas/mp2_control_flujo.html">
+     Control de flujo con cadenas de DNA.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp3_funciones.html">
      Funciones. El dogma central de la biología molecular.
     </a>
    </li>
@@ -681,12 +693,11 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
     <span class="nb">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Ahora, podemos utilizar algún contador, que nos indique la posición de una secuencia:</p>
+<p>Ahora podemos hacer un programa que imprima la posición de cada base de una secuencia de DNA.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">secuencia</span> <span class="o">=</span> <span class="s2">&quot;ATCGTACGT&quot;</span>
-<span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">secuencia</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">secuencia</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">secuencia</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="section" id="listas-de-comprehension-list-comprehensions">
@@ -695,7 +706,7 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrados</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span> <span class="c1"># Se ejecuta un protocolo de iteración</span>
-    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Genera una lista nueva (append() agrega elementos a la lista)</span>
+    <span class="n">cuadrados</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Genera una lista nueva (append() agrega elementos a la lista)</span>
 
 <span class="n">cuadrados</span>
 
@@ -765,7 +776,21 @@ Crearemos un algoritmo que imprima un mensaje en función de si un estudiante ap
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02_datos_variables.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Datos, variables y operadores</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04_funciones.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algoritmos y funciones</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

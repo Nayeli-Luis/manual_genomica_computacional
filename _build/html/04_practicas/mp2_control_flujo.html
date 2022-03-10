@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Repasando variables, datos y operadores &#8212; Manual de biología y bioinformática.</title>
+    <title>Control de flujo con cadenas de DNA. &#8212; Manual de biología y bioinformática.</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Control de flujo con cadenas de DNA." href="mp2_control_flujo.html" />
-    <link rel="prev" title="Prácticas" href="00_practicas.html" />
+    <link rel="next" title="Funciones. El dogma central de la biología molecular." href="mp3_funciones.html" />
+    <link rel="prev" title="Repasando variables, datos y operadores" href="mp1_variables_datos_operadores.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -357,13 +357,13 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mp1_variables_datos_operadores.html">
      Repasando variables, datos y operadores
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mp2_control_flujo.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Control de flujo con cadenas de DNA.
     </a>
    </li>
@@ -415,9 +415,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/04_practicas/mp1_variables_datos_operadores.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/04_practicas/mp2_control_flujo.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -435,7 +435,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F04_practicas/mp1_variables_datos_operadores.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F04_practicas/mp2_control_flujo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -451,6 +451,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/04_practicas/mp2_control_flujo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -463,7 +480,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Repasando variables, datos y operadores</h1>
+                <h1>Control de flujo con cadenas de DNA.</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -474,50 +491,70 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="repasando-variables-datos-y-operadores">
-<h1>Repasando variables, datos y operadores<a class="headerlink" href="#repasando-variables-datos-y-operadores" title="Permalink to this headline">¶</a></h1>
-<p>Ésta mini-práctica se entrega por Classroom, en una libreta de Jupyter Notebook y con la siguiente estructura en el nombre: mp1_Apellidos_Nombres.</p>
-<p><strong>Parte I</strong></p>
-<p>Explorando funciones integradas de Python.
-a) ¿Qué es una función integrada (en inglés son conocidas como <em>built-in function</em>)?</p>
-<p>b) Crea una variable que se llame <code class="docutils literal notranslate"><span class="pre">dna</span></code> que contenga la siguiente cadena de caracteres: <code class="docutils literal notranslate"><span class="pre">caacggcgggtccctcataggatgaataggtgaaactgtctgaatgcttaggaactggttatggttaccacttcatcaaatatcaattgaacgatacagc</span></code>. Ahora escribe lo siguiente:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;catag&quot;</span><span class="p">)</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">dna</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span>
+  <div class="tex2jax_ignore mathjax_ignore section" id="control-de-flujo-con-cadenas-de-dna">
+<h1>Control de flujo con cadenas de DNA.<a class="headerlink" href="#control-de-flujo-con-cadenas-de-dna" title="Permalink to this headline">¶</a></h1>
+<p>Ésta práctica se entrega por Classroom en una libreta de Jupyter (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) con la siguiente estructura en el nombre:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mp2_Apellidos_Nombres.ipynb
 </pre></div>
 </div>
-<p>c) ¿Qué hace cada una de las funciones anteriores?</p>
-<p><strong>Parte II</strong></p>
-<p>Trabajando con operadores y expresiones
-Escribe y ejecuta las expresiones que se encuentran a continuación y responde para cada una:</p>
-<p>a) ¿Qué tipo de dato se está utilizando?</p>
-<p>b) ¿Qué tipo de operador?</p>
-<p>c) Justifica el resultado que se obtenga de cada expresión</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">1234</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">5879</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">89</span>
+<p>Para generar secuencias de DNA de diferente tamaño te sugiero utilizar la siguiente función:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="n">mamifero1</span> <span class="o">=</span> <span class="s2">&quot;Ornitorrinco&quot;</span>
-<span class="n">mamifero2</span> <span class="o">=</span> <span class="s2">&quot; Ornitorrinco&quot;</span>
+<span class="k">def</span> <span class="nf">generar_secuencia</span><span class="p">(</span><span class="n">tamaño</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(),</span> <span class="n">codigo</span> <span class="o">=</span> <span class="s2">&quot;CTGA&quot;</span><span class="p">):</span>
+    <span class="k">return</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">codigo</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">tamaño</span><span class="p">))</span>
 
-<span class="c1"># Expresion 1</span>
-<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> 
-
-<span class="c1"># Expresion 2</span>
-<span class="n">mamifero1</span> <span class="o">==</span> <span class="n">mamifero2</span>
-
-<span class="c1"># Expresión 3</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span>
-
-<span class="c1"># Expresion 4</span>
-<span class="n">y</span> <span class="o">!=</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span>
-
-<span class="c1"># Expresion 5</span>
-<span class="c1"># Tipo: Tal vez en este requieras hacer un poco de investigación</span>
-<span class="ow">not</span> <span class="n">x</span>
+<span class="c1"># generar secuencia de 50 pb y guardar en variable</span>
+<span class="n">DNA</span> <span class="o">=</span> <span class="n">generar_secuencia</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Crea un programa en el que un usuario ingrese un codón y el programa arroje un mensaje que diga si se trada de un codón de stop, de inicio o ninguno de ambos casos.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tu respuesta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Crea un programa que arroje la frecuencia de A, T, C y G de una cadena de DNA de 300 nucleotídos. Punto extra (en algo) si logras hacerlo con bucles for y diccionarios.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tu respuesta </span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Listas de comprehensión.</p>
+<ol class="simple">
+<li><p>Crea una lista que contenga 5 cadenas de DNA de 50 nucleótidos cada una.</p></li>
+<li><p>Extrae de cada cadena el codón número 3</p></li>
+<li><p>El programa debe dar como resultado una lista con los codones que extrajíste</p></li>
+</ol>
+</li>
+</ol>
+<p>Resuelve éste problema utilizando tanto un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> con la función <code class="docutils literal notranslate"><span class="pre">append()</span></code> y utilizando la estructura de las listas de comprehensión.</p>
+<p>Piensa/resuelve por partes!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tu respuesta con for y append()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tu respuesta con lista de comprehensión</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -546,17 +583,17 @@ Escribe y ejecuta las expresiones que se encuentran a continuación y responde p
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="00_practicas.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="mp1_variables_datos_operadores.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Prácticas</p>
+            <p class="prev-next-title">Repasando variables, datos y operadores</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="mp2_control_flujo.html" title="next page">
+    <a class='right-next' id="next-link" href="mp3_funciones.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Control de flujo con cadenas de DNA.</p>
+        <p class="prev-next-title">Funciones. El dogma central de la biología molecular.</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

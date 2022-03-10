@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Resumen de la sintaxis básica" href="05_sintaxis_basica.html" />
-    <link rel="prev" title="Datos, variables y operadores" href="02_datos_variables.html" />
+    <link rel="prev" title="Estructuras de control de flujo" href="03_estructuras_control.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -242,6 +242,11 @@ const thebe_selector_output = ".output, .cell_output"
      Datos, variables y operadores
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_estructuras_control.html">
+     Estructuras de control de flujo
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Algoritmos y funciones
@@ -358,7 +363,12 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../04_practicas/mp2_funciones.html">
+    <a class="reference internal" href="../../04_practicas/mp2_control_flujo.html">
+     Control de flujo con cadenas de DNA.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_practicas/mp3_funciones.html">
      Funciones. El dogma central de la biología molecular.
     </a>
    </li>
@@ -578,7 +588,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <div class="section" id="funciones-built-in">
 <h3>1. Funciones <em>built-in</em><a class="headerlink" href="#funciones-built-in" title="Permalink to this headline">¶</a></h3>
-<p>Python tienen integradas muchísimas funciones que podemos utilizar, <a class="reference external" href="https://docs.python.org/3/library/functions.html">aquí una pequeña lista de algunos</a>. Y al ser funciones, pues incluyen sus parámetros, los cuales podemos explorar con la función <code class="docutils literal notranslate"><span class="pre">help()</span></code>. Por ejemplo, la función <code class="docutils literal notranslate"><span class="pre">all()</span></code>:</p>
+<p>Python tienen integradas muchísimas funciones que podemos utilizar, <a class="reference external" href="https://docs.python.org/3/library/functions.html">aquí una pequeña lista de algunos</a>. Y al ser funciones, pues incluyen sus parámetros, los cuales podemos explorar con la función <code class="docutils literal notranslate"><span class="pre">help()</span></code>. Por ejemplo, la función <code class="docutils literal notranslate"><span class="pre">round()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -586,9 +596,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="funciones-propias">
 <h3>2. Funciones propias<a class="headerlink" href="#funciones-propias" title="Permalink to this headline">¶</a></h3>
 <p>La opción dos es crear nuestras propias funciones, es decir, declarar desde el nombre de la función, hasta los parámetros y argumentos de la misma. Para definir una función, utilizamosla siguiente sintaxis:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-
-<span class="k">def</span> <span class="nf">nombre_funcion</span><span class="p">(</span><span class="n">parametro1</span><span class="p">,</span> <span class="n">parametro2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nombre_funcion</span><span class="p">(</span><span class="n">parametro1</span><span class="p">,</span> <span class="n">parametro2</span><span class="p">):</span>
     <span class="n">Bloque</span> <span class="n">de</span> <span class="n">codigo</span>
 
 
@@ -696,11 +704,11 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="02_datos_variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="03_estructuras_control.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Datos, variables y operadores</p>
+            <p class="prev-next-title">Estructuras de control de flujo</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="05_sintaxis_basica.html" title="next page">
