@@ -41,7 +41,7 @@ parts:
       title: Principios de programación con Python
       sections: 
       - file: 02_bioinfo/02_principios_programacion/02_datos_variables
-      - file: 02_bioinfo/02_principios_programacion/03_estructuras_control_funciones
+      - file: 02_bioinfo/02_principios_programacion/03_estructuras_control
       - file: 02_bioinfo/02_principios_programacion/04_funciones
       - file: 02_bioinfo/02_principios_programacion/05_sintaxis_basica
 
@@ -73,5 +73,6 @@ parts:
       title: Mini prácticas
       sections:
       - file: 04_practicas/mp1_variables_datos_operadores
-      - file: 04_practicas/mp2_funciones
+      - file: 04_practicas/mp2_control_flujo
+      - file: 04_practicas/mp3_funciones
 

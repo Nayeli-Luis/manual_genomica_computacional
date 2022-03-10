@@ -37,7 +37,7 @@ Es importante mencionar que la replicación del DNA avanza en forma de horquilla
 Una vez que la cadena doble hélice está abierta y separada, tenemos acceso a la información que está contenida en los nucleótidos y sólo queda copiarla. Cuando sacamos copias fotostáticas de un libro, necesitamos material ¿no es cierto?, necesitamos hojas, tinta, una máquina fotocopiadora e incluso un separador que indica donde comenzar a fotocopiar. Bueno, pues acá sucede lo mismo, para copiar el DNA necesitamos material, la intervención de otras proteínas y moléculas. Primero la fotocopiadora, en ese caso la máquina (enzima) necesaria se llama ***DNA polimerasa***. Luego el separador que indica donde iniciar, llamado  **primer o cebador** y por último,  las hojas y las tinta, en este caso los ***dNTPs o desoxinucleótidos trifosfato***, los dNTPs van a contener los nucleótidos de complemento.
 
 El proceso consiste en lo siguiente:
-1. Se coloca un primer en el sitio de inicion de la cadena que se va a copiar.
+1. Se coloca un primer en el sitio de inicio de la cadena que se va a copiar.
 2. Se coloca la polimerasa en el sitio de inicio y comienza a avanzar en la cadena.
 3. A medida que la polimerasa avanza, se van poniendo los nucleotidos que correspondan, es decir, si la hebra original es ATCG, la hebra copia será TAGC, porque son los nucleótidos con los que interactuan los originales (ver {ref}`replicacion_paso2`).
 
