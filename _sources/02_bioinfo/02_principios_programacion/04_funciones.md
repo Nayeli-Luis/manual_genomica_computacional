@@ -25,7 +25,7 @@ Una función es un bloque de código que puede llevar a cabo una tarea en espec�
 * **Argumento**: Es el valor que se pasa aun parámetro para poder utilizar una función.
 
 ### 1. Funciones *built-in*
-Python tienen integradas muchísimas funciones que podemos utilizar, [aquí una pequeña lista de algunos](https://docs.python.org/3/library/functions.html). Y al ser funciones, pues incluyen sus parámetros, los cuales podemos explorar con la función `help()`. Por ejemplo, la función `all()`:
+Python tienen integradas muchísimas funciones que podemos utilizar, [aquí una pequeña lista de algunos](https://docs.python.org/3/library/functions.html). Y al ser funciones, pues incluyen sus parámetros, los cuales podemos explorar con la función `help()`. Por ejemplo, la función `round()`:
 
 ```python
 help(round)
@@ -35,8 +35,6 @@ help(round)
 La opción dos es crear nuestras propias funciones, es decir, declarar desde el nombre de la función, hasta los parámetros y argumentos de la misma. Para definir una función, utilizamosla siguiente sintaxis:
 
 ```python
-
-
 def nombre_funcion(parametro1, parametro2):
     Bloque de codigo
 

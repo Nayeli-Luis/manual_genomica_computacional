@@ -112,14 +112,13 @@ for i in range(numero):
     print(numero * 3)
 ```
 
-Ahora, podemos utilizar algún contador, que nos indique la posición de una secuencia:
+Ahora podemos hacer un programa que imprima la posición de cada base de una secuencia de DNA. 
 
 ```python
 secuencia = "ATCGTACGT"
-indice = 0
 
 for i in range(len(secuencia)):
-    print(str(indice) + " " + secuencia[indice])
+    print(str(i) + " " + secuencia[i])
 ```
 
 #### Listas de comprehensión (*list comprehensions*)
@@ -129,7 +128,7 @@ Permite crear listas en una misma línea de código y son muy utilizadas en la g
 cuadrados = []
 
 for num in [1, 2, 3, 4, 5]: # Se ejecuta un protocolo de iteración
-    squares.append(x ** 2)  # Genera una lista nueva (append() agrega elementos a la lista)
+    cuadrados.append(x ** 2)  # Genera una lista nueva (append() agrega elementos a la lista)
 
 cuadrados
 

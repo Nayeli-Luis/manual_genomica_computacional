@@ -63,7 +63,20 @@ Terminación de la transcripción.
 
 Es importante mencionar que en eucariontes, una vez que se tiene el mRNA éste debe pasar por dos tratamiento especiales para que se puede pasar a la traducción.
 
-* Primero, el transcrito en eucariontes sufre un empalme o *splicing*, en donde partes del transcrito (llamadas intrones) se corta y se eliminan. Mientras que, las piezas restantes (llamadas exones) se vuelven a unir. Esto permite que cuando se traduzca el mRNA se genere una proteína "correcta", si se quedaran los intrones, gneraría un prteína sin sentido.
+* Primero, el transcrito en eucariontes sufre un empalme o *splicing*, en donde partes del transcrito (llamadas **intrones**) se cortan y se eliminan. Mientras que, las piezas restantes (llamadas **exones**) se vuelven a unir. Esto permite que cuando se traduzca el mRNA se genere una proteína "correcta", si se quedaran los intrones, gneraría un proteína sin sentido.
+
+::::{margin}
+:::{admonition} La caperuza
+O caperuza 5' o cap-5' es un nucleótido con guanina el cual está ligado al mRNA mediante un enlace tifosfato 5'-5'. Esta guanosita es metilada por una metiltransferasa (otra enzima) en la posición 7.
+
+**Función**
+
+1. Regular la exportación desde el núcleo. 
+2. Prevenir la degradación por exonucleasas. 
+3. Impulsar la traducción. 
+
+:::
+::::
 
 * Segundo, el transcrito en eucariontes deben tener modificaciones en sus extremos, una adición de un nucleótido alterado en 5' (inicio), también conocido como caperuza o cap y una cola poli-A en 3' (final). Esto para que la molécula tenga mayor estabilidad.
 
