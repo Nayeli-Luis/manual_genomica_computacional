@@ -16,6 +16,6 @@ Guarda la cadena arrojada en una variable llamada `dna`.
 
 b) Crea una función que genere la cadena de DNA complementaria. Agrega el código que creaste, no sólo el resultado. 
 
-c) Crea una función que genere la cadena de DNA transcrita. Agrega el código que utilizaste, no solo el resultado.
+c) Crea una función que genere la cadena de DNA transcrita (sin utilizar la función `str.replace()`). Agrega el código que utilizaste, no solo el resultado.
 
 d) Escribe en notación narrada un algoritmo para traducir la cadena transcrita.

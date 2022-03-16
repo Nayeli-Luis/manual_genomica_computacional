@@ -4,7 +4,7 @@ La replicación del DNA pueden generar erores al momento de polimerizar nuevos n
 
 ## Tipos de mutaciones
 
-* ***Sustituciones de bases***: Es el tipo más simple de mutación genética, dada la naturaleza complementaria del DNA, la alteración de un sólo nucleótido altera la base pareada correspondiente. Entonces, una sustitución de bace casi siempre conduse a la sustitución de un par de bases. Existen dos tipos: 
+* ***Sustituciones de bases***: Es el tipo más simple de mutación genética, dada la naturaleza complementaria del DNA, la alteración de un sólo nucleótido altera la base pareada correspondiente. Entonces, una sustitución de base casi siempre conduce a la sustitución de un par de bases. Existen dos tipos: 
 	
 	1. Transición: En donde una purina se reemplaza por una purina o una pirimidina se reemplaza por una pirimidina. 
 

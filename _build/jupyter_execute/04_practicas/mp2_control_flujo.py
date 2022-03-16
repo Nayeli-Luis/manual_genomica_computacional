@@ -21,7 +21,7 @@ def generar_secuencia(tamaño = int(), codigo = "CTGA"):
 DNA = generar_secuencia(50)
 
 
-# 1. Crea un programa en el que un usuario ingrese un codón y el programa arroje un mensaje que diga si se trada de un codón de stop, de inicio o ninguno de ambos casos. 
+# * Crea un programa en el que un usuario ingrese un codón y el programa arroje un mensaje que diga si se trada de un codón de stop, de inicio o ninguno de ambos casos. 
 
 # In[2]:
 
@@ -30,7 +30,7 @@ DNA = generar_secuencia(50)
 
 
 
-# 2. Crea un programa que arroje la frecuencia de A, T, C y G de una cadena de DNA de 300 nucleotídos. Punto extra (en algo) si logras hacerlo con bucles for y diccionarios.
+# * Crea un programa que arroje la frecuencia de A, T, C y G de una cadena de DNA de 300 nucleotídos. Punto extra (en algo) si logras hacerlo con bucles for y diccionarios.
 
 # In[3]:
 
@@ -39,7 +39,7 @@ DNA = generar_secuencia(50)
 
 
 
-# 3. Listas de comprehensión. 
+# * Listas de comprehensión. 
 #     1. Crea una lista que contenga 5 cadenas de DNA de 50 nucleótidos cada una. 
 #     2. Extrae de cada cadena el codón número 3
 #     3. El programa debe dar como resultado una lista con los codones que extrajíste
