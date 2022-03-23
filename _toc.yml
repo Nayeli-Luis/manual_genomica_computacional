@@ -69,10 +69,14 @@ parts:
   - caption: Prácticas
     chapters:
 
-    - file: 04_practicas/00_practicas
+    - file: 04_practicas/00_minipracticas
       title: Mini prácticas
       sections:
       - file: 04_practicas/mp1_variables_datos_operadores
       - file: 04_practicas/mp2_control_flujo
-      - file: 04_practicas/mp3_funciones
+      
+    - file: 04_practicas/01_practicas
+      title: Prácticas
+      sections:
+      - file: 04_practicas/p1_dogma_central
 

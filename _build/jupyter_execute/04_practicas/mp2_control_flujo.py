@@ -21,7 +21,7 @@ def generar_secuencia(tamaño = int(), codigo = "CTGA"):
 DNA = generar_secuencia(50)
 
 
-# * Crea un programa en el que un usuario ingrese un codón y el programa arroje un mensaje que diga si se trada de un codón de stop, de inicio o ninguno de ambos casos. 
+# * Crea un programa en el que un usuario ingrese un codón y el programa arroje un mensaje que diga si se trata de un codón de stop, de inicio o ninguno de los dos. 
 
 # In[2]:
 
