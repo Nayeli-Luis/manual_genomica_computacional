@@ -1,12 +1,26 @@
 # Práctica 1. El dogma central de la biología molecular.
 
-Ésta práctica se entrega por Classroom, en un script de Python (.py) y con la siguiente estructura en el nombre: `p1_Apellidos_Nombres`. El script debe pedir al usuario una cadena de DNA como argumento, además el usuario puede ingresar la cadena en minúsculas o mayúsculas, el programa debe arrojar: 
+Ésta práctica se lleva a cabo en **parejas** que deben estar compuestas por un/a biologo/a + un/a computólogo/a. El formato consiste en un script de Python (.py) que va a contener un programa. A pesar de que se  hace en parejas la entrega es individual y se hace por Classroom.  El archivo debe tener  la siguiente estructura en el nombre: `p1_Apellidos_Nombres`. Además en la parte inicial del script debe aparecer los nombres de equipo, ejemplo: 
 
-* Un mensaje que diga si la cadena de DNA es válida.
-* La cadena de DNA complementaria en mayúsculas. 
-* La cadena de mRNA en mayúsculas, **NO** utilizar `str.replace()`.
-* La cadena de aminoácidos. Es probable que no todos los codones de la cadena de DNA que yo ingrese codifiquen para un aminoácido, para éstos codones que el programa arroje un `NA`.
+```
+# Equipo: 
+# Apellidos Nombres
+# Apellidos Nombres
+```
 
-**NOTA**: No utilizar ningún paquete de Python.
+## Características del programa
+
+El programa debe pedir al usuario una cadena de DNA y el usuario puede ingresar la cadena en minúsculas o mayúsculas, el programa debe: 
+
+1. Validar la cadena, si la cadena no es válida indicarlo en un mensaje y terminar programa. 
+2. Arrojar la cadena complementaria. 
+3. Arrojar la cadena transcrita (mRNA), **SIN** utilizar `str.replace()`.
+4. Verificar que la cadena tenga un codón de inicio, sino es así, que arroje un mensaje. Asuman que estará en el primer codón (sin tomar en cuenta regiones para promotores ni nada por el estilo.)
+5. Si la cadena tiene un codón de inicio, entonces que arroje la cadena de aminoácidos (cadena traducida). Es probable que no todos los codones de la cadena de DNA que ingrese un usuario codifiquen para un aminoácido, para éstos codones que el porgrama arroje un 0 (cero). 
+
+## Reglas
+ 
+ No pueden utilizar paqueterías de Python. 
+ Y ya.
 
  

@@ -467,6 +467,24 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristicas-del-programa">
+   Características del programa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reglas">
+   Reglas
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -479,6 +497,24 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristicas-del-programa">
+   Características del programa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reglas">
+   Reglas
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -487,14 +523,28 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="practica-1-el-dogma-central-de-la-biologia-molecular">
 <h1>Práctica 1. El dogma central de la biología molecular.<a class="headerlink" href="#practica-1-el-dogma-central-de-la-biologia-molecular" title="Permalink to this headline">¶</a></h1>
-<p>Ésta práctica se entrega por Classroom, en un script de Python (.py) y con la siguiente estructura en el nombre: <code class="docutils literal notranslate"><span class="pre">p1_Apellidos_Nombres</span></code>. El script debe pedir al usuario una cadena de DNA como argumento, además el usuario puede ingresar la cadena en minúsculas o mayúsculas, el programa debe arrojar:</p>
-<ul class="simple">
-<li><p>Un mensaje que diga si la cadena de DNA es válida.</p></li>
-<li><p>La cadena de DNA complementaria en mayúsculas.</p></li>
-<li><p>La cadena de mRNA en mayúsculas, <strong>NO</strong> utilizar <code class="docutils literal notranslate"><span class="pre">str.replace()</span></code>.</p></li>
-<li><p>La cadena de aminoácidos. Es probable que no todos los codones de la cadena de DNA que yo ingrese codifiquen para un aminoácido, para éstos codones que el programa arroje un <code class="docutils literal notranslate"><span class="pre">NA</span></code>.</p></li>
-</ul>
-<p><strong>NOTA</strong>: No utilizar ningún paquete de Python.</p>
+<p>Ésta práctica se lleva a cabo en <strong>parejas</strong> que deben estar compuestas por un/a biologo/a + un/a computólogo/a. El formato consiste en un script de Python (.py) que va a contener un programa. A pesar de que se  hace en parejas la entrega es individual y se hace por Classroom.  El archivo debe tener  la siguiente estructura en el nombre: <code class="docutils literal notranslate"><span class="pre">p1_Apellidos_Nombres</span></code>. Además en la parte inicial del script debe aparecer los nombres de equipo, ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equipo: </span>
+<span class="c1"># Apellidos Nombres</span>
+<span class="c1"># Apellidos Nombres</span>
+</pre></div>
+</div>
+<div class="section" id="caracteristicas-del-programa">
+<h2>Características del programa<a class="headerlink" href="#caracteristicas-del-programa" title="Permalink to this headline">¶</a></h2>
+<p>El programa debe pedir al usuario una cadena de DNA y el usuario puede ingresar la cadena en minúsculas o mayúsculas, el programa debe:</p>
+<ol class="simple">
+<li><p>Validar la cadena, si la cadena no es válida indicarlo en un mensaje y terminar programa.</p></li>
+<li><p>Arrojar la cadena complementaria.</p></li>
+<li><p>Arrojar la cadena transcrita (mRNA), <strong>SIN</strong> utilizar <code class="docutils literal notranslate"><span class="pre">str.replace()</span></code>.</p></li>
+<li><p>Verificar que la cadena tenga un codón de inicio, sino es así, que arroje un mensaje. Asuman que estará en el primer codón (sin tomar en cuenta regiones para promotores ni nada por el estilo.)</p></li>
+<li><p>Si la cadena tiene un codón de inicio, entonces que arroje la cadena de aminoácidos (cadena traducida). Es probable que no todos los codones de la cadena de DNA que ingrese un usuario codifiquen para un aminoácido, para éstos codones que el porgrama arroje un 0 (cero).</p></li>
+</ol>
+</div>
+<div class="section" id="reglas">
+<h2>Reglas<a class="headerlink" href="#reglas" title="Permalink to this headline">¶</a></h2>
+<p>No pueden utilizar paqueterías de Python.
+Y ya.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
