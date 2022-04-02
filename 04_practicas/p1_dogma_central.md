@@ -16,7 +16,7 @@ El programa debe pedir al usuario una cadena de DNA y el usuario puede ingresar 
 2. Arrojar la cadena complementaria. 
 3. Arrojar la cadena transcrita (mRNA), **SIN** utilizar `str.replace()`.
 4. Verificar que la cadena tenga un codón de inicio, sino es así, que arroje un mensaje. Asuman que estará en el primer codón (sin tomar en cuenta regiones para promotores ni nada por el estilo.)
-5. Si la cadena tiene un codón de inicio, entonces que arroje la cadena de aminoácidos (cadena traducida). Es probable que no todos los codones de la cadena de DNA que ingrese un usuario codifiquen para un aminoácido, para éstos codones que el porgrama arroje un 0 (cero). 
+5. Si la cadena tiene un codón de inicio, entonces que arroje la cadena de aminoácidos (cadena traducida). Es probable que no todos los codones de la cadena de DNA que ingrese un usuario codifiquen para un aminoácido, para éstos codones que el porgrama arroje un - (guión medio). 
 
 ## Reglas
  
