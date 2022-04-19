@@ -12,7 +12,7 @@ name: fake
 Como se cree que se llevan a cabo los análisis bioinformáticos.
 ```
 
-Lo que en realidad sucede es que cuando usamos una herramienta bioinformática, ésta transforma nuestros datos en otros. Y estos datos pueden reanalizarse con otra herramienta y así llegar a respuestas. De maneera que se vuelve más bien un loop de análisis de datos hasta que hallamos los que nos son útiles (como siempre... en función de los objetivos de nuestra investigación).
+En realidad que cuando usamos una herramienta bioinformática, ésta transforma nuestros datos en otros. Y estos datos pueden reanalizarse con otra herramienta y así llegar a respuestas. De maneera que se vuelve más bien un loop de análisis de datos hasta que hallamos los que nos son útiles (como siempre... en función de los objetivos de nuestra investigación).
 
 ```{figure} ../img/intro_analisis_bioinfo/real-bioinformatics.png
 ---
