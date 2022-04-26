@@ -83,7 +83,7 @@ En donde Q es el valor de calidad y es un número entero, mientras que P es la p
 
 El score de calidad va a depender de la codificación de la plataforma de secuenciación, sin embargo, la codificación estándar es la de Sanger/Illumina 1.8 +. En esta codificación se utilizan los caracteres de <a href = "https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm" >ASCII</a> del 33 al 73. Y cada uno de estos caracteres tienen un valor en el score Phred. Por ejemplo, el caracter signo de exlamación (!) tiene el valor 33 en ASCII y tiene un valor Q igual a 0. La siguiente figura muestra un ejemplo, donde se puede ver la secuencia, el código ASCII, el valor que tiene en ASCII y el valor de Q.
 
-```{figure} ../img/intro_analisis_bioinfo/phred.png
+```{figure} ../img/intro_analisis_bioinfo/phred2.png
 ---
 height: 100px
 name: phred
