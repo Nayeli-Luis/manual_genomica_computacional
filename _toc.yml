@@ -80,4 +80,5 @@ parts:
       sections:
       - file: 04_practicas/p1_dogma_central
       - file: 04_practicas/p2_bash_ngs
+      - file: 04_practicas/p3_git_github
 
